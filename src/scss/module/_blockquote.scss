@@ -1,0 +1,25 @@
+//引用
+.c-blockquote {
+  padding: 28px 24px 28px 72px;
+  background-color: $lightGray;
+  position: relative;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:before {
+    content: '';
+    width: 20px;
+    height: 21px;
+    display: block;
+    @include fa('f10d');
+    color: $keyColor;
+    font-size: 26px;
+    position: absolute;
+    top: 22px;
+    left: 30px;
+  }
+  p {
+    line-height: (28 / 16);
+  }
+}

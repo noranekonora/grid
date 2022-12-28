@@ -1,0 +1,92 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+#about {
+
+  // ご挨拶
+  .p-greeting {
+    &__contents {
+      padding-left: 10%;
+
+      @include mq-max(sm) {
+        padding-left: 0;
+      }
+
+      &>p {
+        font-size: 24px;
+
+        @include mq-max(sm) {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  //  スタッフ紹介
+  .p-staff {
+    &__list {
+      padding-top: 30px;
+      counter-reset: point;
+
+      &>dl {
+        display: flex;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+        @include mq-max(sm) {
+          display: block;
+        }
+        &>dt {
+          position: relative;
+          padding-left: 50px;
+          width: 320px;
+          flex-shrink: 0;
+          line-height: 2;
+          font-size: 24px;
+
+          &::before {
+            content: counter(point, decimal-leading-zero);
+            counter-increment: point;
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 32px;
+            font-family: "Heebo";
+            line-height: 1.2;
+
+            @include mq-max(xs) {
+              font-size: 26px;
+              padding-left: 6px;
+            }
+          }
+        }
+        &>dd {
+          font-size: 18px;
+          line-height: 2.2;
+          @include mq-max(sm) {
+            padding-left: 50px;
+          }
+        }
+      }
+
+    }
+  }
+
+  // 概要情報
+  .p-Overview {
+    &>p {
+      border-bottom: 1px solid $bdrColor;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 0;
+      @include mq-max(xs) {
+        text-align: left;
+        font-size: 18px;
+      }
+    }
+  }
+}

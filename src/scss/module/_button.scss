@@ -1,0 +1,117 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//  ボタン
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.c-btn {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  padding: 21px 55px 21px 31px;
+  max-width: 100%;
+  color: $keyColor;
+  background-color: #fff;
+  line-height: 1.25;
+  border: 1px solid $keyColor;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: color $transition,
+              background-color $transition;
+              box-shadow: $box-shadow;
+  @include mq-max(xs) {
+    width: 100%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    color: $white;
+    background-color: $keyColor;
+    &:after {
+      right: 35px;
+    }
+  }
+  &:after {
+    @include fa('f054');
+    position: absolute;
+    top: 52%;
+    right: 41px;
+    transform: translateY(-50%);
+    transition: right $transition;
+  }
+
+  //PDF
+  &[href$=".pdf"] {
+    &:after {
+      right: 36px;
+    }
+    &:hover {
+      &:after {
+        right: 36px;
+        color: $white;
+      }
+    }
+  }
+
+  //外部リンク
+  &[target="_blank"] {
+    &:after {
+      color: $keyColor;
+      right: 36px;
+    }
+    &:hover {
+      &:after {
+        right: 36px;
+        color: $white;
+      }
+    }
+  }
+
+  //テキスト量で長さ可変
+  &__inline {
+    display: inline-block;
+    width: auto;
+    @include mq-max(xs) {
+      width: 100%;
+    }
+  }
+
+  //小さいボタン
+  &__small {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  //ホバーで背景がスライド
+  &__slide {
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $keyColor;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .4s;
+    }
+    &:hover {
+      background-color: #fff;
+      color: #fff;
+      &:before {
+        transform: translateX(0%);
+      }
+    }
+    &>span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

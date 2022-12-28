@@ -1,0 +1,379 @@
+.l-navigation {
+  @include mq-max(md) {
+    display: none;
+
+    html.open &.active>ul {
+      overflow-y: scroll;
+      height: calc(100vh - #{$headerHeight-sp}); //画面高さ - fixedヘッダーの高さ
+      padding-bottom: 120px;
+    }
+  }
+
+  &.active {
+    transform: translateY(0%);
+  }
+
+  &__inner {
+    padding: 0;
+    display: flex;
+
+    @include mq-max(md) {
+      display: block;
+      height: calc(100vh - #{$headerHeight-sp});
+      overflow-y: scroll;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mq-max(md) {
+      margin-right: 0;
+      border-top: 1px solid $gray;
+
+      &:last-child {
+        border-bottom: 1px solid $gray;
+      }
+    }
+
+    a {
+      font-size: 20px;
+      text-align: center;
+
+      @include mq-max(md) {
+        background-color: $keyColor;
+        position: relative;
+
+        &:after {
+          @include fa('f054');
+          position: absolute;
+          top: 50%;
+          right: 28px !important;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &>a {
+      text-decoration: none;
+      color: $textColor;
+      font-weight: 400;
+      display: inline-block;
+      padding: 33px 19px;
+      position: relative;
+      font-family: $futura;
+
+      @include mq-max(bp1200) {
+        padding: 33px 15px;
+      }
+
+      @include mq-max(md) {
+        display: block;
+        padding: 11px 45px 11px 28px;
+        font-size: 16px;
+
+        &:before {
+          display: none !important;
+        }
+
+      }
+
+      &:hover {
+        &:before {
+          width: 70%;
+        }
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        background-color: $accentColor;
+        position: absolute;
+        bottom: 0;
+        left: (100% - 70%) / 2;
+        transition: all $transition;
+      }
+
+      &.current {
+        @include mq-max(md) {
+          color: $accentColor;
+        }
+
+        &:before {
+          width: 70%;
+        }
+      }
+    }
+
+    //下層メニュー
+    &.has-dropdown {
+      &>a {
+        position: relative;
+
+        &:after {
+          @include fa('f107');
+          position: absolute;
+          top: 50%;
+          right: 4px;
+          transform: translateY(-50%);
+          line-height: 1;
+          font-size: 16px;
+
+          @include mq-max(md) {
+            @include fa('f067');
+            right: 16px;
+          }
+        }
+
+        &.has-dropdown {
+          &:after {
+            @include mq-max(md) {
+              content: '\f068';
+            }
+          }
+        }
+
+        &[href^="javascript:void(0)"] {
+          pointer-events: auto;
+        }
+      }
+
+      //クリックで展開するようにするためにコメントアウト（is-openedの下に移動）
+      // &:hover {
+      //   .l-dropDown {
+      //     top: $headerHeight; // headerの高さ
+      //     opacity: 1;
+      //     visibility: visible;
+      //     @include mq-max(md) {
+      //       top: auto;
+      //     }
+      //     a {
+      //       transition: color $transition,
+      //                   height $transition;
+      //       &:hover {
+      //         color: $keyColor;
+      //       }
+      //     }
+      //   }
+      // }
+      .l-dropDown {
+        position: absolute;
+        top: $headerHeight - 30px; // headerの高さ - 30px
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease;
+        z-index: -1;
+        padding: 0 24px;
+        background-color: $white;
+        overflow: hidden;
+
+        @include mq-max(md) {
+          position: relative;
+          transition: none;
+          top: auto;
+          opacity: 1;
+          visibility: visible;
+          z-index: 1;
+          padding: 0;
+          border-radius: 0;
+        }
+
+        li {
+          border-bottom: 1px solid $gray;
+
+          @include mq-max(md) {
+            border-bottom: none;
+          }
+
+          &:last-child {
+            border: none;
+          }
+
+          a {
+            background-color: $white;
+            padding: 18px 0;
+            white-space: nowrap;
+            display: block;
+            text-decoration: none;
+            color: $textColor;
+            width: 100%;
+
+            @include mq-max(md) {
+              line-height: 0;
+              height: 0;
+              padding: 0;
+              opacity: 0;
+              transition: height $transition,
+                opacity 0.4s,
+                padding $transition,
+                line-height $transition;
+            }
+
+            &:after {
+              @include mq-max(md) {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+
+      &.is-opened {
+        .l-dropDown {
+          top: calc(#{$headerHeight} + 20px); // headerの高さ
+          opacity: 1;
+          visibility: visible;
+
+          @include mq-max(md) {
+            top: auto;
+          }
+
+          a {
+            transition: color $transition,
+              height $transition;
+
+            &:hover {
+              color: $keyColor;
+            }
+          }
+        }
+
+        &>a {
+          @include mq-max(md) {
+            &:after {
+              content: '\f068';
+            }
+          }
+        }
+
+        >.l-dropDown {
+          @include mq-max(md) {
+            opacity: 1;
+            display: block;
+
+            >li {
+              border-bottom: 1px solid $gray;
+
+              &:first-child {
+                border-top: 1px solid $gray;
+              }
+
+              &:last-child {
+                border-bottom: none;
+              }
+            }
+
+            >li>a {
+              opacity: 1;
+              line-height: 1.5;
+              height: 46px;
+              padding: 11px 45px 11px 50px;
+              background-color: $lightGray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__ja {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: $sanserif;
+  }
+}
+
+//強調メニュー（右端）
+.l-nav {
+  margin-left: 13px;
+
+  @include mq-max(md) {
+    margin-left: 0;
+  }
+
+  &__btns {
+    display: flex;
+    height: 100%;
+  }
+
+  &__item {
+    @include mq-max(md) {
+      width: 100%;
+    }
+
+    display: flex;
+    align-items: center;
+
+    &>a {
+      background-color: $accentColor;
+      border-radius: 50%;
+      color: $white;
+      position: relative;
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      transition: all $transition;
+
+      @include mq-max(md) {
+        border-radius: 0;
+        width: 100%;
+        height: 60px;
+      }
+
+      &>span {
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          content: "\f0e0" !important;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 400;
+          margin-bottom: 3px;
+          font-size: 28px;
+        }
+      }
+
+      &:hover {
+        background-color: $white;
+
+        &>span {
+          &::before {
+            color: $accentColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+//ドロップダウン展開時のフィルター
+.l-filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  transition: opacity $transition;
+  pointer-events: none;
+
+  @include mq-max(md) {
+    display: none !important;
+  }
+
+  &.is-active {
+    opacity: .4;
+    pointer-events: auto;
+  }
+}

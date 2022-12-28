@@ -1,0 +1,87 @@
+{% set item = [
+  {
+    name: '環境・リサイクル機械',
+    id: 'kankyo',
+    link: '/product/01.pdf',
+    thumb: '/service/rental/product/pic_kankyo.jpg',
+  },
+  {
+    name: '土木・掘削機械',
+    id: 'doboku',
+    link: '/product/02.pdf',
+    thumb: '/service/rental/product/pic_doboku.jpg',
+  },
+  {
+    name: '整地・運搬・積込機械',
+    id: 'seichi',
+    link: '/product/03.pdf',
+    thumb: '/service/rental/product/pic_seichi.jpg',
+  },
+  {
+  name: 'アイテム4',
+  id: 'seichi',
+  link: '/product/03.pdf',
+  thumb: '/service/rental/product/pic_seichi.jpg',
+  }
+] %}
+
+
+{% if pageId == 'service-product','service' %} {# /service/rental/product/ #}
+
+<div class="l-section">
+  <ul class="c-anchor">
+    {% for i in item %}
+    <li class="c-anchor__item">
+      <a href="#{{ i.id }}">{{ i.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="c-card01 c-card01--sm">
+    <ul class="grid c-card01__list">
+
+      {% for i in item %}
+      <li class="col-3_md-4_sm-6_xs-12 c-card01__item">
+        <a href="{{ inc.pdf }}{{ i.link }}" id="{{ i.id }}" target="_blank" rel="noopener">
+          <div class="c-card01__inner">
+            <div class="c-card01__thumb" style="background-image: url('{{ inc.image }}{{ i.thumb }}');"></div>
+            <div class="c-card01__body">
+              <h3 class="c-card01__title" data-js="js-matchHeight">{{ i.name }}</h3>
+              <p class="c-link c-link--arrow">詳しく知る</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</div>
+
+{% elseif pageId == 'sell' %} {# /service/sell/ #}
+
+<section class="l-section">
+  <h2 class="c-ttl-2 c-ttl-2--line c-ttl--mbLarge">
+    <small>ITEM LIST</small>
+    <span>取扱製品</span>
+  </h2>
+
+  <div class="c-card01 c-card01--sm">
+    <ul class="grid c-card01__list">
+
+      {% for i in item %}
+      <li class="col-3_md-4_sm-6_xs-12 c-card01__item">
+        <div class="c-card01__inner">
+          <div class="c-card01__thumb" style="background-image: url('{{ i.thumb }}');"></div>
+          <div class="c-card01__body">
+            <h3 class="c-card01__title" data-js="js-matchHeight">{{ i.name }}</h3>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</section>
+
+{% endif %}

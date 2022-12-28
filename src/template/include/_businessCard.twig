@@ -1,0 +1,42 @@
+{# 事業紹介カード #}
+
+{# カード情報 #}
+{% set info = [
+  {
+    link: '/service/rental/',
+    thumb: '/common/business/pic_business_rental.jpg',
+    title: '建設機器 レンタル'
+  },
+  {
+    link: '/service/sell/',
+    thumb: '/common/business/pic_business_buy_sell.jpg',
+    title: '建設機器 販売'
+  },
+  {
+    link: '/service/maintenance/',
+    thumb: '/common/business/pic_business_repair.jpg',
+    title: '建設機械 整備'
+  },
+] %}
+{# カード情報 #}
+
+
+{# テンプレート #}
+<div class="c-card01">
+  <ul class="grid c-card01__list">
+    {% for item in info %}
+    <li class="col-4_sm-6_xs-12 c-card01__item">
+      <a href="{{ item.link }}">
+        <div class="c-card01__inner">
+          <div class="c-card01__thumb" style="background-image: url('{{ inc.image }}{{ item.thumb }}');"></div>
+          <div class="c-card01__body">
+            <h3 class="c-card01__title" data-js="js-matchHeight">{{ item.title }}</h3>
+            <p class="c-link c-link--arrow">詳しく知る</p>
+          </div>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{# テンプレート #}

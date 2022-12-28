@@ -1,0 +1,20 @@
+.u- {
+  &bdr {
+    &--keyColor {
+      background: linear-gradient(transparent 60%, $keyColor 60%);
+    }
+    &--yellow {
+      background: linear-gradient(transparent 60%, #FFEF69 60%);
+    }
+  }
+
+  &txt {
+    &--red {
+      color: $red;
+    }
+    &--largest {
+      line-height: 3;
+      font-size: 120%;
+    }
+  }
+}

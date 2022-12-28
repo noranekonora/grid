@@ -1,0 +1,45 @@
+//grid調整用mixin
+@mixin gridTune($padding) {
+  margin-bottom: -1 * $padding;
+  margin-left: -1 * $padding/2;
+  margin-right: -1 * $padding/2;
+  @media screen and (max-width:$contentWidth + $contentPadding) {
+    margin: 0 -1*$contentPadding/2 -1*$contentPadding; // 調整前に戻る。
+  }
+  &>[class*="col-"] {
+    padding: 0 $padding/2 $padding;
+    @media screen and (max-width:$contentWidth + $contentPadding) {
+      padding: 0 $contentPadding/2 $contentPadding; // 調整前に戻る。
+    }
+  }
+}
+
+//grid調整　→　layout.scssに記述してる。
+//[class*="grid"] {
+//  margin-bottom: -1 * $contentPadding; //gridlexを使うことでできてしまう下余白を相殺。
+//}
+
+// 手順メモ
+// 1.「util」に入れて、all.scssに読み込む。
+// ※もし[class*="grid"] のmarginが優先度的にきいていない場合は、この記述だけ他の場所に移動する（layout.scssなど）。
+
+// 2.gridクラスに@includeで適用。（可能なら「.grid」に直接適用するのではなく、別にクラスを設ける方がいい）
+
+// 3.$paddingにお望みののcontentsPaddingを入力
+
+// 例：
+// .samaple {
+//   @include gridTune(60px);
+// }
+
+// ↓↓↓
+
+// こう出力される。
+//.samaple {
+//  margin-bottom: -60px;
+//  margin-left: -30px;
+//  margin-right: -30px;
+//  &>[class*="col-"] {
+//    padding 0 30px 60px;
+//  }
+//}

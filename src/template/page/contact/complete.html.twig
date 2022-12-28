@@ -1,0 +1,57 @@
+{% extends '../../layout/_04_form.twig' %}
+
+{# ページID設定 #}
+{% set pageId = 'complete' %}
+
+<!-- ページタイトル設定 -->
+{% set pageTitle = 'お問い合わせありがとうございます' %}
+{% set subTitle = 'Contact' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = 'お問い合わせありがとうございます' %}
+{% set ogurlpath = '/contact/complete.html' %}
+{% set ogimagepath = '' %}
+
+{# ページ個別　CSS等 #}
+{% block headArea %}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/form.css">
+{% endblock %}
+
+{# コンテンツをここに記載(div#main) #}
+{% block contents %}
+
+<div class="l-section">
+  <section class="c-step">
+    <h2 class="c-step__title">送信完了しました</h2>
+    <ul class="c-step__list">
+      <li class="c-step__item">内容の入力</li>
+      <li class="c-step__item">入力内容の確認</li>
+      <li class="c-step__item is-active">送信完了</li>
+    </ul>
+  </section>
+
+  <section class="c-formCompleteBox">
+    <h3 class="c-ttl-3 c-ttl-3--line">お問い合わせありがとうございます</h3>
+    <p>この度はお問い合わせいただき、誠にありがとうございます。<br>
+      お問い合わせ内容へのご返答は、3営業日以内に担当の者よりご連絡差し上げます。</p>
+    <p>尚、内容確認のメールを自動返信メールにて送信いたしましたので、ご確認下さい。</p>
+  </section>
+  <section class="c-formCompleteBox">
+    <h3 class="c-ttl-3 c-ttl-3--line">自動返信メールが届いてない場合</h3>
+    <p>弊社からの返信が迷惑メールフォルダに自動的に移動される場合があります。<br>10分以上経っても自動返信メールが届かない場合には、迷惑メールフォルダをご確認ください。<br>
+      また、受信できるように設定の変更をお願いします。<br>迷惑フォルダにも返信が見当たらないようであれば、お手数ですが再度お問い合わせ下さいますようお願いいたします。</p>
+  </section>
+
+  <div class="l-btnArea">
+    <a href="{{ link.home }}" class="c-formBtn c-formBtn--back">トップページへ戻る</a>
+  </div>
+</div>
+
+{% endblock %}
+
+{# ページ個別　JS等 #}
+{% block jsArea %}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+<!-- ページタイトル設定 -->
+{% set pageTitle = 'PHPパーツ集 | フォノグラム基本パーツ' %}
+
+<!-- ページID設定 -->
+{% set pageId = 'parts' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '' %}
+{% set ogurlpath = '' %}
+{% set ogimagepath = '' %}
+
+<!-- ページ個別　CSS等 -->
+{% block headArea %}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/parts.css">
+{% endblock %}
+
+<!-- コンテンツをここに記載(div#main) -->
+{% block contents %}
+
+<div class="l-section">
+  <h2 class="u-taC">PHPテスト</h2>
+  <ul class="c-list c-list--comment">
+    <li class="c-list__item">もし「Failed to decode downloaded font」のような読み込みエラーが出た場合は、「router.php」に使う拡張子の記述がないのが原因と考えられる。</li>
+  </ul>
+  <?php echo '<p>Hello World</p>'; ?>
+  <?php echo '<p>Hello Vader</p>'; ?>
+</div>
+
+{% endblock %}
+
+<!-- ページ個別　JS等 -->
+{% block jsArea %}
+{% endblock %}

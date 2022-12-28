@@ -1,0 +1,37 @@
+// クラス付与型ホバーアクション
+// クラスのありなしでホバーをカスタマイズできる
+// hover_を頭に置くとわかりやすい
+
+.u-hover {
+  &__shadow {
+    transition: all $transition !important;
+    &:hover {
+      box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__underline {
+    & > span {
+      display: inline-block;
+      position: relative;
+      padding-bottom: 5px;
+      &:after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        display: block;
+        background-color: #000;
+        position: absolute;
+        bottom: 0;
+        transition: all $transition !important;
+      }
+    }
+    &:hover {
+      & > span {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

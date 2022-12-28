@@ -1,0 +1,39 @@
+{#
+  下層ページ共通テンプレート
+#}
+
+{% extends '../layout/_00_base.twig' %}
+
+{# 下層共通CSS等 #}
+{% block headArea %}
+{% endblock %}
+
+{# メインブロック #}
+{% block main %}
+  {# パンくず #}
+  <div class="l-lowerCaption">
+    <div class="l-lowerCaption__inner">
+      <h1 class="l-lowerCaption__title">
+        {% if (subTitle) %}
+        <small>{{ subTitle }}</small>
+        {% endif %}
+        お知らせ
+      </h1>
+      <ul class="c-topicspath">
+        <li><a href="{{ link.home}}">ホーム</a></li>
+        {% for cat in lowCat %}
+          {% if pageTitle != cat.name %}
+            <li><a href="{{ cat.url }}">{{ cat.name }}</a></li>
+          {% endif %}
+        {% endfor %}
+        <li>{{pageTitle|replace({'<br>':''})}}</li>
+      </ul>
+    </div>
+  </div>
+  <div id="contents" class="l-lower">
+    {% block contents %}{% endblock %}
+  </div>
+{% endblock %}
+
+{# 下層共通 JS #}
+{% block jsArea %}{% endblock %}

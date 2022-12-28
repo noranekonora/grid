@@ -1,0 +1,140 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '2' %}
+
+{# ページタイトル設定 #}
+{% set pageTitle = 'school' %}
+{% set subTitle = 'スクール' %}
+
+{# ページID設定 #}
+{% set pageId = 'school' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '' %}
+{% set ogurlpath = '' %}
+{% set ogimagepath = '' %}
+
+{# ページ個別 CSS等 #}
+{% block headArea %}
+{{parent()}}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/school.css">
+{% endblock %}
+
+{# コンテンツをここに記載(div#contents内) #}
+{% block contents %}
+
+{# カテゴリー #}
+<section class="l-section p-category">
+  <h2 class="c-ttl-2">Category<small>カテゴリー</small></h2>
+  <div class="c-tbl__scroll">
+    <table class="c-tbl">
+      <thead>
+        <th></th>
+        <th><span>U-6</span></th>
+        <th><span>U-8</span></th>
+        <th><span>U-10</span></th>
+        <th><span>U-12</span></th>
+      </thead>
+      <tbody>
+        <tr>
+          <th>火曜日</th>
+          <td>17：00-18：00<br>会場：矢野新町公園</td>
+          <td>17：00-18：00<br>会場：矢野新町公園</td>
+          <td>17：00-18：00<br>会場：矢野小学校</td>
+          <td>17：00-18：00<br>会場：矢野新町公園</td>
+        </tr>
+        <tr>
+          <th>水曜日</th>
+          <td></td>
+          <td></td>
+          <td>17：00-18：00<br>会場：矢野小学校</td>
+          <td>17：00-18：00<br>会場：矢野新町公園</td>
+        </tr>
+        <tr>
+          <th>木曜日</th>
+          <td>17：00-18：00<br>会場：矢野新町公園</td>
+          <td>17：00-18：00<br>会場：矢野新町公園</td>
+          <td>17：00-18：00<br>会場：矢野小学校</td>
+          <td>17：00-18：00<br>会場：矢野新町公園</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="p-category__price">
+  <p>月/週2回の場合　全クラス：+1,500円<br>
+  月/週3回の場合　全クラス：+2,000円<br>
+  【諸費用】<br class="u-only-xs">・入会金4,000円　<br class="u-only-xs">・年会費：6,000円　<br class="u-only-xs">・ユニホーム代：10,000円</p>
+  </div>
+</section>
+{# カテゴリー #}
+
+{# スクール理念 #}
+<section class="l-section">
+  <h2 class="c-ttl-2">School philosophy<small>スクール理念</small></h2>
+  <div class="l-col2__block">
+    <div class="l-col2__img">
+      <img src="{{inc.image}}/school/img_schoolPhilosophy.png" alt="">
+    </div>
+    <div class="l-col2__detail">
+      <p class="l-col2__catch">
+        「やりぬく力」を身につける。
+      </p>
+      <p>「やりぬく力」(grit)をコンセプトに、サッカーを通じてスポーツの出来ることや身体を動かすことの楽しさを感じてもらいたいと考えています。子供たちひとりひとりが、勇気（brave）とアイディア（idea）を持って、表現（challenge）出来る選手に成長できるサポートします。
+      </p>
+    </div>
+  </div>
+</section>
+{# スクール理念 #}
+
+{# 指導理念 #}
+<section class="l-section">
+  <h2 class="c-ttl-2">Guidance philosophy<small>指導理念</small></h2>
+  <div class="l-col2__block">
+    <div class="l-col2__img">
+      <img src="{{inc.image}}/school/img_guidancePhilosophy.png" alt="">
+    </div>
+    <div class="l-col2__detail">
+      <p class="l-col2__catch">
+        「絶対的な技術」を持つ、<br class="u-only-xs">個への育成。
+      </p>
+      <div class="l-philosophy__contents">
+        <h3 class="c-ttl-3">enjoy</h3>
+        <p>本気で競い合い、自ら課題を見つける</p>
+        <h3 class="c-ttl-3">feel</h3>
+        <p>工夫する考えを身につけ、起こることを予測する</p>
+        <h3 class="c-ttl-3">create</h3>
+        <p>チャレンジしようとする姿勢を持ち、あきらめない</p>
+        <h3 class="c-ttl-3">technique</h3>
+        <p>プレッシャーの中でも思い通りにボールを扱う</p>
+      </div>
+    </div>
+  </div>
+</section>
+{# 指導理念 #}
+
+{# カテゴリー #}
+<section class="l-section">
+  <h2 class="c-ttl-2">Activity scenery<small>スクールの様子</small></h2>
+  <ul class="grid">
+    <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+    <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+    <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+    <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+    <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+    <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+  </ul>
+</section>
+{# カテゴリー #}
+
+{# cvArea #}
+{% include ('../../include/_cvArea.twig') %}
+{# cvArea #}
+{% endblock %}
+
+{# ページ個別　JS等 #}
+{% block jsArea %}
+{% endblock %}

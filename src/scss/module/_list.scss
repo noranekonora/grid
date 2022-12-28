@@ -1,0 +1,145 @@
+.c-list {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 30px;
+  line-height: 2;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  // 丸付き
+  &--disc {
+    & > .c-list__item {
+      position: relative;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%; //四角にしたい場合はこれをトル
+        background-color: $keyColor;
+        position: absolute;
+        top: .9em;
+        left: -1em;
+        // @media all and (-ms-high-contrast: none) {}
+      }
+    }
+  }
+  &--count {
+    counter-reset: count;
+    & > .c-list__item {
+      position: relative;
+      &:before{
+        counter-increment: count;
+        content:counter(count)'.';
+        position: absolute;
+        left: -1.1em;
+        color: $keyColor;
+      }
+      &:nth-child(n + 10) {
+        &:before {
+          left: -1.6em;
+        }
+      }
+    }
+    &--brackets{
+      counter-reset: count;
+      & > .c-list__item {
+        position: relative;
+        &:before{
+          counter-increment: count;
+          content:"("counter(count)")";
+          position: absolute;
+          left: -1.5em;
+          color: $keyColor;
+        }
+      }
+    }
+  }
+  &--comment {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    & > .c-list__item {
+      position: relative;
+      &:before{
+        content: '※';
+        display: inline-block;
+        position: absolute;
+        left: -1.5em;
+        @media all and (-ms-high-contrast: none) {
+          top: 0.1em;
+        }
+      }
+    }
+    // 番号付き注釈
+    &--num {
+      counter-reset: count;
+      & > .c-list__item {
+        position: relative;
+        padding-left: 0.5em;
+        &:before {
+          counter-increment: count;
+          content: '※'counter(count);
+          position: absolute;
+          left: -1.5em;
+          @media all and (-ms-high-contrast: none) {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  // チェック
+  &--check {
+    & > .c-list__item {
+      padding-left: 5px;
+      position: relative;
+      padding-bottom: 10px;
+      @include mq-max(sm) {
+        line-height: 1.5;
+      }
+      &:before {
+        @include fa('f058');
+        color: $keyColor;
+        position: absolute;
+        top: 2px;
+        left: -20px;
+        transition: right $transition;
+      }
+    }
+  }
+
+  //大き目のリスト
+  &--large {
+    & > .c-list__item {
+      position: relative;
+      font-size: 24px;
+      display: inline-block;
+      margin-right: 50px;
+      @include mq-max(content) {
+        margin-right: 0;
+        display: block;
+      }
+      @include mq-max(xs) {
+        font-size: 20px;
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%; //四角にしたい場合はこれをトル
+        background-color: $keyColor;
+        position: absolute;
+        top: .8em;
+        left: -1em;
+        @include mq-max(xs) {
+          top: .75em;
+        }
+      }
+    }
+  }
+}

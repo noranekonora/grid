@@ -1,0 +1,50 @@
+{% extends '../../../../../layout/_10_news.twig' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '5' %}
+
+{# ページタイトル設定 #}
+{% set pageTitle = '<?php the_title(); ?>' %}
+
+{# ページID設定 #}
+{% set pageId = 'single-news' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '<?php the_title(); ?>の記事です。' %}
+{% set wpogurl = '<?php the_permalink(); ?>' %}
+
+{# ページ個別 CSS等 #}
+{% block headArea %}
+<?php wp_head(); ?>
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/single.css">
+{% endblock %}
+
+{# コンテンツをここに記載(div#contents内) #}
+{% block contents %}
+
+<section class="l-section l-section--sm single_body">
+  <h2 class="c-ttl-2">
+    <span class="p-heading__head">
+      <small class="c-newslist__date"><?php the_time("Y/n/d"); ?></small>
+      <small class="c-label"><?php showTerms('news_category');?></small>
+    </span>
+    <span class="p-heading"><?php the_title(); ?></span>
+  </h2>
+  <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
+  <?php the_content(); ?>
+  <?php endwhile; endif; ?>
+  <div class="p-goTop">
+    <a href="{{ link.home}}" class="c-btn">ホームへ戻る</a>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{# ページ個別　JS等 #}
+{% block jsArea %}
+<?php wp_footer(); ?>
+{% endblock %}

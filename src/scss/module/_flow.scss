@@ -1,0 +1,213 @@
+//フロー
+
+.c-flow {
+  &__list {
+    counter-reset: flow;
+  }
+  &__item {
+    margin-bottom: 57px;
+    position: relative;
+    &:after {
+      @include fa('f0d7');
+      position: absolute;
+      bottom: -26px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 64px;
+      color: $keyColor;
+      line-height: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      &:after {
+        content: none;
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    border: 1px solid $gray;
+    position: relative;
+    @include mq-max(xs) {
+      flex-direction: column;
+    }
+    &:before {
+      content: '';
+      width: 14px;
+      height: calc(100% + 2px);
+      background-color: $keyColor;
+      position: absolute;
+      top: 50%;
+      left: -1px;
+      transform: translateY(-50%);
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: $keyColor;
+    text-align: center;
+    padding: 0px 20px 0px 30px;
+    margin: 0;
+    position: relative;
+    width: 250px;
+    @include mq-max(sm) {
+      width: 180px;
+      font-size: 20px;
+    }
+    @include mq-max(xs) {
+      width: 100%;
+      font-size: 22px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+    }
+    &:before {
+      content: counter(flow,decimal-leading-zero);
+      counter-increment: flow;
+      display: block;
+      font-size: 46px;
+      margin: 0 0 -10px;
+      @include mq-max(sm) {
+        font-size: 36px;
+        margin-bottom: -5px;
+      }
+      @include mq-max(xs) {
+        font-size: 46px;
+      }
+    }
+  }
+  &__desc {
+    padding: 41px 50px;
+    width: calc(100% - 250px);
+    position: relative;
+    @include mq-max(content) {
+      padding-right: 20px;
+    }
+    @include mq-max(sm) {
+      width: calc(100% - 180px);
+      padding: 50px 20px 50px 25px;
+    }
+    @include mq-max(xs) {
+      width: 100%;
+      padding: 30px 35px;
+    }
+    &:before {
+      content: '';
+      width: 1px;
+      height: 84%;
+      border-left: 1px dashed $gray;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @include mq-max(xs) {
+        border-left: none;
+        border-top: 1px dashed $gray;
+        width: 84%;
+        height: 1px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    p {
+      line-height: calc(26 / 16);
+      margin: 0;
+      .c-link {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.c-flow--leftline {
+  &__item {
+    background-color: $white;
+    padding: 25px 50px 25px 14px;
+    // border-radius: 10px;
+    margin-bottom: 50px;
+    border: 1px solid $bdrColor;
+    position: relative;
+    @include mq-max(xs) {
+      padding: 15px 20px 29px 29px;
+    }
+    &:before {
+      content: '';
+      width: 14px;
+      height: 100%;
+      display: inline-block;
+      background-color: $keyColor;
+      // border-radius: 10px 0 0 10px;
+      border: 1px solid $keyColor;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &:not(:last-child):after {
+      @include fa('f0dd');
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: $keyColor;
+      font-size: 66px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__detail {
+    display: flex;
+    @include mq-max(xs) {
+      display: block;
+    }
+    dt {
+      width: 250px;
+      font-size: 22px;
+      font-weight: 600;
+      color: $keyColor;
+      position: relative;
+      padding-top: 65px;
+      text-align: center;
+      @include mq-max(xs) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 46px;
+      }
+      &:after {
+        content: '';
+        width: 1px;
+        height: calc( 100% + 40px );
+        border-right: 1px dashed #C6C6C6;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        @include mq-max(xs) {
+          border-right: none;
+          border-bottom: 1px dashed #C6C6C6;
+          width: 100%;
+          height: 1px;
+          top: unset;
+          bottom: -10px;
+          left: 0;
+        }
+      }
+    }
+    dd {
+      width: calc( 100% - 250px );
+      padding-left: 40px;
+      line-height: 1.625;
+      @include mq-max(xs) {
+        width: 100%;
+        padding: 10px 10px 0 10px;
+      }
+    }
+  }
+}

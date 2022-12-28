@@ -1,0 +1,151 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+//必要モジュール読み込み
+@import "../module/heading";
+@import "../module/blockquote";
+@import "../module/list";
+
+#contents {
+  //必要なら以下に見出し系リセットCSSを書く
+  .c-ttl-2 {
+    padding-bottom: 15px;
+    margin-bottom: 70px;
+    border-bottom: 1px solid $gray;
+    @include mq-max(xs) {
+      margin-bottom: 40px;
+    }
+    .p-heading {
+      &__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+    }
+    .c-newslist__date {
+      display: inline-block;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    .c-label {
+      display: inline-block;
+      font-size: 12px;
+      padding: 1.5px 5px;
+    }
+  }
+
+  // TOPへ戻る
+  .p-goTop {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  //WP用の必要最低限CSS(この中のみ)
+  .single_body {
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    //見出し
+    h3 {
+      @extend .c-ttl-3;
+    }
+    h4 {}
+    h5 {}
+
+    //引用
+    blockquote {
+      @extend .c-blockquote;
+    }
+
+    //画像
+    figure {
+      img {
+        width: auto;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    //画像位置
+    .aligncenter {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .alignright {
+      float: right;
+      margin: 0 0 10px 10px;
+    }
+    .alignleft {
+      float: left;
+      margin: 0 10px 10px 0;
+    }
+
+    //文字色
+    p,
+    li,
+    th,
+    td {
+      color: $textColor;
+    }
+
+    //リスト
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5em;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      li {
+        &::marker {
+          color: $keyColor;
+        }
+      }
+      //ギャラリーなど
+      &[class*="block"] {
+        list-style-type: none;
+        padding: 0;
+      }
+    }
+
+    //数字つき
+    ol {
+      list-style-type: decimal;
+      padding-left: 1.5em;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      li {
+        &::marker {
+          color: $keyColor;
+        }
+      }
+    }
+
+    //テーブル（Gutenberg）
+    .wp-block-table {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      table {
+        border-collapse: collapse;
+        tr {
+          th,td {
+            border: 1px solid #000;
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+  }
+}

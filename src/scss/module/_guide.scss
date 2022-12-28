@@ -1,0 +1,25 @@
+//行動指針
+.l-guide {
+  &__list {
+    padding-left: 65px;
+    @include mq-max(xs) {
+      padding-left: 15px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    @include mq-max(xs) {
+      font-size: 20px;
+    }
+  }
+}

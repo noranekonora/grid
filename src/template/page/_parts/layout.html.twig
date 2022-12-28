@@ -1,0 +1,152 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+<!-- ページタイトル設定 -->
+{% set pageTitle = 'パーツ集　レイアウト' %}
+
+<!-- ページID設定 -->
+{% set pageId = 'parts' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '' %}
+{% set ogurlpath = '' %}
+{% set ogimagepath = '' %}
+
+<!-- ページ個別　CSS等 -->
+{% block headArea %}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/parts.css">
+{% endblock %}
+
+<!-- コンテンツをここに記載(div#main) -->
+{% block contents %}
+
+<div class="l-section anchorList">
+  <h2 class="u-taC">基本レイアウト</h2>
+  <ul class="parts_anchor">
+    {# 「data-anchor」を持つものがJSで自動的に書き出される #}
+  </ul>
+  {% include '../../include/parts/_parts-link.twig' %}
+</div>
+
+{# alternate #}
+<div id="alternate" class="l-section" data-anchor="互い違い">
+  <h3>互い違い(.l-alternate)</h3>
+  <div class="l-alternate">
+    {# .l-alternate__wrap #}
+    <div class="l-alternate__wrap">
+      <div class="grid">
+        <div class="col-6_xs-12">
+          <img src="http://placeholder.pics/svg/600x400" alt="">
+        </div>
+        <div class="col-6_xs-12">
+          <h3>ここに見出しが入ります。</h3>
+          <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+        </div>
+      </div>
+    </div>
+    {# l-alternate__wrap #}
+    {# l-alternate__wrap #}
+    <div class="l-alternate">
+      <div class="grid-reverse">
+        <div class="col-6_xs-12">
+          <img src="http://placeholder.pics/svg/600x400" alt="">
+        </div>
+        <div class="col-6_xs-12">
+          <h3>ここに見出しが入ります。</h3>
+          <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+        </div>
+      </div>
+    </div>
+    {# l-alternate__wrap #}
+  </div>
+</div>
+{# alternate #}
+
+{# timeline_hours #}
+<section id="undefined" class="l-section" data-anchor="タイムライン（時間）">
+  <h3>タイムライン（時間）</h3>
+  <div class="c-timeline__hours">
+    <dl class="c-timeline__task is-left">
+      <dt class="c-timeline__time"><span>9:00</span></dt>
+      <dd class="c-timeline__content">
+        <h3 class="c-timeline__name">始業　メール確認</h3>
+        <p>昨日までのやり取りの続きや、急ぎの業務などをこの時間を使って行います。</p>
+      </dd>
+    </dl>
+
+    <dl class="c-timeline__task is-left">
+      <dt class="c-timeline__time"><span>10:00</span></dt>
+      <dd class="c-timeline__content">
+        <h3 class="c-timeline__name">会議体資料作成</h3>
+        <p>次の会議は自分が発表する番。本番に向けしっかりとした下準備を心がけています。</p>
+      </dd>
+    </dl>
+
+    <dl class="c-timeline__task is-right">
+      <dt class="c-timeline__time"><span>12:00</span></dt>
+      <dd class="c-timeline__content">
+        <h3 class="c-timeline__name">昼休み</h3>
+        <p>次の会議は自分が発表する番。本番に向けしっかりとした下準備を心がけています。</p>
+      </dd>
+    </dl>
+
+    <dl class="c-timeline__task is-right">
+      <dt class="c-timeline__time"><span>13:00</span></dt>
+      <dd class="c-timeline__content">
+        <h3 class="c-timeline__name">部内ミーティング</h3>
+        <p>部内の共有事項、目標の認識合わせ。部内の結束が固まる時。</p>
+      </dd>
+    </dl>
+
+    <dl class="c-timeline__task is-right">
+      <dt class="c-timeline__time"><span>14:00</span></dt>
+      <dd class="c-timeline__content">
+        <h3 class="c-timeline__name">中長期課題に関する打ち合わせ</h3>
+        <p>5年、10年先の会社のあり方についての会議。熱が入ります。</p>
+      </dd>
+    </dl>
+
+    <dl class="c-timeline__task is-right">
+      <dt class="c-timeline__time"><span>15:00</span></dt>
+      <dd class="c-timeline__content">
+        <h3 class="c-timeline__name">予算計画と実績の乖離要因究明</h3>
+        <p>各部署から上がってきた数字をもとに実績と予算の開きを検証します。</p>
+      </dd>
+    </dl>
+
+    <dl class="c-timeline__task is-right">
+      <dt class="c-timeline__time"><span>18:30</span></dt>
+      <dd class="c-timeline__content">
+        <h3 class="c-timeline__name">退社</h3>
+        <p>共働きなので、仕事を早く終えられた日には、夕食の献立を考えながら帰ることもあります。</p>
+      </dd>
+    </dl>
+  </div>
+</section>
+{# timeline_hours #}
+
+{% endblock %}
+
+<!-- ページ個別　JS等 -->
+{% block jsArea %}
+<script>
+  $(function(){
+    var anchorList = [];
+    var anchorName = [];
+    $('[data-anchor]').each(function(){
+      anchorList.push($(this).attr('id'));
+      anchorName.push($(this).data('anchor'));
+    })
+
+    //アンカーリンク描画
+    for (var i=0; i < anchorList.length; i++) {
+      $('.anchorList .parts_anchor').append('<li><a href="#'+ anchorList[i] +'">' + anchorName[i] +'</a></li>');
+    }
+  });
+</script>
+{% endblock %}

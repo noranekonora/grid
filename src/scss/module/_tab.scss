@@ -1,0 +1,95 @@
+//タブ
+
+$bdr-width-tab: 2px;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+.c-tab {
+  overflow: hidden;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  //注意書き表示
+  &.add_attention {
+    &:before {
+      @include mq-max(md) {
+        content: 'スライドでタブを移動できます→';
+        display: block;
+        font-size: 12px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &__select {
+    display: flex;
+    align-items: baseline;
+    @include mq-max(md) {
+      overflow-x: scroll;
+    }
+  }
+
+  &__item {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    border: $bdr-width-tab solid $bdrColor;
+    border-left: none;
+    cursor: pointer;
+    flex: 0 1 auto; //IE10バグ対策
+    &:first-child {
+      border-left: $bdr-width-tab solid $bdrColor;
+    }
+    @include mq-max(md) {
+      min-width: calc(100% / 5);
+    }
+    @include mq-max(sm) {
+      min-width: calc(100% / 3);
+    }
+    @include mq-max(xs) {
+      min-width: 50%;
+    }
+    &>a {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 20px 15px;
+      display: block;
+      color: #000;
+      &:hover {
+        color: #000;
+      }
+    }
+
+    //現在地
+    &.is-active {
+      border-color: $keyColor;
+      border-right: none;
+      &:last-child {
+        border-right: $bdr-width-tab solid $keyColor;
+      }
+      &>a {
+        background-color: $keyColor;
+      }
+      &+.c-tab__item {
+        border-left: $bdr-width-tab solid $bdrColor;
+      }
+    }
+  }
+
+  &__body {
+    padding: 30px;
+  }
+
+  &__article {
+    display: none;
+    &.is-show {
+      display: block;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+}

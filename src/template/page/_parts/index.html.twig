@@ -1,0 +1,43 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+<!-- ページタイトル設定 -->
+{% set pageTitle = 'パーツ集 | HOME' %}
+
+<!-- ページID設定 -->
+{% set pageId = 'parts' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '' %}
+{% set ogurlpath = '' %}
+{% set ogimagepath = '' %}
+
+<!-- ページ個別　CSS等 -->
+{% block headArea %}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/parts.css">
+{% endblock %}
+
+<!-- コンテンツをここに記載(div#main) -->
+{% block contents %}
+
+<section class="l-section">
+  <h2 class="u-taC">PFWパーツリスト</h2>
+  <ul class="parts_list">
+    <li><a href="{{ link.parts}}/common.html">フォノグラム基本パーツ</a></li>
+    <li><a href="{{ link.parts}}/client.html">クライアント用パーツ</a></li>
+    <li><a href="{{ link.parts}}/layout.html">レイアウトサンプル</a></li>
+    <li><a href="{{ link.parts}}/twig_syntax.html">Twig構文</a></li>
+    <li><a href="{{ link.parts}}/test.php">PHPパーツテスト</a></li>
+  </ul>
+</section>
+
+{% endblock %}
+
+<!-- ページ個別　JS等 -->
+{% block jsArea %}
+{% endblock %}

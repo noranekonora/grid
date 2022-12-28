@@ -1,0 +1,87 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+{# ページタイトル設定 #}
+{% set pageTitle = 'サイトマップ' %}
+{% set subTitle = 'Sitemap' %}
+
+{# ページID設定 #}
+{% set pageId = 'sitemap' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '' %}
+{% set ogurlpath = '/sitemap/' %}
+{% set ogimagepath = '' %}
+
+{# ページ個別 CSS等 #}
+{% block headArea %}
+  {{parent()}}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/sitemap.css">
+{% endblock %}
+
+{# コンテンツをここに記載(div#contents内) #}
+{% block contents %}
+
+<div class="l-section p-sitemap">
+  <div class="grid">
+    <div class="col-6_xs-12 p-sitemap__block">
+      {# Left #}
+      <ul class="c-list c-list--large">
+        <li class="c-list__item">
+          <a href="{{ link.home}}">トップページ</a>
+        </li>
+        <li class="c-list__item">
+          <a href="/service/rental/">建設機器レンタル・リース</a>
+          <ul class="c-list c-list--disc">
+            <li class="c-list__item">
+              <a href="/service/rental/product/">取扱製品</a>
+            </li>
+            <li class="c-list__item">
+              <a href="/service/rental/area/">対応エリア・営業所一覧</a>
+            </li>
+            <li class="c-list__item">
+              <a href="/service/rental/flow/">ご利用までの流れ</a>
+            </li>
+          </ul>
+        </li>
+        <li class="c-list__item">
+          <a href="/service/sell/">建設機器販売買取</a>
+        </li>
+        <li class="c-list__item">
+          <a href="/service/maintenance/">建設機器修理</a>
+        </li>
+      </ul>
+      {# Left #}
+    </div>
+
+    <div class="col-6_xs-12 p-sitemap__block">
+      {# Right #}
+      <ul class="c-list c-list--large">
+        <li class="c-list__item">
+          <a href="{{ link.company}}">会社情報</a>
+        </li>
+        <li class="c-list__item">
+          <a href="{{ link.recruit}}">採用情報</a>
+        </li>
+        <!--　<li class="c-list__item">
+          <a href="/links/">リンク集</a>
+        </li>　-->
+        <li class="c-list__item">
+          <a href="/contact/">お問い合わせ</a>
+        </li>
+        <li class="c-list__item">
+          <a href="/privacy/">個人情報保護方針</a>
+        </li>
+      </ul>
+      {# Right #}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{# ページ個別　JS等 #}
+{% block jsArea %}
+{% endblock %}

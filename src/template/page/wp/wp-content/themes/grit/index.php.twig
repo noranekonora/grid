@@ -1,0 +1,146 @@
+{% extends '../../../../../layout/_00_base.twig' %}
+
+{#
+ページタイトル設定トップはいらない)
+#}
+{% set pageTitle = '' %}
+
+{# ページID設定 #}
+{% set pageId = 'top' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '' %}
+{% set ogurlpath = '/' %}
+{% set ogimagepath = '' %}
+
+{# ページ個別　CSS等 #}
+{% block headArea %}
+<?php wp_head(); ?>
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/util/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/util/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/top.css">
+{% endblock %}
+
+{# コンテンツをここに記載(div#main) #}
+{% block main %}
+
+{# Main Visual #}
+<div class="p-mainVisual">
+  <div class="p-mainVisual__news">
+    <a href="">
+      <dl class="p-mainVisual__newsInner">
+        <dt>
+          <span class="p-mainVisual__newsDate">2022.04.12</span>
+          <span class="p-mainVisual__newsLabel">school</span>
+        </dt>
+        <dd class="p-mainVisual__newsTitle">本日4/12(火)のスクールは通常通り行います。</dd>
+      </dl>
+    </a>
+  </div>
+  <div class="p-mainVisual__bg" style="background-image: url('{{ inc.image }}/top/bg_mainimg.jpg');">
+  </div>
+  <div class="p-mainVisual__catch">
+    <h2 class="p-mainVisual__catch-heading">
+      <span>It's all up to you!</span>
+      技術を、<br>
+      戦術が超える。
+    </h2>
+  </div>
+</div>
+{# Main Visual #}
+
+<div id="contents">
+  {# about #}
+  <div class="l-section p-about">
+    <p>広島市安芸区で活動する「広島グリットサッカークラブ」です。<br>
+      “grit” = ”やり抜く力” という言葉をコンセプトに子どもたちのやり抜く力”育て、伸ばしていくことで簡単に諦めず、自分の自信に繋がる力を身につけます。</p>
+    <div class="p-about__linkBox">
+      <a class="c-link" href="{{ link.about }}"><span>グリットについて</span></a>
+    </div>
+  </div>
+  {# about #}
+
+  {# school,Jr.youth #}
+  {# 2カラムレイアウト　画像端付き #}
+  <div class="l-col2 l-col2--side">
+    <div class="l-section l-section--full">
+      <div class="l-col2__block l-col2__block--reverse">
+        <div class="l-col2__img" style="background-image: url('{{ inc.image }}/top/pic_school.jpg');"></div>
+        <section class="l-col2__detail">
+          <h2 class="c-ttl-2">School</h2>
+          <p class="l-col2__catch">「楽しみながら、サッカーを続ける」</p>
+          <p class="l-col2__txt">
+            ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
+          </p>
+          <div class="l-col2__btn">
+            <a href="{{ link.school }}" class="c-link"><span>スクールについて</span></a>
+          </div>
+        </section>
+      </div>
+      <div class="l-col2__block">
+        <div class="l-col2__img" style="background-image: url('{{ inc.image }}/top/pic_youth.jpg');"></div>
+        <section class="l-col2__detail">
+          <h2 class="c-ttl-2">Jr.Youth</h2>
+          <p class="l-col2__catch">「サッカーを楽しみながら、高い技術を習得する」</p>
+          <p class="l-col2__txt">
+            ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
+          </p>
+          <div class="l-col2__btn">
+            <a href="{{ link.jr_youth }}" class="c-link"><span>ジュニアユースについて</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  {# 2カラムレイアウト　画像端付き #}
+  {# school,Jr.youth #}
+
+  {# News #}
+  {% include ('../../../../../include/_newsList.twig') %}
+  {# News #}
+
+  {# Instagram #}
+  <section class="l-section">
+    <h2 class="c-ttl-2">Instagram</h2>
+    <a href="" class="c-link"><span>インスタグラムを見る</span></a>
+  </section>
+  {# Instagram #}
+
+  {# cvArea #}
+  {% include ('../../../../../include/_cvArea.twig') %}
+  {# cvArea #}
+
+</div>
+
+
+{% endblock %}
+
+{# ページ個別　JS等 #}
+{% block jsArea %}
+<?php wp_footer(); ?>
+<script src="{{ inc.js}}/page/jquery.newsTicker.min.js"></script>
+<script src="{{ inc.js}}/page/slick/slick.min.js"></script>
+<script>
+
+    //スライダー
+    $('[data-js="slider"]').slick({
+      centerMode: true,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 1000,
+      fade: true,
+      slidesToShow: 1,
+      arrows: false,
+      centerPadding: 0,
+      pauseOnHover: false,
+    });
+  });
+</script>
+{% endblock %}

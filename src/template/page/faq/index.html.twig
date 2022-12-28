@@ -1,0 +1,78 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '4' %}
+
+{# ページタイトル設定 #}
+{% set pageTitle = 'faq' %}
+{% set subTitle = 'よくある質問' %}
+
+{# ページID設定 #}
+{% set pageId = 'faq' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '' %}
+{% set ogurlpath = '' %}
+{% set ogimagepath = '' %}
+
+{# ページ個別 CSS等 #}
+{% block headArea %}
+{{parent()}}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/faq.css">
+{% endblock %}
+
+{# コンテンツをここに記載(div#contents内) #}
+{% block contents %}
+
+<section class="l-section">
+  <h2 class="c-ttl-2">Faq<small>よくある質問<small></h2>
+  <dl class="c-accordion c-accordion--faq" data-js="accordion">
+    <dt class="c-accordion__title">サッカー経験がないのですが、入会できますか？</dt>
+    <dd class="c-accordion__body">未経験のかた男女問わずご入会いただけます。入会前に無料体験が2回参加できます。</dd>
+  </dl>
+  <dl class="c-accordion c-accordion--faq" data-js="accordion">
+    <dt class="c-accordion__title">何歳から体験・入会できますか？</dt>
+    <dd class="c-accordion__body">年中（5歳になる年）〜小学6年生までの男女です。</dd>
+  </dl>
+  <dl class="c-accordion c-accordion--faq" data-js="accordion">
+    <dt class="c-accordion__title">見学はできますか？</dt>
+    <dd class="c-accordion__body">いつでも見学可能です。お申込みも不要です。</dd>
+  </dl>
+  <dl class="c-accordion c-accordion--faq" data-js="accordion">
+    <dt class="c-accordion__title">体験はいつできますか？</dt>
+    <dl class="c-accordion c-accordion--faq" data-js="accordion">
+      <dd class="c-accordion__body">事前に申込みが必要となり2回まで参加可能です。お問合せフォームまたはお電話にてご連絡ください。</dd>
+    </dl>
+    <dl class="c-accordion c-accordion--faq" data-js="accordion">
+      <dt class="c-accordion__title">サッカーチームに所属しているのですが、体験・入会はできますか？</dt>
+      <dd class="c-accordion__body">できます。入会されても協会登録は致しませんので、所属チームとの二重登録のご心配はございません。</dd>
+    </dl>
+
+    <dt class="c-accordion__title"> 兄弟で入会した場合、割引はありますか？</dt>
+    <dd class="c-accordion__body">ございます。2人兄弟で入会の場合は月会費から1割引き。3人兄弟以上の場合は月会費から2割引きとなっています。</dd>
+  </dl>
+  <dl class="c-accordion c-accordion--faq" data-js="accordion">
+    <dt class="c-accordion__title"> 振替制度はありますか？</dt>
+    <dd class="c-accordion__body">.あります。<br>
+      当スクールが、雨やグラウンド状況等により開催が不可能と判断した場合のみ振替可能となります。<br>
+      振替参加に関しましては、該当されていない曜日または振替日にて消化してください。</dd>
+  </dl>
+  <dl class="c-accordion c-accordion--faq" data-js="accordion">
+    <dt class="c-accordion__title">休会の手続きを教えてください。</dt>
+    <dd class="c-accordion__body">休会希望日の前月、15日までに「休会届」のご提出またはメールでのご連絡が必要です。<br>
+      休会期間は最長で3カ月となります。なお、休会期間中の月会費は発生しません。<br>
+      （塾や旅行など私的理由での休会の受付は致しません。）</dd>
+
+  </dl>
+</section>
+{# cvArea #}
+{% include ('../../include/_cvArea.twig') %}
+{# cvArea #}
+{% endblock %}
+
+{# ページ個別　JS等 #}
+{% block jsArea %}
+{% endblock %}

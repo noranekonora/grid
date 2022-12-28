@@ -1,0 +1,134 @@
+//変数定義
+
+/*
+██████   █████  ███████ ███████
+██   ██ ██   ██ ██      ██
+██████  ███████ ███████ █████
+██   ██ ██   ██      ██ ██
+██████  ██   ██ ███████ ███████
+*/
+
+//----------------------------------------------------------------
+//    レイアウト設定
+//----------------------------------------------------------------
+$contentWidth    : 1280px;// 全体のコンテンツ幅
+$contentPadding  : 30px;//パディング:gridlexでも使用
+$sectionPadding  : 60px; //.l-sectionの上下padding
+$sectionInnerPadding : 30px; //.l-section__innerのpadding
+$tablet-break    : 768px;//タブレットでのブレイクポイント
+$mobile-break    : 568px;//モバイルでのブレイクポイント
+$padding-break   : 40px;//基本のコンテンツ余白
+$padding-content : ($padding-break / 2);//テーブルの上下などの余白指定
+
+//----------------------------------------------------------------
+//    header fixed設定
+//----------------------------------------------------------------
+$is-fixed        : true;
+$headerHeight    : 120px;
+$headerHeight-sp : 60px; //ここを変えたら、menu.jsの「headerHeight」の値も変えること！
+
+
+/*
+██████  ██████  ███████  █████  ██   ██ ██████   ██████  ██ ███    ██ ████████
+██   ██ ██   ██ ██      ██   ██ ██  ██  ██   ██ ██    ██ ██ ████   ██    ██
+██████  ██████  █████   ███████ █████   ██████  ██    ██ ██ ██ ██  ██    ██
+██   ██ ██   ██ ██      ██   ██ ██  ██  ██      ██    ██ ██ ██  ██ ██    ██
+██████  ██   ██ ███████ ██   ██ ██   ██ ██       ██████  ██ ██   ████    ██
+*/
+
+//全体をレスポンシブ非対応にする時は false
+$responsiveMode : true;
+
+
+// max-width(gridlexに合わせる)
+$breakpoint-max: (
+  'bp400': 'screen and (max-width: 400px)',
+  'xs': 'screen and (max-width: 568px)', //スマホ境界
+  'bp700': 'screen and (max-width: 700px)',//iPad Pro(10.5~11)　縦
+  'sm': 'screen and (max-width: 768px)', //タブレット境界
+  'iPadPro-v': 'screen and (max-width: 834px)',
+  'bp962': 'screen and (max-width: 962px)',
+  'md': 'screen and (max-width: 1024px)',
+  'content': 'screen and (max-width:'$contentWidth + $contentPadding')',
+  'bp1200': 'screen and (max-width: 1200px)',
+  'lg': 'screen and (max-width: 1280px)',
+  'bp1350': 'screen and (max-width: 1350px)'
+) !default;
+
+// min-width(gridlexに合わせる)
+$breakpoint-min: (
+  'xs': 'screen and (min-width: 568px)', //スマホ境界
+  'sm': 'screen and (min-width: 768px)', //タブレット境界
+  'iPadPro-v': 'screen and (min-width: 834px)', //iPad Pro(10.5~11)　縦
+  'md': 'screen and (min-width: 1024px)',
+  'content': 'screen and (min-width:'$contentWidth + $contentPadding')',
+  'lg': 'screen and (min-width: 1280px)',
+) !default;
+
+
+/*
+ ██████  ██████  ██       ██████  ██████
+██      ██    ██ ██      ██    ██ ██   ██
+██      ██    ██ ██      ██    ██ ██████
+██      ██    ██ ██      ██    ██ ██   ██
+ ██████  ██████  ███████  ██████  ██   ██
+*/
+
+$white           : #FFFFFF;
+$gray            : #CCCCCC;
+$black           : #000000;
+$gray-l          : lighten( $gray, 15%);
+$red             : #c82e2e;
+
+$keyColor        :#090B3B; //キーカラー
+$accentColor     : #FFD200; //アクセントカラー
+
+$lightGray       :#F7F7F7;
+$lightBlue       :#F0F5FF;
+
+$bdrColor        : #707070;
+
+/*
+████████ ███████ ██   ██ ████████
+   ██    ██       ██ ██     ██
+   ██    █████     ███      ██
+   ██    ██       ██ ██     ██
+   ██    ███████ ██   ██    ██
+*/
+
+$FontAwesome: 'Font Awesome 5 Free';
+
+$textColor: $white;
+$textColorLight: lighten($textColor,10);
+$textColorDark: darken($textColor,10);
+$lineHeight: 1.5; // 基本的な行間
+
+// サンセリフ・ゴシック体
+$sanserif: YakuHanJPs, 游ゴシック体, YuGothic-M, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// セリフ・明朝体
+$serif: "游明朝", "Yu Mincho", YuMincho, "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+// 見出し
+$futura:"Futura PT", sans-serif;
+
+//----------------------------
+//    コンテンツ
+//---------------------------
+$content-bg       : $keyColor;
+$font-size        : 190%;//全体のフォントサイズ
+$full-size   : 100%;//基本のコンテンツ余白
+$skew : -10deg;
+$box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+//-----------------------------
+//    装飾の定義
+//-----------------------------
+$border-radius   : 3px;//全体の角丸サイズ
+$transition: .2s ease;
+$box-shadow: 0px 0px 8px rgba(0,0,0,0.16);
+
+//----------------------------------------------------------------
+//    ボタンの定義
+//----------------------------------------------------------------
+$btn-width       : 350px;//PCサイトアクションボタンの大きさ
+$border-btn          : none;//テーブルのボーダーカラー
+$border-btn-width   : 0px;//テーブルのボーダーサイズ
+$border-txt-color   : $white;//テーブルのボーダーサイズ

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-185921389-1"></script>
+  <script> window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-185921389-1');
+    </script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>Twig Syntax｜grit</title>
+  <script src="/inc/js/page/viewport-extra.min.js"></script>
+  <script>new ViewportExtra(375);</script>
+  <link rel="icon" href="/inc/image/favicon.ico" type="image/x-icon">
+  <meta name="description" content="gritの「Twig Syntax」についてのページです。">
+  <meta property="og:site_name" content="grit" />
+  <meta property="og:title" content="Twig Syntax｜grit" />
+  <meta property="og:description" content="gritの「Twig Syntax」についてのページです。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="">
+  <meta property="og:image" content="/inc/image/common/img_ogp.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="/inc/image/common/img_ogp.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap&subset=japanese" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/inc/css/style.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/agate.min.css">
+  <link rel="stylesheet" type="text/css" href="/inc/css/page/parts.css">
+</head>
+
+<body id="parts">
+  <div id="container">
+    <header class="l-header">
+      <div class="l-header__inner">
+        <div class="l-header__modules">
+          <a href="/" class="logo"><img src="/inc/image/common/img_logo.svg" alt="grit"></a>
+          <div class="c-toggleBtn" id="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <nav class="l-navigation" id="gnavi">
+          <ul class="l-navigation__inner">
+            <li class="l-navigation__item">
+              <a href="/about/"><span class="l-navigation__ja">グリットについて</span>ABOUT US</a>
+            </li>
+            <li class="l-navigation__item">
+              <a href="/school/"><span class="l-navigation__ja">スクール</span>SCHOOL</a>
+            </li>
+            <li class="l-navigation__item">
+              <a href="/jr-youth/"><span class="l-navigation__ja">ジュニアユース</span>Jr.YOUTH</a>
+            </li>
+            <li class="l-navigation__item">
+              <a href="/faq/"><span class="l-navigation__ja">よくある質問</span>FAQ</a>
+            </li>
+            <li class="l-navigation__item">
+              <a href="/news/"><span class="l-navigation__ja">お知らせ</span>NEWS</a>
+            </li>
+            <li class="l-nav">
+              <ul class="l-nav__btns">
+                <li class="l-nav__item l-nav__item">
+                  <a href="/contact/"><span></span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="l-filter"></div>
+    </header>
+    <!-- /header -->
+    <div id="main">
+      <div class="l-lowerCaption">
+        <div class="l-lowerCaption__inner">
+          <div class="l-lowerCaption__titleBox">
+            <h1 class="l-lowerCaption__title">
+              <small>Twig Syntax</small>
+            </h1>
+          </div>
+          <ul class="c-topicspath">
+            <li><a href="/">HOME</a></li>
+            <li>Twig Syntax</li>
+          </ul>
+        </div>
+      </div>
+      <div id="contents" class="l-lower">
+        <div class="l-section">
+          <h2 class="u-taC">Twig構文</h2>
+          <ul class="parts_anchor">
+            <li><a href="#extend">継承</a></li>
+            <li><a href="#include">インクルード</a></li>
+            <li><a href="#comment">コメントアウト</a></li>
+            <li><a href="#variable">変数</a></li>
+            <li><a href="#if">条件式</a></li>
+            <li><a href="#currentNavi">currentクラス付きnavi</a></li>
+          </ul>
+          <ul class="parts_link">
+            <li><a href="/_parts/common.html">基本パーツ集</a></li>
+            <li><a href="/_parts/layout.html">レイアウトサンプル</a></li>
+            <li><a href="/_parts/client.html">クライアント用パーツ</a></li>
+            <li><a href="/_parts/twig_syntax.html">Twig構文</a></li>
+            <li><a href="/_parts/product-list.html">製品一覧テンプレ</a></li>
+          </ul>
+        </div>
+        <section id="extend" class="l-section">
+          <h2>継承</h2>
+          <pre><code class="twig hljs">{% extends '相対パス' %}</code></pre>
+        </section>
+        <section id="include" class="l-section">
+          <h2>インクルード</h2>
+          <pre><code class="twig hljs">{% include '相対パス' %}</code></pre>
+        </section>
+        <section id="comment" class="l-section">
+          <h2>コメントアウト</h2>
+          <pre><code class="twig hljs">{# ここにコメントを書く#}</code></pre>
+        </section>
+        <section id="variable" class="l-section">
+          <h2>変数</h2>
+          <section class="l-section">
+            <h3>変数表記</h3>
+            <pre><code class="twig hljs">{{ 変数名 }}</code></pre>
+          </section>
+          <section class="l-section">
+            <h3>変数定義</h3>
+            <pre><code class="twig hljs">{% set 変数名 = 'value' %}</code></pre>
+            <ul class="comment">
+              <li>配列の場合は<br>{% set array = [ A, B ] %}</li>
+              <li>連想配列は<br>{% set array = [ key : value ] %}</li>
+            </ul>
+          </section>
+        </section>
+        <section id="if" class="l-section">
+          <h2>条件式</h2>
+          <pre><code class="twig hljs">{% if 条件式 %}
+  処理
+{% endif %}
+</code></pre>
+          <p>else文、elseif文、複数条件の場合はandやorも使用可能</p>
+          <pre><code class="twig hljs">{% if 条件式A and 条件式B %}
+  処理
+{% elseif 条件式 %}
+  処理
+{% else %}
+  処理
+{% endif %}
+</code></pre>
+        </section>
+        <section id="currentNavi" class="l-section">
+          <h2>currentクラス付きnavi</h2>
+          <pre><code class="twig hljs">&lt;nav id=&quot;ナビ名&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;1&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;2&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;3&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;4&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;5&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー5&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+          <ul class="comment">
+            <li>「currentID」は任意の名前に変更OK</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <!-- end of #main -->
+    <footer class="l-f l-f--lineTop">
+      <div class="l-f__inner">
+        <a href="/" class="pageTop" data-js="pagetop"></a>
+        <p class="l-f__companyName">一般社団法人 広島グリットサッカークラブ</p>
+        <small class="l-f__copyright">&copy; 2022 Hirosima grit soccer club.</small>
+      </div>
+    </footer>
+    <!-- /footer -->
+  </div>
+  <!-- end of #container -->
+  <script src="/inc/js/common.min.js"></script>
+  <script src="/inc/js/page/jquery.matchHeight.min.js"></script>
+  <!--[if lt IE 9]><script src="/inc/js/old-ie.min.js"></script><![endif]-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

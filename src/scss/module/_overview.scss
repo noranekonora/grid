@@ -1,0 +1,18 @@
+  //会社概要
+.l-overview {
+  &__img {
+    margin-bottom: 50px;
+    &>img {
+      max-width: 100%;
+    }
+  }
+  &__tbl {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .label{
+      display: inline-block;
+      width: 50px;
+    }
+  }
+}

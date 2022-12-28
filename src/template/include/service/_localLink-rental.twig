@@ -1,0 +1,54 @@
+{# レンタル以下のローカルリンク #}
+<div class="l-section--lightBlue l-section--lowPadding p-localLink">
+  <div class="l-section">
+    <div class="c-card01">
+      <ul class="grid c-card01__list">
+        {% if pageId != 'service-product' %}
+
+        <li class="col-6_xs-12 c-card01__item c-card01__item--product">
+          <a href="/service/rental/product/">
+            <div class="c-card01__inner">
+              <div class="c-card01__thumb"></div>
+              <div class="c-card01__body">
+                <h3 class="c-card01__title" data-js="js-matchHeight">取扱製品</h3>
+                <p class="c-link c-link--arrow">詳しく知る</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        {% endif %}
+        {% if pageId != 'service-area' %}
+
+        <li class="col-6_xs-12 c-card01__item c-card01__item--area">
+          <a href="/service/rental/area/">
+            <div class="c-card01__inner">
+              <div class="c-card01__thumb"></div>
+              <div class="c-card01__body">
+                <h3 class="c-card01__title" data-js="js-matchHeight">対応エリア・営業所一覧</h3>
+                <p class="c-link c-link--arrow">詳しく知る</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        {% endif %}
+        {% if pageId != 'service-flow' %}
+
+        <li class="col-6_xs-12 c-card01__item c-card01__item--flow">
+          <a href="/service/rental/flow/">
+            <div class="c-card01__inner">
+              <div class="c-card01__thumb"></div>
+              <div class="c-card01__body">
+                <h3 class="c-card01__title" data-js="js-matchHeight">ご利用までの流れ</h3>
+                <p class="c-link c-link--arrow">詳しく知る</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>

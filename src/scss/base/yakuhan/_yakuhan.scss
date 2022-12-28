@@ -1,0 +1,47 @@
+//YakuHanJP : ゴシック体（約物全部入り）
+//約物全部を詰める場合はこちらを使用してください（_variables.scssを編集）
+
+$yakuhanJP-font-path: "/inc/font/YakuHanJP";
+
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$yakuhanJP-font-path}/YakuHanJP-Regular.eot');
+  src: url("#{$yakuhanJP-font-path}/YakuHanJP-Regular.woff2") format("woff2"),
+    url("#{$yakuhanJP-font-path}/YakuHanJP-Regular.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: bold;
+  font-weight: bold;
+  src: url('#{$yakuhanJP-font-path}/YakuHanJP-Bold.eot');
+  src: url("#{$yakuhanJP-font-path}/YakuHanJP-Bold.woff2") format("woff2"),
+    url("#{$yakuhanJP-font-path}/YakuHanJP-Bold.woff") format("woff");
+}
+
+//YakuHanJPs  : ゴシック体（カッコのみ）
+//基本はこちらをセットしています。
+
+$yakuhanJPs-font-path: "/inc/font/YakuHanJPs";
+
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$yakuhanJPs-font-path}/YakuHanJPs-Regular.eot');
+  src: url("#{$yakuhanJPs-font-path}/YakuHanJPs-Regular.woff2") format("woff2"),
+    url("#{$yakuhanJPs-font-path}/YakuHanJPs-Regular.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "YakuHanJPs";
+  font-style: bold;
+  font-weight: bold;
+  src: url('#{$yakuhanJPs-font-path}/YakuHanJPs-Bold.eot');
+  src: url("#{$yakuhanJPs-font-path}/YakuHanJPs-Bold.woff2") format("woff2"),
+    url("#{$yakuhanJPs-font-path}/YakuHanJPs-Bold.woff") format("woff");
+}

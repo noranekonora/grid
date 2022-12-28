@@ -1,0 +1,120 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+//共通
+#archive-recruit,
+#single-recruit {
+  .l-lowerCaption {
+    margin-bottom: -80px;
+    @include mq-max(sm) {
+      margin-bottom: -30px;
+    }
+  }
+  .c-topicspath {
+    bottom: 110px;
+    @include mq-max(sm) {
+      bottom: 75px;
+    }
+    @include mq-max(xs) {
+      bottom: 42px;
+    }
+  }
+
+  .p-mainImg {
+    padding-top: 0;
+    position: relative;
+    z-index: 2;
+    img {
+      display: block;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    &__body {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+//採用一覧
+#archive-recruit {
+  #contents {
+    padding: 0;
+  }
+
+  .p-job {
+    &__head {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      @include mq-max(md) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .c-ttl-2 {
+        margin: 0 60px 0 0;
+        @include mq-max(md) {
+          margin: 0 0 10px;
+        }
+      }
+    }
+  }
+}
+
+
+//採用詳細
+#single-recruit {
+  &.pfwform-system-confirm {
+    #contents {
+      padding-top: 60px;
+    }
+  }
+  #contents {
+    padding-top: 0;
+  }
+
+  .p-mainImg__body {
+    max-width: 800px;
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .p-form {
+    //パーツ調整
+    .c-step {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      &__title,
+      &__list {
+        width: 100%;
+      }
+      &__title {
+        margin-bottom: 10px;
+      }
+      &__list {
+        justify-content: center;
+      }
+    }
+
+    .c-tbl__block {
+      .c-tbl__head {}
+      tbody {
+        tr {
+          th {
+            padding-left: 20px;
+          }
+          td {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+}

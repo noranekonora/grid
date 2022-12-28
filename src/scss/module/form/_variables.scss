@@ -1,0 +1,20 @@
+//変数定義
+
+//----------------------------------------------------------------
+//    フォームの定義
+//----------------------------------------------------------------
+$padding-parts   : 4px 10px;//input等のform用パーツの余白指定
+$border-parts    : $gray;//inputなどのフォーム用パーツのボーダーカラー
+$border-table    : $gray;//テーブルのボーダーカラー
+$border-table-style    : solid;//solid,none,dotted //テーブルのボーダースタイル
+$bg-th           : $gray-l;
+$txt-th          : $black;
+$bg-must         : $red;     //必須アイコンの色
+$bg-optional     : $black;     //任意アイコンの色
+$form-transition : .3s;
+$exampleTxt      : #777;
+
+// -------   errorの定義  --------
+$bg-error       : lighten( $red, 40% );//エラーメッセージの
+$txt-error      : $red;//エラーメッセージのテキストカラー
+$border-error   : 2px solid $red;//エラーメッセージのテキストカラー

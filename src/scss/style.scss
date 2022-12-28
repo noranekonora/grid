@@ -1,0 +1,19 @@
+// サイト全体 共通SCSS
+
+//ユーティリティ群
+@import "util/all";
+
+//ベース読込
+@import "base/ress"; // 初期化CSS
+@import "base/base"; // 共通部分
+@import "base/gridlex/gridlex"; //グリッド用
+@import "base/layout"; // レイアウト
+@import "base/fontawesome/fontawesome"; //アイコンフォント
+@import "base/fontawesome/brands";
+@import "base/fontawesome/regular";
+@import "base/fontawesome/solid";
+@import "base/fontawesome/v4-shims";
+@import "base/yakuhan/yakuhan"; //約半フォント
+
+//module群
+@import "module/all";

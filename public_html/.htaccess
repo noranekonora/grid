@@ -1,0 +1,14 @@
+
+# 404リダイレクト
+ErrorDocument 404 /_404.html
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+
+# END WordPress
+
+# WP 読み込み設定
+# AddHandler fcgid-script .php .phps .html
+# AddHandler php7-script .html

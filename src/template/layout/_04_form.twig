@@ -1,0 +1,29 @@
+{#
+フォーム用テンプレート
+#}
+
+{% extends './_01_lower.twig' %}
+
+{# 下層カテゴリ共通 パンくず設定 #}
+{% set lowCat = lowCat | default({}) | merge({
+  'catlayer2':{'name':'お問い合わせ','url':'/contact/'}
+}) %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '1' %}
+
+{# 下層カテゴリ共通 CSS等 #}
+{% block headArea %}
+{{parent()}}
+{# 例：<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/company/company.css"> #}
+{% endblock %}
+
+{# 下層カテゴリ内共通 JS等 #}
+{% block jsArea %}
+{{parent()}}
+{# 例：<script type="text/javascript" src="{{ inc.js}}/page/company.js"></script> #}
+{% endblock %}
+
+{# ローカルナビを使う場合等 #}
+{% block localNavi %}
+{% endblock %}

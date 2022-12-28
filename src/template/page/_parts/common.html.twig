@@ -1,0 +1,443 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+<!-- ページタイトル設定 -->
+{% set pageTitle = '基本パーツ' %}
+{% set subTitle = 'pfw parts' %}
+
+<!-- ページID設定 -->
+{% set pageId = 'parts' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = 'pfwからの基本パーツ' %}
+{% set ogurlpath = '' %}
+{% set ogimagepath = '' %}
+
+<!-- ページ個別　CSS等 -->
+{% block headArea %}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/agate.min.css">
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/parts.css">
+{% endblock %}
+
+<!-- コンテンツをここに記載(div#main) -->
+{% block contents %}
+<div class="l-section anchorList">
+  <ul class="c-anchor">
+    {# 「data-anchor」を持つものがJSで自動的に書き出される #}
+  </ul>
+</div>
+
+{# セクション #}
+<section id="section"  class="l-section" data-anchor="セクション">
+  <h2 class="c-ttl-2">セクション</h2>
+  <h3>.l-section(通常ブロック)</h3>
+  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+</section>
+
+<section class="l-section">
+  <h3>.l-section(通常ブロック) &gt; .l-section__inner</h3>
+  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  <div class="l-section__inner">
+    <p>l-section__inner 1つ目。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+  <div class="l-section__inner">
+    <p>l-section__inner 2つ目。.l-section__inner:last-child　にはmargin-bottom はつかない。<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+</section>
+
+<section class="l-section">
+  <h3>.l-sectionの横幅調整</h3>
+  <p>「.l-section」or 「.l-section__inner」に追加することで横幅を調節できる。</p>
+  <div class="l-section__inner l-section--md">
+    <p><strong>l-section__inner l-section--md max-width: 990px</strong>
+    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+  <div class="l-section__inner l-section--sm">
+    <p><strong>l-section__inner l-section--sm max-width: 800px</strong>
+    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+  <div class="l-section__inner l-section--xs">
+    <p><strong>l-section__inner l-section--xs max-width: 600px</strong>
+    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+</section>
+{# セクション #}
+
+
+
+{# text-align #}
+<section id="text-align" class="l-section" data-anchor="text-align">
+  <h2 class="c-ttl-2">text-align</h2>
+  <table class="c-tbl c-tbl__block">
+    <tbody>
+      <tr>
+        <th>.u-taL</th>
+        <td>
+          <p class="u-taL">テキストテキストテキストテキストテキストテキスト</p>
+        </td>
+      </tr>
+      <tr>
+        <th>.u-taC</th>
+        <td>
+          <p class="u-taC">テキストテキストテキストテキストテキストテキスト</p>
+        </td>
+      </tr>
+      <tr>
+        <th>.u-taR</th>
+        <td>
+          <p class="u-taR">テキストテキストテキストテキストテキストテキスト</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+{# text-align #}
+
+
+{# only系 #}
+<section id="only" class="l-section" data-anchor="only系">
+  <h2 class="c-ttl-2">only系</h2>
+  <table class="c-tbl c-tbl__block">
+    <tr>
+      <th>.u-only-xs</th>
+      <td>
+        <p class="u-only-xs">xsの時のみ表示</p>
+      </td>
+    </tr>
+    <tr>
+      <th>.u-only-sm</th>
+      <td>
+        <p class="u-only-sm">smの時のみ表示</p>
+      </td>
+    </tr>
+    <tr>
+      <th>.u-only-md</th>
+      <td>
+        <p class="u-only-md">mdの時のみ表示</p>
+      </td>
+    </tr>
+    <tr>
+      <th>.u-only-lg</th>
+      <td>
+        <p class="u-only-lg">lgの時のみ表示</p>
+      </td>
+    </tr>
+  </table>
+</section>
+{# only系 #}
+
+
+{# 内幅 #}
+
+{# 内幅 #}
+
+{# media query #}
+<section id="mq" class="l-section" data-anchor="media query">
+  <h3 class="c-ttl-2">media query</h3>
+  <table class="c-tbl c-tbl__block">
+    <tr>
+      <th>mq-max</th>
+      <td>
+        <div style="margin-bottom: 20px;">
+        【mixin】<br>
+        <pre><code class="hljs scss">@include mq-max(xs) {}</code></pre>
+        </div>
+        <div>【CSSに変換後】<br>@media screen and (max-width: 568px) {}</div>
+      </td>
+    </tr>
+    <tr>
+      <th>mq-min</th>
+      <td>
+        <div style="margin-bottom: 20px;">【mixin】<br>
+          <pre><code class="hljs scss">@include mq-min(xs) {}</code></pre>
+        </div>
+        <div>【CSSに変換後】<br>@media screen and (min-width: 568px) {}</div>
+      </td>
+    </tr>
+  </table>
+</section>
+{# media query #}
+
+
+
+
+{# hover action #}
+<section id="hover" class="l-section" data-anchor="hover">
+  <h3>hoverアクション</h3>
+  <section class="l-section__inner">
+    <h4>.u-hover__shadow</h4>
+    <div class="grid">
+      <div class="col-6_xs-12">
+        <p class="u-hover__shadow" style="width:100%;background-color:#ccc;text-align:center;padding:40px 0;">ホバーしてみ</p>
+      </div>
+      <div class="col-6_xs-12">
+        <p class="u-hover__shadow" style="width:100%;background-color:#ccc;text-align:center;padding:40px 0;">ホバーしてみ</p>
+      </div>
+    </div>
+  </section>
+  <section class="l-section__inner">
+    <h4>.u-hover__underline (aタグの中にspanタグが必要)</h4>
+    <ul style="display:flex;">
+      <li style="margin-right:20px"><a href="#" class="u-hover__underline"><span>リンク1</span></a></li>
+      <li style="margin-right:20px"><a href="#" class="u-hover__underline"><span>リンク2</span></a></li>
+      <li><a href="#" class="u-hover__underline"><span>あいうえお</span></a></li>
+    </ul>
+  </section>
+</section>
+{# hover action #}
+
+
+{# a tag #}
+<section id="a_tag" class="l-section" data-anchor="aタグ">
+  <h3>aタグ</h3>
+  <ul class="c-list c-list--disc">
+    <li class="c-list__item"><a href="" target="_blank" rel="noopener">target="_blank"</a></li>
+    <li class="c-list__item"><a href="test.pdf" target="_blank">PDF</a></li>
+    <li class="c-list__item"><span class="u-tel" data-js="tel">000-0000-0000</span></li>
+  </ul>
+  <ul class="c-list c-list--comment">
+    <li class="c-list__item"><p style="margin-bottom:10px;">【電話番号】「data-js="tel"」をつける。スマホ時にgaタグ付きのaタグに書き換えられる。</p>
+      <pre class="hljs html"><code>&lt;span data-js=&quot;tel&quot;&gt;000-0000-0000&lt;/span&gt;</code></pre>
+    </li>
+    <li class="c-list__item">
+      GAタグが自答的につくようになっている。一つ一つ違うラベルを張りたい場合は、以下のJSに書き換え、一つずつaタグに記入する。
+      <section>
+        <h4 style="margin:0;">JS</h4>
+<pre><code class="hljs javascript">var isMobile = navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/);
+
+if (!isMobile) {
+  $('a[href^="tel:"]').on('click', function(e) {
+    e.preventDefault();
+  });
+}</code></pre>
+      </section>
+      <section>
+        <h4 style="margin:0;">SCSS</h4>
+<pre><code class="scss hljs">a[href^="tel:"] { cursor: default; }</code></pre>
+      </section>
+    </li>
+  </ul>
+</section>
+{# a tag #}
+
+
+{# ボタン #}
+<section id="button" class="l-section" data-anchor="ボタン">
+  <h3>ボタン(.c-btn)</h3>
+  <ul>
+    <li style="margin-bottom:10px;"><a href="" class="c-btn">ボタン</a></li>
+    <li style="margin-bottom:10px;"><a href="sample.pdf" class="c-btn">PDF</a></li>
+    <li style="margin-bottom:10px;"><a href="" target="_blank" class="c-btn">外部サイト</a></li>
+    <li><a href="" class="c-btn c-btn__small">小さいボタン(.c-btn.c-btn__small)</a></li>
+  </ul>
+</section>
+{# ボタン #}
+
+
+{# table #}
+<section id="table" class="l-section" data-anchor="テーブル">
+  <h3>テーブル</h3>
+  <h4>■デフォルト(.c-tbl.c-tbl_block)</h4>
+  <table class="c-tbl c-tbl__block">
+    <tbody>
+      <tr>
+        <th>会社名</th>
+        <td>株式会社フォノグラム</td>
+      </tr>
+      <tr>
+        <th>代表取締役</th>
+        <td>フォノグラム太郎</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>■商品比較(.c-tbl.c-tbl__compare)</h4>
+  <table class="c-tbl c-tbl__compare">
+    <thead>
+      <tr>
+        <th class="p_name">商品名</th>
+        <th class="p_content">商品内容</th>
+        <th class="deposit_term">お預け入れ期間</th>
+        <th class="deposit_price">お預け入れ金額</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>総合口座</th>
+        <td data-tblName="商品内容">
+          <span>1冊の通帳に普通預金と定期預金をセット。<br>
+            定期預金をセットすることで、定期預金の90%以内、最高200万円まで自動的にご融資が受けられます。
+            普通預金を無利息型とした場合、普通預金は決済用預金となります。(定期預金は決済用預金ではありません。)</span>
+        </td>
+        <td data-tblName="お預け入れ期間"><span>いつでも出し入れ自由</span></td>
+        <td data-tblName="お預け入れ金額"><span>1円以上</span></td>
+      </tr>
+      <tr>
+        <th>普通預金</th>
+        <td data-tblName="商品内容">
+          <span>いつでも自由に出し入れができる預金です。<br>
+            キャッシュカードによる払い出しや振込、給与・年金などの自動受取、公共料金などの自動支払など日常のお財布代わりにご利用ください。無利息型の場合は決済用預金となります</span>
+        </td>
+        <td data-tblName="お預け入れ期間"><span>いつでも出し入れ自由</span></td>
+        <td data-tblName="お預け入れ金額"><span>1円以上</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>■スクロール型(テーブルを.c-tbl_scrollで囲う)</h4>
+  <div class="c-tbl__scroll">
+    <table class="c-tbl">
+      <thead>
+        <tr>
+          <th>項目1</th>
+          <th>項目2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>内容が入ります。</td>
+          <td>内容が入ります。</td>
+        </tr>
+        <tr>
+          <td>内容が入ります。</td>
+          <td>内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+{# table #}
+
+
+{# accordion #}
+<section id="accordion" class="l-section" data-anchor="アコーディオン">
+  <h3>アコーディオン</h3>
+<pre class="hljs html"><code>{% raw %}
+&lt;dl class=&quot;c-accordion&quot; data-js=&quot;accordion&quot;&gt;
+  &lt;dt class=&quot;c-accordion__title&quot;&gt;アコーディオンタイトル&lt;/dt&gt;
+  &lt;dd class=&quot;c-accordion__body&quot;&gt;テキストが入ります。&lt;/dd&gt;
+&lt;/dl&gt;{% endraw %}</code></pre>
+
+  <h4>■デフォルト(.c-accordion)</h4>
+  <dl class="c-accordion" data-js="accordion">
+    <dt class="c-accordion__title">アコーディオンタイトル</dt>
+    <dd class="c-accordion__body">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+    <dt class="c-accordion__title">アコーディオンタイトル</dt>
+    <dd class="c-accordion__body">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+    <dt class="c-accordion__title">アコーディオンタイトル</dt>
+    <dd class="c-accordion__body">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+  </dl>
+
+  <h4>■QA Ver(.c-accordion.c-accordion--faq)</h4>
+  <dl class="c-accordion c-accordion--faq" data-js="accordion">
+    <dt class="c-accordion__title">アコーディオンタイトル</dt>
+    <dd class="c-accordion__body">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+    <dt class="c-accordion__title">アコーディオンタイトル</dt>
+    <dd class="c-accordion__body">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+    <dt class="c-accordion__title">アコーディオンタイトル</dt>
+    <dd class="c-accordion__body">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+  </dl>
+</section>
+{# accordion #}
+
+
+{# tab #}
+<section id="tab" class="l-section" data-anchor="タブ">
+  <h3>タブ(.c-tab)</h3>
+  <pre class="hljs html"><code>{% raw %}
+&lt;div class=&quot;c-tab&quot; data-js=&quot;tab&quot;&gt;
+  &lt;ul class=&quot;c-tab__select&quot;&gt;
+    &lt;li class=&quot;c-tab__item is-active&quot;&gt;&lt;a href=&quot;#tab_menu01&quot;&gt;Menu01&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;c-tab__item&quot;&gt;&lt;a href=&quot;#tab_menu02&quot;&gt;Menu02&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;c-tab__item&quot;&gt;&lt;a href=&quot;#tab_menu03&quot;&gt;Menu03&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;c-tab__body&quot;&gt;
+    &lt;div id=&quot;tab_menu01&quot; class=&quot;c-tab__article is-show&quot;&gt;
+      &lt;p&gt;Menu01の内容。&lt;br&gt;サンプルテキストです。&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab_menu02&quot; class=&quot;c-tab__article&quot;&gt;
+      &lt;p&gt;Menu02の内容。&lt;br&gt;サンプルテキストです。&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tab_menu03&quot; class=&quot;c-tab__article&quot;&gt;
+      &lt;p&gt;Menu03の内容。&lt;br&gt;サンプルテキストです。&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;{% endraw %}</code></pre>
+  <ul class="c-list c-list--comment">
+    <li class="c-list__item">.c-tab__itemにはmd以降にmin-widthを設定。タブの数が多い場合は横にスクロールするようにしています。</li>
+  </ul>
+
+  <div class="c-tab" data-js="tab">
+    <ul class="c-tab__select">
+      <li class="c-tab__item is-active"><a href="#tab_menu01">Menu01</a></li>
+      <li class="c-tab__item"><a href="#tab_menu02">Menu02</a></li>
+      <li class="c-tab__item"><a href="#tab_menu03">Menu03</a></li>
+    </ul>
+    <div class="c-tab__body">
+      {# tab_article #}
+      <div id="tab_menu01" class="c-tab__article is-show">
+        <p>Menu01の内容。<br>サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。</p>
+      </div>
+      {# tab_article #}
+      {# tab_article #}
+      <div id="tab_menu02" class="c-tab__article">
+        <p>Menu02の内容。<br>サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。</p>
+      </div>
+      {# tab_article #}
+      {# tab_article #}
+      <div id="tab_menu03" class="c-tab__article">
+        <p>Menu03の内容。<br>サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。</p>
+      </div>
+      {# tab_article #}
+    </div>
+  </div>
+
+  <div class="c-tab" data-js="tab">
+    <ul class="c-tab__select">
+      <li class="c-tab__item is-active"><a href="#tab_menu04">Menu04</a></li>
+      <li class="c-tab__item"><a href="#tab_menu05">Menu05</a></li>
+    </ul>
+    <div class="c-tab__body">
+      {# tab_article #}
+      <div id="tab_menu04" class="c-tab__article is-show">
+        <p>Menu01の内容。<br>サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。</p>
+      </div>
+      {# tab_article #}
+      {# tab_article #}
+      <div id="tab_menu05" class="c-tab__article">
+        <p>Menu02の内容。<br>サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。サンプルテキストです。</p>
+      </div>
+      {# tab_article #}
+    </div>
+  </div>
+</section>
+{# tab #}
+
+
+{% endblock %}
+
+<!-- ページ個別　JS等 -->
+{% block jsArea %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+$(function(){
+  var anchorList = [];
+  var anchorName = [];
+  $('[data-anchor]').each(function(){
+    anchorList.push($(this).attr('id'));
+    anchorName.push($(this).data('anchor'));
+  })
+
+  //アンカーリンク描画
+  for (var i=0; i < anchorList.length; i++) {
+    $('.anchorList .c-anchor').append('<li class="c-anchor__item"><a href="#'+ anchorList[i] +'">' + anchorName[i] +'</a></li>');
+  }
+});
+</script>
+{% endblock %}

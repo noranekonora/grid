@@ -1,0 +1,55 @@
+  //沿革
+  .l-history {
+    background: $lightBlue;
+    width: calc(100% - 73px);
+    overflow: hidden;
+
+    @include mq-max(bp1350) {
+      padding-right: 0;
+    }
+
+    @include mq-max(xs) {
+      width: calc(100% - 30px);
+    }
+
+    &__inner {
+      @include mq-max(content) {
+        padding-right: 0;
+      }
+    }
+
+    &__scroll {
+      overflow-x: scroll;
+      position: relative;
+      padding-bottom: 20px;
+
+      img {
+        display: block;
+        height: 275px;
+      }
+    }
+
+    //パーツ調整
+    .l-section {
+      max-width: calc(#{$contentWidth} + ((100vw - #{$contentWidth}) / 2));
+      margin: 0 0 0 auto;
+
+      @include mq-max(xs) {
+        padding-right: 0;
+      }
+    }
+  }
+
+
+  //perfectscrollの改造
+  .ps {
+    &>.ps__scrollbar-x-rail {
+      opacity: 1;
+      background-color: $lightBlue;
+
+      .ps__scrollbar-x {
+        background-color: $keyColor;
+        height: 11px;
+      }
+    }
+  }

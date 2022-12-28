@@ -1,0 +1,46 @@
+{# サイト全体共通テンプレート #}
+
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-185921389-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-185921389-1');
+    </script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    {% if responsive == true %}<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">{% endif %}
+    <meta name="format-detection" content="telephone=no">
+    <title>{% if pageTitle %}{{pageTitle|replace({'<br>':''})}}｜{% endif %}{% if lowCat.catlayer2.name and lowCat.catlayer2.name != pageTitle %}{{lowCat.catlayer2.name}}｜{% endif %}{{siteName}}</title>
+    <script src="{{ inc.js}}/page/viewport-extra.min.js"></script>
+    <script>new ViewportExtra(375);</script>
+    <link rel="icon" href="{{ inc.image }}/favicon.ico" type="image/x-icon">
+    {% include ('../include/_ogp.twig') %}
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap&subset=japanese" rel="stylesheet">
+    {% if not disableBaseStyle %}<link rel="stylesheet" type="text/css" href="{{ inc.css }}/style.css">{% endif %}
+    {% block headArea %}{% endblock %}
+  </head>
+
+  <body id="{{pageId}}"{% if pageClass |length > 0 %} class="{{pageClass}}"{% endif %}>
+    <div id="container">
+      {% include ('../include/_header.twig') %}
+
+      <div id="main">
+      {% block main %}{% endblock %}
+      </div>
+      <!-- end of #main -->
+
+      {% include ('../include/_footer.twig') %}
+
+    </div>
+    <!-- end of #container -->
+    <script src="{{ inc.js}}/common.min.js"></script>
+    <script src="{{ inc.js}}/page/jquery.matchHeight.min.js"></script>
+    <!--[if lt IE 9]><script src="{{ inc.js}}/old-ie.min.js"></script><![endif]-->
+    {% block jsArea %}{% endblock %}
+  </body>
+</html>

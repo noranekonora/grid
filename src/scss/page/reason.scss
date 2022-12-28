@@ -1,0 +1,48 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+#reason {
+
+  //3つの強み
+  .p-strength {
+    max-width: 660px;
+    margin: 0 auto 20px;
+    line-height: 1;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+
+  //パーツ調整
+  .c-ttl-2 {
+    @include mq-max(bp400) {
+      text-align: left;
+    }
+    br {
+      @include mq-max(bp400) {
+        display: none;
+      }
+    }
+  }
+
+  .c-pointBox {
+    &__item {
+      &:nth-child(3) {
+        .c-ttl-3 {
+          br {
+            @include mq-max(sm) {
+              display: none;
+            }
+            @include mq-max(xs) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

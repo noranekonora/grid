@@ -1,0 +1,33 @@
+{# ↓各ページのtwigにディスクリプションが入力されていれば、それが優先され、何も入力されていなければ、自動で文言が生成されます。 #}
+<meta name="description" content="{% if description %}{{ description }}{% else %}{{ siteName }}の「{{pageTitle|replace({'<br>':''})}}」についてのページです。{% endif %}">
+
+{# ↓siteNameはconfig.jsonで設定されています。 #}
+<meta property="og:site_name" content="{{ siteName }}" />
+
+{# ↓各ページのタイトルと同じものが出力されます。 #}
+<meta property="og:title" content="{% if pageTitle %}{{pageTitle|replace({'<br>':''})}}｜{% endif %}{% if lowCat.catlayer2.name and lowCat.catlayer2.name != pageTitle %}{{lowCat.catlayer2.name}}｜{% endif %}{{siteName}}" />
+
+{# ↓各ページのtwigにディスクリプションが入力されていれば、それが優先され、何も入力されていなければ、自動で文言が生成されます。 #}
+<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ siteName }}の「{{pageTitle|replace({'<br>':''})}}」についてのページです。{% endif %}" />
+
+{# ↓トップページ(pageIdがtop)にはwebsiteが出力され、それ以外のページでは、articleが出力されます。 #}
+<meta property="og:type" content="{% if pageId == 'top' %}website{% else %}article{% endif %}" />
+
+{# ↓Wordpressのページと静的ページで出力方法が異なります。
+Wordpressのページのtwigには、wpogurl = '<?php the_permalink(); ?>'のように記述してください。
+静的ページでは、「config.jsonに記述しているdomain」と「各ページに記述したogurlpath」を組み合わせたものを出力しています。 #}
+<meta property="og:url" content="{% if wpogurl %}{{wpogurl}}{% endif %}{% if ogurlpath %}{{ domain }}{{ ogurlpath }}{% endif %}">
+
+{# ↓各ページのtwigにogimagepathを記述すると、そのOGP画像が優先され、何も書かれていなければ、デフォルトのOGP画像が出力されます。 #}
+<meta property="og:image" content="{% if ogimagepath %}{{ domain }}{{ogimagepath}}{% else %}{{ domain }}{{ inc.image }}/common/img_ogp.jpg{% endif %}" />
+
+{# ↓Twitterでシェアされたときの見せ方の表示方法です。 #}
+<meta name="twitter:card" content="summary_large_image">
+
+{# ↓Wordpressのページと静的ページで出力方法が異なります。
+Wordpressのページのtwigには、wpogurl = '<?php the_permalink(); ?>'のように記述してください。
+静的ページでは、「config.jsonに記述しているdomain」と「各ページに記述したogurlpath」を組み合わせたものを出力しています。 #}
+<meta name="twitter:site" content="{% if wpogurl %}{{wpogurl}}{% endif %}{% if ogurlpath %}{{ domain }}{{ ogurlpath }}{% endif %}">
+
+{# ↓各ページのtwigにogimagepathを記述すると、そのOGP画像が優先され、何も書かれていなければ、デフォルトのOGP画像が出力されます。 #}
+<meta name="twitter:image" content="{% if ogimagepath %}{{ domain }}{{ogimagepath}}{% else %}{{ domain }}{{ inc.image }}/common/img_ogp.jpg{% endif %}">

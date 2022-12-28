@@ -1,0 +1,304 @@
+//カード
+.c-card01 {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  // &__list {}
+  &__item {
+    &>a {
+      display: block;
+      transition: all $transition;
+      &:after {
+        content: none;
+      }
+      &:hover {
+        transform: translateY(-10px);
+        @include mq-max(md) {
+          transform: none;
+        }
+        .c-link--arrow {
+          &:after {
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+  &__inner {
+    box-shadow: $box-shadow;
+  }
+  &__thumb {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: (342 / 359 * 100%);
+  }
+  &__body {
+    padding: 10px 22px 19px;
+    background-color: $white;
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: $black;
+    @include mq-max(md) {
+      font-size: 20px;
+    }
+  }
+
+  //パーツ調整
+  .c-link--arrow {
+    &:after {
+      top: 60%;
+    }
+    &:hover {
+      &:after {
+        right: -8px;
+      }
+    }
+  }
+
+
+  //小型カード
+  &--sm {
+    .c-card01__thumb {
+      width: 100%;
+      padding-top: calc(249 / 260 * 100%);
+    }
+    .c-card01__title {
+      font-size: 18px;
+    }
+    .c-card01__body {
+      padding: 15px 22px 19px;
+      border-top: 1px solid $bdrColor;
+    }
+
+    //パーツ調整
+    .c-link--arrow {
+      &:after {
+        top: 55%;
+      }
+    }
+  }
+}
+
+.c-card02 {
+  &__item {
+    &>a {
+      display: block;
+      transition: all $transition;
+      &:after {
+        content: none;
+      }
+      &:hover {
+        transform: translateY(-10px);
+        @include mq-max(md) {
+          transform: none;
+        }
+        .c-card02__detail {
+          &:after {
+            right: -20px;
+          }
+        }
+      }
+    }
+  }
+  &__inner {
+    box-shadow: $box-shadow;
+  }
+  &__thumb {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: calc(233 / 360 * 100%);
+  }
+  &__body {
+    padding: 13px 24px 45px;
+    position: relative;
+    background-color: $white;
+    @include mq-max(sm) {
+      padding: 13px 22px 45px;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $keyColor;
+    margin-bottom: 0;
+  }
+  &__desc {
+    color: $textColor;
+    margin: 0;
+    line-height: 1.5;
+  }
+  &__detail {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: $keyColor;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    bottom: 18px;
+    right: 28px;
+    &:after {
+      @include fa('f138');
+      position: absolute;
+      top: 54%;
+      right: -18px;
+      transform: translateY(-50%);
+      transition: all $transition;
+    }
+  }
+}
+
+
+//小さめのカード
+.c-smallCard {
+  margin-bottom: 0;
+  a {
+    &:after {
+      content: none;
+    }
+  }
+  // &__item {}
+  &__inner {
+    box-shadow: $box-shadow;
+  }
+  &__thumb {
+    width: 100%;
+    padding-top: (125 / 250 * 100%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid $gray;
+  }
+  &__body {
+    background-color: $white;
+    padding: 14px 15px;
+  }
+  &__name {
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &--link {
+    .c-smallCard__name {
+      color: $textColor;
+      font-size: 18px;
+      margin: 0 0 2px;
+    }
+    .c-smallCard__detail {
+      color: $keyColor;
+      font-size: 12px;
+      font-weight: 600;
+      &:after {
+        @include fa('f35d');
+        margin-left: 5px;
+      }
+    }
+    a {
+      transition: all $transition;
+      display: block;
+      &:hover {
+        transform: translateY(-10px);
+        @include mq-max(md) {
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+
+//ユニークカード
+.c-uniqueCard {
+  &__list {}
+  &__item {}
+  &__index {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: $keyColor;
+    color: $white;
+    padding: 3px 10px;
+  }
+  &__img {
+    width: 100%;
+    padding-top: (222 / 360 * 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+  }
+}
+
+
+//保有車両
+.c-card03 {
+  &__item {
+    // &:not(:nth-last-child(-n+2)) {
+    //   margin-bottom: 20px;
+    // }
+    .c-box {
+      min-height: 262px;
+    }
+    .c-telcol2 {
+      display: flex;
+      &__tel {
+        margin-right: 4px;
+      }
+    }
+    img {
+      // border-radius: 10px;
+      margin-bottom: 24px;
+    }
+    li {
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  &__title {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &__detaillist {
+    .items {
+      display: flex;
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+      dt {
+        letter-spacing: 0.06em;
+        font-weight: 600;
+        margin-right: 14px;
+      }
+    }
+  }
+  &--col2 {
+    .c-card03__item {
+      &:not(:nth-last-child(-n+2)) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &--col3 {
+    .c-card03__item {
+      img {
+        margin-bottom: 10px;
+      }
+    }
+    .c-card03__title {
+      &--mb0 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

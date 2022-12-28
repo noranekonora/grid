@@ -1,0 +1,112 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+//建設機器レンタル
+#rental {
+  .p-links {
+    // padding-top: 0;
+  }
+}
+
+
+//建設機器レンタル　下層共通
+%centerImg {
+  content: '';
+  width: 117px;
+  height: 117px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  @include mq-max(xs) {
+    width: 100px;
+    height: 100px;
+  }
+}
+#service-product,
+#service-flow,
+#service-area {
+  //パーツ調整
+  #contents {
+    padding-bottom: 0;
+  }
+  .l-f {
+    border-top: none;
+  }
+  .p-localLink {
+    .c-card01 {
+      &__item {
+        &--product {
+          .c-card01__thumb {
+            &:before {
+              @extend %centerImg;
+              background: url('/inc/image/common/ico_product.png')no-repeat center / contain;
+            }
+          }
+        }
+        &--area {
+          .c-card01__thumb {
+            &:before {
+              @extend %centerImg;
+              background: url('/inc/image/common/ico_map.png')no-repeat center / contain;
+            }
+          }
+        }
+        &--flow {
+          .c-card01__thumb {
+            &:before {
+              @extend %centerImg;
+              background: url('/inc/image/common/ico_flow.png')no-repeat center / contain;
+            }
+          }
+        }
+      }
+      &__thumb {
+        padding-top: 0;
+        height: 158px;
+        background: linear-gradient(#fff 0%, #ededed 100%);
+        position: relative;
+        @include mq-max(xs) {
+          height: 120px;
+        }
+      }
+    }
+  }
+}
+
+// 営業所一覧
+.p-branch {
+  // &__list {}
+  // &__item {}
+  &__inner {
+    background-color: $white;
+    padding: 15px 20px 20px;
+    border: 1px solid $gray;
+  }
+  &__name {
+    font-size: 24px;
+    font-weight: 500;
+    color: $textColor;
+    margin-bottom: 5px;
+  }
+  &__address {
+    font-size: 16px;
+    color: $textColor;
+    // &-zip {}
+    // &-name {}
+  }
+  &__num {
+    font-size: 16px;
+    color: $textColor;
+    // &-tel {}
+    // &-fax {}
+  }
+
+  .c-link {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
+

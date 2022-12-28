@@ -1,0 +1,27 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+#privacy {
+
+  #contents {
+    .l-section {
+      li {
+        line-height: 2;
+      }
+    }
+  }
+
+  //アクセス解析ツールについて
+  .analysis_tool {
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 20px;
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

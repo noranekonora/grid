@@ -1,0 +1,93 @@
+//アイコンカード
+
+.c-icoCard {
+  &__item {
+    &>a {
+      display: block;
+      &:hover {
+        .c-icoCard__inner {
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.16);
+        }
+        .c-link--arrow {
+          &:after {
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    box-shadow: $box-shadow;
+    transition: all $transition;
+  }
+  &__icoWrap {
+    background: linear-gradient(#fff 0%, #ededed 100%);
+    width: 230px;
+    padding: 20px;
+    @include mq-max(content) {
+      width: 120px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+  &__ico {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include mq-max(content) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &__body {
+    width: calc(100% - 230px);
+    padding: 23px 13px 45px 27px;
+    position: relative;
+    @include mq-max(content) {
+      width: calc(100% - 120px);
+      padding-bottom: 40px;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 5px;
+    @include mq-max(sm) {
+      font-size: 20px;
+    }
+  }
+  &__desc {
+    font-size: 16px;
+    line-height: calc(26 / 16);
+    color: $textColor;
+    margin: 0;
+    @include mq-max(sm) {
+      font-size: 15px;
+    }
+  }
+
+
+  //パーツ調整
+  .c-link--arrow {
+    position: absolute;
+    bottom: 26px;
+    left: 28px;
+    @include mq-max(content) {
+      bottom: 15px;
+    }
+    &:hover {
+      &:after {
+        right: -8px;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,8 @@
+//FontAwesome5 必要プロパティ出力用mixin
+
+// @mixinの定義
+@mixin fa($content) {
+  content: unquote("\"") + unquote(str-insert($content, "\\", 1)) + unquote("\"");
+  font-family: $FontAwesome;
+  font-weight: 600;
+}

@@ -1,0 +1,48 @@
+/*
+Gulpで「config.hjson」を「config.json」にコンバートします。
+hjsonの基本的な使い方はこちらを参照。
+https://co.bsnws.net/article/131
+
+※「-（ハイフン）」は使えません。
+※ scssのbackgroundなどでパスを使用する際は、hjson記述ではなく今まで通りの記述を使用する
+※ 基本{{ }}で囲んで記述するが、URL（ogurlpathとパンくず）の設定は{{ }}なしで記述する
+*/
+
+{
+  "siteName": "grit",
+  "domain": "",
+  "companyName": "一般社団法人 広島グリットサッカークラブ",
+  "keywords": "",
+  "description": "",
+  "responsive": true,
+
+/*
+各inc系パス
+使い方 : {{ inc.css }} → /inc/css
+※inc系とlinkのpartsは最後の「/」なしで格納
+twig記述の際に「{{ inc.image }}/common～」など/から始められるように
+*/
+  "inc": {
+    "image": "/inc/image",
+    "css": "/inc/css",
+    "js": "/inc/js",
+    "pdf": "/inc/pdf"
+  },
+
+/*
+各ページへのリンクを管理
+使い方 : {{ link.home }} → /
+parts以外のリンクは全て変数に入れる
+ {{ link.news }}single.htmlみたいな書き方にはしない
+*/
+  "link": {
+    "parts": "/_parts", //パーツ集
+    "home": "/", //TOP
+    "about": "/about/", //グリットについて
+    "school": "/school/", //スクール
+    "jr_youth": "/jr-youth/" //ジュニアユース
+    "faq": "/faq/" //よくある質問
+    "news": "/news/", //お知らせ
+    "contact": "/contact/", //お問い合わせ
+  }
+}

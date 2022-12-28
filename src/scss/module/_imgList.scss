@@ -1,0 +1,70 @@
+//イメージリスト（２、３カラムに対応）
+.c-imgList {
+  margin-bottom: 60px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__img {
+    width: 100%;
+    padding-top: (221 / 357 * 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  &__material {
+    display: flex;
+    align-items: center;
+    dt {
+      font-size: 16px;
+      font-weight: 600;
+      background-color: #EBEBEB;
+      border-radius: 5px;
+      padding: 1.5px 10px;
+      margin-right: 10px;
+    }
+    dd {
+      font-size: 15px;
+    }
+  }
+}
+
+
+//プロパティカード
+.c-property {
+  &__list {}
+  &__item {}
+  &__thumb {
+    width: 100%;
+    padding-top: (222 / 358 * 100%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 8px;
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  //パーツ調整
+  .c-tbl__block {
+    tbody {
+      tr {
+        // th,td {}
+        th {
+          padding: 5.5px 10px;
+        }
+        td {
+          padding: 5.5px 15px;
+        }
+      }
+    }
+  }
+}

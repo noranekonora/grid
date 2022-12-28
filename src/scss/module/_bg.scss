@@ -1,0 +1,30 @@
+.u- {
+  &bg {
+    &--dot {
+      background-color: $lightGray;
+      background-image:
+        radial-gradient(#E1E7F1 13%, transparent 13%);
+      background-repeat: repeat;
+      background-size: 18px 18px;
+      z-index: -100;
+    }
+
+    &--gr {
+      background: linear-gradient(0deg, transparent 9px, #E1E7F1 10px), linear-gradient(90deg, transparent 9px, #E1E7F1 10px);
+      background-size: 10px 10px;
+      background-color: $lightGray;
+      z-index: -100;
+      margin-top: 60px;
+      @include mq-max(xs) {
+        margin-top: 40px;
+      }
+    }
+    &--gray-l {
+      background-color: $gray-l;
+      margin-top: 60px;
+      @include mq-max(xs) {
+        margin-top: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+#youth {
+
+  // css調整
+  .c-tbl {
+
+    th,
+    td {
+      padding: 20px;
+
+      @include mq-max(xs) {
+        padding: 10px 15px;
+      }
+    }
+
+    thead {
+      th {
+        span {
+          background-color: $white;
+        }
+      }
+    }
+
+  }
+
+  .p-matchSchedule {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-bottom: 1px solid $bdrColor;
+
+    @include mq-max(sm) {
+      display: block;
+    }
+    @include mq-max(xs) {
+      margin-bottom: 10px;
+    }
+
+    &>dt,
+    dd {
+      font-size: 24px;
+    }
+
+    &>dt {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding-right: 10px;
+      @include mq-max(xs) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__detail {
+      display: flex;
+
+      @include mq-max(xs) {
+        display: block;
+      }
+
+      &>dd {
+        font-weight: 500;
+
+        &:not(:last-child) {
+          margin-right: 35px;
+        }
+      }
+    }
+    &__slash {
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
+}

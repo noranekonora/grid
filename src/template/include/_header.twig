@@ -1,0 +1,17 @@
+<header class="l-header">
+  <div class="l-header__inner">
+    <div class="l-header__modules">
+      {% if pageId == 'top' %}
+      <h1>{% endif %}<a href="{{ link.home}}" class="logo"><img src="{{ inc.image }}/common/img_logo.svg" alt="{{siteName}}"></a>{% if pageId == 'top' %}</h1>
+      {% endif %}
+      <div class="c-toggleBtn" id="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    {% include ('../include/_gnavi.twig') %}
+  </div>
+  <div class="l-filter"></div>
+</header>
+<!-- /header -->

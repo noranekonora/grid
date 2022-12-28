@@ -1,0 +1,38 @@
+{% extends '../../layout/_04_form.twig' %}
+
+{# ページID設定 #}
+{% set pageId = 'complete' %}
+
+<!-- ページタイトル設定 -->
+{% set pageTitle = '送信エラー' %}
+{% set subTitle = 'Contact' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '大変申し訳ございません。エラーが発生しました。' %}
+{% set ogurlpath = '/contact/error.html' %}
+{% set ogimagepath = '' %}
+
+{# ページ個別　CSS等 #}
+{% block headArea %}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/form.css">
+{% endblock %}
+
+{# コンテンツをここに記載(div#main) #}
+{% block contents %}
+<div class="l-section">
+  <section class="c-formCompleteBox">
+    <h2 class="c-ttl-2">大変申し訳ございません。エラーが発生しました。</h2>
+    <p>お手数ですが、時間をあけて再度お申込みください。</p>
+  </section>
+  <div class="l-btnArea">
+    <a href="{{ link.home }}" class="c-formBtn c-formBtn--back">トップページへ戻る</a>
+  </div>
+</div>
+{% endblock %}
+
+{# ページ個別　JS等 #}
+{% block jsArea %}
+{% endblock %}

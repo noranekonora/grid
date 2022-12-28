@@ -1,0 +1,112 @@
+//ユーティリティ群
+@import "../util/all";
+
+.c-step{
+  margin-bottom: $padding-break;
+  display: -webkit-flex;
+  display: -ms-flex;
+  -js-display: flex;
+  display: flex;
+  align-items: center;
+  @include mq-max(sm){
+    flex-direction: column;
+  }
+  &__title {
+    flex-direction: row;
+    width: 40%;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    @include mq-max(md){
+      font-size: 100%;
+    }
+    @include mq-max(sm){
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    flex-direction: row;
+    width: 60%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    -js-display: flex;
+    display: flex;
+    align-items: center;
+    @include mq-max(sm){
+      width: 100%;
+    }
+
+
+  }
+
+  &__item {
+      flex-direction: row;
+      width: 30%;
+      margin: 1%;
+      background: $gray;
+      padding: 13px $padding-content;
+      position: relative;
+      text-align: center;
+      @include mq-max(md){
+        width: 32%;
+        font-size: 81%;
+        line-height: 23px;
+      }
+      @include mq-max(xs){
+        font-size: 66%;
+        padding: 13px 5px;
+      }
+      &:after,&:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 0;
+        @include mq-max(xs){
+          display: none;
+        }
+      }
+      &:after{
+        right: -10px;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 10px solid $gray;
+        height: 100%;
+        //Firefoxずれ回避
+        @-moz-document url-prefix() {
+          border-left: 11px solid $gray;
+        }
+      }
+      &:before{
+        left: 0;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 10px solid #ffffff;
+      }
+      &:first-child{
+        &:before{
+          display: none;
+        }
+      }
+      &.is-active{
+        background: $keyColor;
+        color: $keyColor;
+        color: #fff;
+        &:after{
+          border-left-color: $keyColor;
+        }
+      }
+    }
+
+  #complete &{
+    section {
+      .borderwrap{
+        padding: 10px;
+      }
+    }
+  }
+
+
+}

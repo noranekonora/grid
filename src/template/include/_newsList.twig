@@ -1,0 +1,178 @@
+{# お知らせ一覧　Twig loopバージョン (静的にお知らせを管理する場合) #}
+
+{# お知らせ記事設定 #}
+{% set news = [
+  {
+    'date': '2021.03.01',
+    'title': 'ホームページをリニューアルしました。',
+    'category': 'aaa',
+    'category_txt': 'grit news',
+    'link': '/news/single.html',
+    'target_blank': false
+  },
+  {
+    'date': '2021.03.01',
+    'title': 'ホームページをリニューアルしました。',
+    'category': 'aaa',
+    'category_txt': 'grit news',
+    'link': '/news/single.html',
+    'target_blank': false
+  },
+  {
+    'date': '2021.03.01',
+    'title': 'ホームページをリニューアルしました。',
+    'category': 'aaa',
+    'category_txt': 'grit news',
+    'link': '/news/single.html',
+    'target_blank': false
+  },
+  {
+    'date': '2021.03.01',
+    'title': 'ホームページをリニューアルしました。',
+    'category': 'aaa',
+    'category_txt': 'grit news',
+    'link': '/news/single.html',
+    'target_blank': false
+  },
+  {
+    'date': '2021.03.01',
+    'title': 'ホームページをリニューアルしました。',
+    'category': 'aaa',
+    'category_txt': 'grit news',
+    'link': '/news/single.html',
+    'target_blank': false
+  },
+  {
+    'date': '2021.03.01',
+    'title': 'ホームページをリニューアルしました。',
+    'category': 'aaa',
+    'category_txt': 'grit news',
+    'link': '/news/single.html',
+    'target_blank': false
+  }
+] %}
+
+
+
+{# お知らせテンプレート htmlVer. #}
+{% if pageId == 'top' %}
+<div class="l-section p-news">
+  <div class="grid">
+    <div class="col-4_sm-12">
+      <h2 class="c-ttl-2">News</h2>
+      <a href="{{ link.news }}" class="c-link u-not-under-sm"><span>お知らせ一覧を見る</span></a>
+    </div>
+    <div class="col-8_sm-12">
+      <ul class="c-newslist">
+        {% for newslist in news | slice(0,4) %}
+        <li class="c-newslist__item">
+          <a href="{{ newslist.link }}" {% if newslist.target_blank %}target="_blank" rel="noopener" {% endif %}>
+            <dl>
+              <dt>
+                <span class="c-newslist__date">{{ newslist.date }}</span>
+                <span
+                  class="c-label {% if newslist.category %}c-label__{{ newslist.category }}{% endif %}">{{ newslist.category_txt }}</span>
+              </dt>
+              <dd>{{ newslist.title }}</dd>
+            </dl>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="u-taC u-only-sm-xs p-news__spLink">
+        <a href="{{ link.news }}" class="c-link"><span>お知らせ一覧を見る</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% elseif pageId == 'archive-news' %}
+<ul class="c-newslist">
+  {% for newslist in news %}
+  <li class="c-newslist__item">
+    <a href="{{ newslist.link }}" {% if newslist.target_blank %}target="_blank" rel="noopener" {% endif %}>
+      <dl>
+        <dt>
+          <span class="c-newslist__date">{{ newslist.date }}</span>
+          <span
+            class="c-label {% if newslist.category %}c-label__{{ newslist.category }}{% endif %}">{{ newslist.category_txt }}</span>
+        </dt>
+        <dd>{{ newslist.title }}</dd>
+      </dl>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endif %}
+{# お知らせテンプレート htmlVer. #}
+
+{# お知らせテンプレート phpVer. #}
+{# {% if pageId == 'top' %}
+
+<div class="c-newslist__wrap">
+  <h2 class="c-newslist__heading">NEWS</h2>
+  <?php query_posts('post_type=news&posts_per_page=3&order=DESC'); ?>
+  <?php if ( have_posts() ): ?>
+  <ul class="c-newslist">
+    <?php while ( have_posts() ) : the_post(); ?>
+    <li class="c-newslist__item">
+        <?php
+          $type = get_field('postType');
+          if ($type == 'normal'):
+        ?>
+        <a href="<?php the_permalink(); ?>">
+        <?php elseif($type == 'pdf') : ?>
+        <a href="<?php the_field('pdfLink'); ?>" target="_blank" rel="noopener">
+        <?php elseif($type == 'externalLink') : ?>
+        <a href="<?php the_field('externalLink'); ?>" target="_blank" rel="noopener">
+        <?php endif; ?>
+        <dl>
+          <dt>
+            <span class="c-newslist__date"><?php the_time("Y.m.d"); ?></span>
+            <span class="c-label"><?php showTerms('news_category');?></span>
+          </dt>
+          <dd><?php the_title(); ?></dd>
+        </dl>
+      </a>
+    </li>
+    <?php endwhile; // end of the loop. ?>
+  </ul>
+  <?php endif; ?>
+  <?php wp_reset_query(); ?>
+  <a href="{{ link.news}}" class="c-newslist__toList">一覧はこちら</a>
+</div>
+
+{% elseif pageId == 'archive-news' %}
+
+<ul class="c-newslist">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+    <li class="c-newslist__item">
+      <?php
+        $type = get_field('postType');
+        if ($type == 'normal'):
+      ?>
+      <a href="<?php the_permalink(); ?>">
+      <?php elseif($type == 'pdf') : ?>
+      <a href="<?php the_field('pdfLink'); ?>" target="_blank" rel="noopener">
+      <?php elseif($type == 'externalLink') : ?>
+      <a href="<?php the_field('externalLink'); ?>" target="_blank" rel="noopener">
+      <?php endif; ?>
+        <dl>
+          <dt>
+            <span class="c-newslist__date"><?php the_time("Y/n/d"); ?></span>
+            <span class="c-label"><?php showTerms('news_category');?></span>
+          </dt>
+          <dd><?php the_title(); ?></dd>
+        </dl>
+      </a>
+    </li>
+
+  <?php endwhile; endif; ?>
+</ul>
+
+{% endif %} #}
+{# お知らせテンプレート phpVer. #}

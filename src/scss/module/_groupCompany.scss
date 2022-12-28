@@ -1,0 +1,87 @@
+//グループ会社パーツ
+.l-group {
+  background-color: $lightGray;
+  &__inner {
+    max-width: $contentWidth;
+    width: 100%;
+    margin: 0 auto;
+    padding: 64px 0;
+    display: flex;
+    justify-content: space-between;
+    @include mq-max(content) {
+      padding: 64px 15px;
+    }
+    @include mq-max(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq-max(sm) {
+      padding: 60px 15px;
+    }
+  }
+  &__heading {
+    max-width: 200px;
+    width: 100%;
+    @include mq-max(md) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  &__company {
+    max-width: 846px;
+    width: 100%;
+    @include mq-max(content) {
+      max-width: 750px;
+    }
+    @include mq-max(md) {
+      max-width: 100%;
+    }
+    &-item {
+      @include mq-max(xs) {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #000;
+      margin-bottom: 5px;
+    }
+    &-desc {
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+  }
+  &__logo {
+    width: 100%;
+    text-align: center;
+    padding: 20.5px 10px;
+    margin-bottom: 18px;
+    @include mq-max(sm) {
+      padding: 15px 10px;
+    }
+    @include mq-max(xs) {
+      padding: 20.5px 10px;
+    }
+    img {
+      display: inline-block;
+      width: auto;
+      height: 56px;
+      @include mq-max(sm) {
+        height: 40px;
+      }
+      @include mq-max(xs) {
+        height: 56px;
+      }
+    }
+  }
+  &__link {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    display: block;
+  }
+}

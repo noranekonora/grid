@@ -1,0 +1,111 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+#contents {
+  @include mq-max(content) {
+    padding-bottom: 60px;
+  }
+}
+
+//お知らせ一覧
+.c-newslist {
+  background-color: $white;
+  padding: 0;
+  &__item {
+    padding: 0;
+    border-bottom: 1px solid $gray;
+    &:first-child {
+      border-top: 1px solid $gray;
+    }
+    a {
+      display: block;
+      padding: 32px 35px;
+      position: relative;
+      @include mq-max(sm) {
+        padding: 15px 35px 15px 10px;
+      }
+      &:after {
+        @include fa('f105');
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color: $keyColor;
+        transition: all $transition;
+      }
+      &:hover {
+        &:after {
+          right: 10px;
+        }
+      }
+    }
+    dl {
+      dt {
+        max-width: 170px;
+        flex: 0 0 170px;
+        @include mq-max(sm) {
+          max-width: 100%;
+          flex: 0 0 100%;
+          margin-bottom: 10px;
+        }
+      }
+      dd {
+        flex: 0 0 calc(100% - 170px);
+        max-width: calc(100% - 170px);
+        @include mq-max(sm) {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+  // &__date {}
+
+  // .c-label {}
+}
+
+
+
+//ページネーション
+.pagination {
+  text-align: center;
+  padding-bottom: 45px;
+  @include mq-max(sm) {
+    padding-bottom: 80px;
+  }
+  &__box {
+    display: inline-block;
+  }
+  ul.page-numbers {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16 );
+    border-radius: 10px;
+    overflow: hidden;
+    li {
+      margin-right: 0;
+      font-size: 18px;
+      font-weight: 500;
+      border-right: 1px solid $gray;
+      &:last-child {
+        margin-right: 0;
+        border-right: none;
+      }
+      .page-numbers {
+        padding: 18.5px 26.9px;
+        display: inline-block;
+        color: #000;
+        transition: all .4s ease;
+        @include mq-max(xs) {
+          padding: 6px 15px;
+        }&.current {
+          background-color: $keyColor;
+        }
+        &:hover {
+          background-color: $keyColor;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+//沿革
+
+.c-timeline {
+  width: 100%;
+  margin: 0 auto;
+  list-style-type: none;
+  @include mq-max(xs) {
+    padding-left: 20px;
+  }
+
+  li {
+    display: flex;
+    position: relative;
+    &:last-child {
+      &:before {
+        content: none;
+      }
+      .c-timeline__content {
+        padding-bottom: 0;
+      }
+    }
+    @include mq-max(xs) {
+      flex-direction: column;
+    }
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 100%;
+      background-color: $keyColor;
+      background-position: top;
+      position: absolute;
+      top: 12px;
+      left: calc(20% - 2px);
+      @include mq-max(xs) {
+        left: 0;
+      }
+    }
+  }
+
+  //日付
+  &_inner {
+    display: inline-block;
+  }
+  &__date {
+    line-height: 1;
+    width: 20%;
+    text-align: right;
+    padding-right: 35px;
+    @include mq-max(xs) {
+      width: 100%;
+      text-align: left;
+      padding-right: 0;
+      padding-left: 35px;
+    }
+    strong {
+      font-size: 24px;
+      font-weight: 400;
+      margin: 0 0 5px;
+      display: block;
+      text-align: center;
+      @include mq-max(xs) {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+    span {
+      display: block;
+      font-size: 14px;
+      color: $keyColor;
+      text-align: center;
+      @include mq-max(xs) {
+        display: inline-block;
+      }
+    }
+  }
+
+  //内容
+  &__content {
+    width: 80%;
+    padding-left: 35px;
+    padding-bottom: 50px;
+    position: relative;
+    top: -8px;
+    @include mq-max(xs) {
+      top: 0;
+    }
+  }
+  //〇
+  &__point {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: $keyColor;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: calc(20% - 10px);
+    @include mq-max(xs) {
+      left: -8px;
+      top: 4px;
+    }
+    &:before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: #fff;
+      @extend %v_center;
+    }
+  }
+  //画像
+  &__img {
+    max-width: 460px;
+    img {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  //時間割
+  &__hours {
+    position: relative;
+    padding: 0 15px;
+    @include mq-max(md) {
+      padding: 0;
+    }
+    .c-timeline__task {
+      width: calc((100% / 2) + (180px / 2));
+      padding: 0 0 50px;
+      margin: 0;
+      overflow: visible;
+      display: flex;
+      position: relative;
+      @include mq-max(sm) {
+        width: 100%;
+      }
+      &:last-child {
+        padding-bottom: 0;
+        .c-timeline__time {
+          &:after {
+            content: none;
+          }
+        }
+      }
+      .c-timeline__time {
+        min-width: 180px;
+        position: relative;
+        @include mq-max(sm) {
+          flex: 0 0 100px;
+          max-width: 100px;
+          min-width: 0;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 2px;
+          height: 100%;
+          background-color: $keyColor;
+          @extend %v_center;
+          top: 68px;
+          transform: translateX(-50%);
+        }
+        &>span {
+          display: block;
+          color: $keyColor;
+          font-size: 18px;
+          border: 3px solid $keyColor;
+          border-radius: 50%;
+          text-align: center;
+          width: 68px;
+          height: 68px;
+          line-height: 3.3;
+          margin: 0 auto;
+          background-color: #fff;
+        }
+      }
+      &.is-left {
+        flex-direction: row-reverse;
+        @include mq-max(sm) {
+          flex-direction: row;
+        }
+        .c-timeline__name {
+          text-align: right;
+          @include mq-max(sm) {
+            text-align: left;
+          }
+        }
+      }
+      &.is-right {
+        margin-left: auto;
+        @include mq-max(sm) {
+          margin-left: 0;
+        }
+        .c-timeline__name {
+          text-align: left;
+        }
+      }
+      .c-timeline__content {
+        flex: 1;
+        max-width: 480px;
+        margin: 0;
+        @include mq-max(md) {
+          max-width: 364px;
+        }
+        @include mq-max(sm) {
+          max-width: 100%;
+        }
+      }
+      .c-timeline__name {
+        font-size: 18px;
+        color: $keyColor;
+        font-weight: 600;
+      }
+    }
+  }
+
+}

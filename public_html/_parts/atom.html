@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-185921389-1"></script>
+  <script> window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-185921389-1');
+    </script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>Atoms（原子）｜grit</title>
+  <script src="/inc/js/page/viewport-extra.min.js"></script>
+  <script>new ViewportExtra(375);</script>
+  <link rel="icon" href="/inc/image/favicon.ico" type="image/x-icon">
+  <meta name="description" content="FANのマスターコンポーネント_原子">
+  <meta property="og:site_name" content="grit" />
+  <meta property="og:title" content="Atoms（原子）｜grit" />
+  <meta property="og:description" content="FANのマスターコンポーネント_原子" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="">
+  <meta property="og:image" content="/inc/image/common/img_ogp.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="/inc/image/common/img_ogp.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap&subset=japanese" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/inc/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/inc/css/page/parts.css">
+</head>
+
+<body id="parts">
+  <div id="container">
+    <header class="l-header">
+      <div class="l-header__inner">
+        <div class="l-header__modules">
+          <a href="/" class="logo"><img src="/inc/image/common/img_logo.svg" alt="grit"></a>
+          <div class="c-toggleBtn" id="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <nav class="l-navigation" id="gnavi">
+          <ul class="l-navigation__inner">
+            <li class="l-navigation__item">
+              <a href="/about/"><span class="l-navigation__ja">グリットについて</span>ABOUT US</a>
+            </li>
+            <li class="l-navigation__item">
+              <a href="/school/"><span class="l-navigation__ja">スクール</span>SCHOOL</a>
+            </li>
+            <li class="l-navigation__item">
+              <a href="/jr-youth/"><span class="l-navigation__ja">ジュニアユース</span>Jr.YOUTH</a>
+            </li>
+            <li class="l-navigation__item">
+              <a href="/faq/"><span class="l-navigation__ja">よくある質問</span>FAQ</a>
+            </li>
+            <li class="l-navigation__item">
+              <a href="/news/"><span class="l-navigation__ja">お知らせ</span>NEWS</a>
+            </li>
+            <li class="l-nav">
+              <ul class="l-nav__btns">
+                <li class="l-nav__item l-nav__item">
+                  <a href="/contact/"><span></span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="l-filter"></div>
+    </header>
+    <!-- /header -->
+    <div id="main">
+      <div class="l-lowerCaption">
+        <div class="l-lowerCaption__inner">
+          <div class="l-lowerCaption__titleBox">
+            <h1 class="l-lowerCaption__title">
+              <small>Atoms（原子）</small> Atoms </h1>
+          </div>
+          <ul class="c-topicspath">
+            <li><a href="/">HOME</a></li>
+            <li>Atoms（原子）</li>
+          </ul>
+        </div>
+      </div>
+      <div id="contents" class="l-lower">
+        <section class="l-section anchorList">
+          <ul class="c-anchor">
+          </ul>
+        </section>
+        <section id="color" class="l-section" data-anchor="カラー">
+          <h2 class="c-ttl-2 c-ttl--center">カラー</h2>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3">ブランドカラー</h3>
+            <ul class="grid parts_color">
+              <li class="col-2_sm-6_xs-12 keyColor">$keyColor</li>
+              <li class="col-2_sm-6_xs-12 keyColor-dark">$keyColor-dark</li>
+              <li class="col-2_sm-6_xs-12 accentColor">$accentColor</li>
+              <li class="col-2_sm-6_xs-12 lightGray">$lightGray </li>
+              <li class="col-2_sm-6_xs-12 lightBlue">$lightBlue</li>
+            </ul>
+          </section>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3">ベーシックカラー</h3>
+            <ul class="grid parts_color">
+              <li class="col-2_sm-6_xs-12 white">$white</li>
+              <li class="col-2_sm-6_xs-12 gray-l">$gray-l </li>
+              <li class="col-2_sm-6_xs-12 gray">$gray</li>
+              <li class="col-2_sm-6_xs-12 black">$black</li>
+              <li class="col-2_sm-6_xs-12 red">$red</li>
+            </ul>
+          </section>
+        </section>
+        <section id="heading" class="l-section" data-anchor="見出し">
+          <h2 class="c-ttl-2 c-ttl--center">見出し</h2>
+          <section class="l-section__inner">
+            <h1 class="c-ttl-1"><small>LOW-H1</small>下層H1見出し</h1>
+            <p>コンテンツ内で使用することはほとんどないが一応掲載。<br> 下層H1見出しの使用場面は、下層ページタイトル内でのみ。（.l-lowerCaption__title）</p>
+          </section>
+          <section class="l-section__inner">
+            <h2 class="c-ttl-2">H2見出しレフトノーマル。H2見出しレフトノーマル。</h2>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h2 class="c-ttl-2"><small>SUBTITLE</small>H2見出しレフトサブタイトルあり。</h2>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h2 class="c-ttl-2 c-ttl--center">H2見出しセンター<br> ノーマル</h2>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h2 class="c-ttl-2 c-ttl--center"><small>SUBTITLE</small>H2見出しセンター<br>サブタイトルあり</h2>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h2 class="c-ttl-2 c-ttl-2--line">
+              <small>SUBTITLE</small>
+              <span>H2サブタイトルレフト線あり</span>
+            </h2>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3">H3見出しレフトノーマル H3見出しレフトノーマル</h3>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3 c-ttl--center">H3見出しセンター<br>ノーマル</h3>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3 c-ttl-3--line">H3レフト飾りあり</h3>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3 c-ttl-3--line">h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線</h3>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h4>H4見出しレフト</h4>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h5>H5見出しレフト</h5>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+          </section>
+          <section class="l-section__inner">
+            <h2 class="c-ttl-2 c-ttl--center c-ttlChapter">
+              <span>章見出し</span>
+            </h2>
+            <h3 class="c-ttlChapter c-ttlChapter--sub"><span>章小見出し</span></h3>
+            <p>「宮地精機」で使用している見出しスタイル。「宮地精機」で使用している見出しスタイル。<br>h2,h3などの見出しレベルは固定ではなく、ページの内容によってその都度該当する見出しタグにつける</p>
+          </section>
+        </section>
+        <section id="paragraph" class="l-section" data-anchor="テキスト">
+          <h2 class="c-ttl-2 c-ttl--center">テキスト</h2>
+          <p> 本文16px。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。 </p>
+          <p class="is-large"> 本文18px。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。 </p>
+          <blockquote class="c-blockquote">
+            <p> 本文16px。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。 </p>
+          </blockquote>
+          <section id="strong" class="l-section__inner" data-anchor="強調">
+            <h3 class="c-ttl-3">強調</h3>
+            <p>サンプルテキストを<strong>黒で目立たせたい</strong>(strong)</p>
+            <p>サンプルテキストを<strong class="u-txt--red">赤で目立たせたい</strong>(strong.u-txt--red)</p>
+            <p>サンプルテキストを<strong class="u-txt--largest">最も強調されるテキスト</strong>です。(strong.u-txt--largest)</p>
+            <p>サンプルテキストを<strong class="u-bdr--keyColor">$keyColorの下線で目立たせたい</strong>(strong.u-bdr--keyColor)</p>
+            <p>サンプルテキストを<strong class="u-bdr--yellow">黄色い下線で目立たせたい</strong>(strong.u-bdr--yellow)</p>
+            <p class="u-txt--largest">.u-txt--largestで文字サイズを大きく。<br>ここには強調したいキャッチコピー・導入などを入れます。<br>ここには強調したいキャッチコピー・導入などを入れます。 </p>
+            <p class="u-txt--largest u-taC"> .u-txt--largest.u-taCで中央寄せに。<br>ここには強調したいキャッチコピー・導入などを入れます。<br>ここには強調したいキャッチコピー・導入などを入れます。</p>
+          </section>
+        </section>
+        <section id="list" class="l-section" data-anchor="リスト">
+          <h2 class="c-ttl-2 c-ttl--center">リスト</h2>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3">箇条書きリスト【List ul】</h3>
+            <ul class="c-list c-list--disc">
+              <li class="c-list__item">.c-list.c-list--disc > .c-list__item</li>
+              <li class="c-list__item">通常本文テキストはこちら。通常本文テキストはこちら。通常本文テキストはこちら。通常本文テキストはこちら。通常本文テキストはこちら。通常本文テキストはこちら。</li>
+            </ul>
+            <ul class="c-list c-list--large">
+              <li class="c-list__item">リストビッグリストビッグリストビッグ</li>
+              <li class="c-list__item">ここにサービス名が入ります入りますます</li>
+              <li class="c-list__item">ここにサービス名が入ります入りますます</li>
+            </ul>
+            <ul class="c-list c-list--comment">
+              <li class="c-list__item">.c-list.c-list--comment （「※」付き注釈 ）</li>
+              <li class="c-list__item">.c-list.c-list--comment （「※」付き注釈 ）</li>
+            </ul>
+            <ul class="c-list c-list--check">
+              <li class="c-list__item">リストチェックリストチェックリストチェック</li>
+              <li class="c-list__item">リストチェックリストチェックリストチェック</li>
+              <li class="c-list__item">リストチェックリストチェックリストチェック</li>
+            </ul>
+          </section>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3">番号リスト【List ol】</h3>
+            <ol class="c-list c-list--count">
+              <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+              <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+              <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+            </ol>
+            <ol class="c-list c-list--count--brackets">
+              <li class="c-list__item">.c-list.c-list--count--brackets > .c-list__item</li>
+              <li class="c-list__item">.c-list.c-list--count--brackets > .c-list__item</li>
+              <li class="c-list__item">.c-list.c-list--count--brackets > .c-list__item</li>
+            </ol>
+            <ol class="c-list c-list--comment--num">
+              <li class="c-list__item">.c-list.c-list--comment--num （「※」付き注釈 ）</li>
+              <li class="c-list__item">.c-list.c-list--comment--num （「※」付き注釈 ）</li>
+            </ol>
+          </section>
+          <section class="l-section__inner">
+            <h3 class="c-ttl-3">.c-listの入れ子</h3>
+            <ul class="c-list c-list--disc">
+              <li class="c-list__item"> あいうえお <ul class="c-list c-list--count">
+                  <li class="c-list__item"> かきくけこ <ul class="c-list c-list--comment">
+                      <li class="c-list__item"> さしすせそ <ul class="c-list c-list--comment--num">
+                          <li class="c-list__item"> たちつてと <ul class="c-list c-list--count--brackets">
+                              <li class="c-list__item">なにぬねの</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section id="button" class="l-section" data-anchor="ボタン・リンク・ページネーション">
+          <h2 class="c-ttl-2 c-ttl--center">ボタン・リンク・ページネーション</h2>
+          <ul>
+            <li><a href="" class="c-btn">FANについて詳しく知る</a></li>
+            <li><a href="" target="_blank" rel="noopener" class="c-link">外部リンク</a></li>
+            <li><a href="sample.pdf" target="_blank" rel="noopener" class="c-link">PDFリンク</a></li>
+            <li><a href="" class="c-link c-link--underline">テキストリンク</a></li>
+          </ul>
+          <nav class="pagination">
+            <div class="pagination__box">
+              <ul class="page-numbers">
+                <li><a class="page-numbers" href=""><i class="fas fa-angle-left"></i></a></li>
+                <li><span aria-current="page" class="page-numbers current">1</span></li>
+                <li><a class="page-numbers" href="">2</a></li>
+                <li><a class="next page-numbers" href=""><i class="fas fa-angle-right"></i></a></li>
+              </ul>
+            </div>
+          </nav>
+          <p>※WordPressのページネーションの作成については、実案件を参考にコードを入れてください。パーツとしてのスタイルは用意してあります。</p>
+        </section>
+        <section id="box" class="l-section" data-anchor="枠">
+          <h2 class="c-ttl-2 c-ttl--center">ボックス</h2>
+          <div class="c-box">
+            <h3 class="c-box__heading">ボックスタイトル</h3>
+            <p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+          </div>
+          <div class="c-box c-box--gray">
+            <h3 class="c-box__heading">ボックスタイトル</h3>
+            <p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+          </div>
+          <div class="c-box c-box--red">
+            <h3 class="c-box__heading">ボックスタイトル</h3>
+            <p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+          </div>
+        </section>
+        <section id="background" class="" data-anchor="背景">
+          <div class="l-section--lightgray">
+            <section class="l-section">
+              <h2 class="c-ttl-2">背景色 $lightGray</h2>
+              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            </section>
+          </div>
+          <div class="l-section--lightBlue">
+            <section class="l-section">
+              <h2 class="c-ttl-2">背景色 $lightBlue</h2>
+              <p>色の変数はサイトによって作成。色の変数はサイトによって作成。色の変数はサイトによって作成。色の変数はサイトによって作成。</p>
+            </section>
+          </div>
+          <div class="l-section--lightBlue">
+            <section class="l-section">
+              <h2 class="c-ttl-2 c-ttl-2--line">
+                <small>SUBTITLE</small>
+                <span>下層で使うh2見出し</span>
+              </h2>
+              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            </section>
+          </div>
+          <div class="l-section--lightBlue l-section--lowPadding">
+            <section class="l-section">
+              <h2 class="c-ttl-2 c-ttl-2--line">
+                <small>SUBTITLE</small>
+                <span>padding小さめ</span>
+              </h2>
+              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            </section>
+          </div>
+          <div class="l-section--lightBlue l-section--lightBlue--band">
+            <section class="l-section">
+              <h2 class="c-ttl-2 c-ttl-2--line">
+                <small>SUBTITLE</small>
+                <span>下層で使うh2見出し</span>
+              </h2>
+              <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            </section>
+          </div>
+        </section>
+        <section id="table" class="l-section" data-anchor="テーブル">
+          <h2 class="c-ttl-2">テーブル</h2>
+          <table class="c-tbl c-tbl__block">
+            <tbody>
+              <tr>
+                <th>会社名</th>
+                <td>株式会社フォノグラム</td>
+              </tr>
+              <tr>
+                <th>代表取締役</th>
+                <td>フォノグラム太郎</td>
+              </tr>
+              <tr>
+                <th>設 立</th>
+                <td>1984年(昭和 59年4月) </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+    <!-- end of #main -->
+    <footer class="l-f l-f--lineTop">
+      <div class="l-f__inner">
+        <a href="/" class="pageTop" data-js="pagetop"></a>
+        <p class="l-f__companyName">一般社団法人 広島グリットサッカークラブ</p>
+        <small class="l-f__copyright">&copy; 2022 Hirosima grit soccer club.</small>
+      </div>
+    </footer>
+    <!-- /footer -->
+  </div>
+  <!-- end of #container -->
+  <script src="/inc/js/common.min.js"></script>
+  <script src="/inc/js/page/jquery.matchHeight.min.js"></script>
+  <!--[if lt IE 9]><script src="/inc/js/old-ie.min.js"></script><![endif]-->
+  <script>
+    $(function() {
+      var anchorList = [];
+      var anchorName = [];
+      $('[data-anchor]').each(function() {
+        anchorList.push($(this).attr('id'));
+        anchorName.push($(this).data('anchor'));
+      })
+      //アンカーリンク描画
+      for (var i = 0; i < anchorList.length; i++) {
+        $('.anchorList .c-anchor').append('<li class="c-anchor__item"><a href="#' + anchorList[i] + '">' + anchorName[i] + '</a></li>');
+      }
+    });
+  </script>
+</body>
+
+</html>

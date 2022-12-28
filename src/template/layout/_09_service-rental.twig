@@ -1,0 +1,10 @@
+{#
+下層(3階層目)共通テンプレート（例：会社案内/スタッフ紹介）
+#}
+
+{% extends './_09_service.twig' %}
+
+{# 下層カテゴリ共通 パンくず設定 #}
+{% set lowCat = lowCat | merge({
+  'catlayer3':{'name':'建設機器レンタル','url':'/service/rental/'}
+})%}

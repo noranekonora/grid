@@ -1,0 +1,161 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+//partsページ用レイアウト
+
+
+//HOME
+.parts_list {
+  display: flex;
+  margin-bottom: -20px;
+  flex-wrap: wrap;
+  @include mq-max(xs) {
+    flex-direction: column;
+  }
+  li {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    width: 50%;
+    @include mq-max(xs) {
+      width: 100%;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      padding: 50px 30px;
+      background-color: #000;
+      display: block;
+      &:hover {
+        color: #000;
+        background-color: $keyColor;
+      }
+    }
+  }
+}
+
+
+//parts_link
+.parts_link {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  li {
+    width: 20%;
+    padding: 0 10px;
+    @include mq-max(sm) {
+      width: 33%;
+    }
+    @include mq-max(xs) {
+      width: 50%;
+      padding: 0 5px;
+    }
+    a {
+      background-color: $keyColor;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//anchor
+.parts_anchor {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  li {
+    width: 20%;
+    padding: 0 10px;
+    @include mq-max(sm) {
+      width: 33%;
+    }
+    @include mq-max(xs) {
+      width: 50%;
+      padding: 0 5px;
+    }
+    a {
+      background-color: $keyColor;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// anchorList上書き
+.c-anchor {
+  // margin-bottom: 0;
+}
+
+//カラー
+.parts_color {
+    align-items: center;
+  justify-content: center;
+  li {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    &.keyColor {
+      background: $keyColor;
+      color: $white;
+    }
+    // &.keyColor-dark {
+    //   background: $keyColor-dark;
+    //   color: $white;
+
+    // }
+    &.accentColor {
+      background: $accentColor;
+      color: $white;
+
+    }
+    &.lightGray {
+      background: $lightGray;
+    }
+    &.lightBlue {
+      background: $lightBlue;
+    }
+
+    &.white {
+      background: $white;
+    }
+    &.gray {
+      background: $gray;
+    }
+    &.black {
+      background: $black;
+      color: $white;
+    }
+    &.gray-l {
+      background: $gray-l;
+    }
+    &.red {
+      background: $red;
+      color: $white;
+    }
+
+  }
+
+}
+
+//code highlight
+pre {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//余白
+.mb50 {
+  margin-bottom: 50px;
+}

@@ -1,0 +1,26 @@
+<nav class="l-navigation" id="gnavi">
+  <ul class="l-navigation__inner">
+    <li class="l-navigation__item">
+      <a{% if currentID |length > 0 and currentID == "1" %} class="current"{% endif %} href="{{ link.about}}"><span class="l-navigation__ja">グリットについて</span>ABOUT US</a>
+    </li>
+    <li class="l-navigation__item">
+      <a{% if currentID |length > 0 and currentID == "2" %} class="current"{% endif %} href="{{ link.school}}"><span class="l-navigation__ja">スクール</span>SCHOOL</a>
+    </li>
+    <li class="l-navigation__item">
+      <a{% if currentID |length > 0 and currentID == "3" %} class="current"{% endif %} href="{{ link.jr_youth}}"><span class="l-navigation__ja">ジュニアユース</span>Jr.YOUTH</a>
+    </li>
+    <li class="l-navigation__item">
+      <a{% if currentID |length > 0 and currentID == "4" %} class="current"{% endif %} href="{{ link.faq}}"><span class="l-navigation__ja">よくある質問</span>FAQ</a>
+    </li>
+    <li class="l-navigation__item">
+      <a{% if currentID |length > 0 and currentID == "5" %} class="current"{% endif %} href="{{ link.news}}"><span class="l-navigation__ja">お知らせ</span>NEWS</a>
+    </li>
+    <li class="l-nav">
+      <ul class="l-nav__btns">
+        <li class="l-nav__item l-nav__item">
+          <a href="{{ link.contact}}"><span></span></a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,477 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+<!-- ページタイトル設定 -->
+{% set pageTitle = 'パーツ集 | クライアント用パーツ' %}
+{% set subTitle = 'Rental lease' %}
+
+<!-- ページID設定 -->
+{% set pageId = 'parts' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '各プロジェクトごとに用意するパーツ集' %}
+{% set ogurlpath = '' %}
+{% set ogimagepath = '' %}
+
+<!-- ページ個別　CSS等 -->
+{% block headArea %}
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/parts.css">
+{% endblock %}
+
+<!-- コンテンツをここに記載(div#main) -->
+{% block contents %}
+
+<section class="l-section anchorList">
+  <h2 class="u-taC">クライアント用パーツ</h2>
+  <ul class="parts_anchor">
+    {# 「data-anchor」を持つものがJSで自動的に書き出される #}
+  </ul>
+  {% include '../../include/parts/_parts-link.twig' %}
+</section>
+
+<h2 class="c-ttl-2 c-ttl--center"><i>ATOM</i></h2>
+
+{# セクション #}
+<section id="heading" class="l-section" data-anchor="セクション">
+  <h2 class="c-ttl-2">セクション</h2>
+  <div class="l-section__inner l-section--md">
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </div>
+  <div class="l-section__inner l-section--sm">
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </div>
+  <div class="l-section__inner l-section--xs">
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </div>
+</section>
+{# セクション #}
+
+{# 見出し #}
+<section id="heading" class="l-section" data-anchor="見出し">
+  <section class="l-section__inner">
+    <h2 class="c-ttl-2">h2見出し</h2>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h2 class="c-ttl-2 c-ttl--center">h2見出し</h2>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h2 class="c-ttl-2"><small>SUBTITLE</small>サブタイトルありのh2見出し</h2>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h2 class="c-ttl-2 c-ttl-2--line">
+      <small>SUBTITLE</small>
+      <span>下層で使うh2見出し</span>
+    </h2>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h2 class="c-ttl-2 c-ttl--center"><small>SUBTITLE</small>h2見出し中央寄せ</h2>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h2 class="c-ttl-2 c-ttl--center c-ttl--mbLarge"><small>SUBTITLE</small>h2見出し　margin-bottom:30px</h2>
+    <figure>
+      <img src="https://placehold.jp/640x150.png" alt="">
+    </figure>
+  </section>
+  <section class="l-section__inner">
+    <h3 class="c-ttl-3">h3見出し</h3>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h3 class="c-ttl-3 c-ttl-3--line">h3見出し＋横線</h3>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h3 class="c-ttl-3 c-ttl-3--line">h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線h3見出し＋横線</h3>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h4>h4見出し</h4>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+  <section class="l-section__inner">
+    <h5>h5見出し</h5>
+    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  </section>
+</section>
+{# 見出し #}
+
+
+{# 本文 #}
+<section id="paragraph" class="l-section" data-anchor="本文">
+  <h2 class="c-ttl-2">本文</h2>
+  <p>本文16px。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+  <p class="is-large">本文18px。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+  <blockquote class="c-blockquote">
+    <p>本文16px。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+  </blockquote>
+</section>
+{# 本文 #}
+
+
+{# リスト #}
+<section id="list" class="l-section" data-anchor="リスト">
+  <h2 class="c-ttl-2">リスト</h2>
+  <ul class="c-list c-list--disc">
+    <li class="c-list__item">.c-list.c-list--disc > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--disc > .c-list__item</li>
+    <li class="c-list__item">ながーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーい</li>
+  </ul>
+  <ul class="c-list c-list--count">
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+    <li class="c-list__item">.c-list.c-list--count > .c-list__item</li>
+  </ul>
+  <ul class="c-list c-list--large">
+    <li class="c-list__item">ここにサービス名が入ります入りますます</li>
+    <li class="c-list__item">ここにサービス名が入ります入りますます</li>
+    <li class="c-list__item">ここにサービス名が入ります入りますます</li>
+  </ul>
+</section>
+{# リスト #}
+
+
+{# ボタン #}
+<section id="button" class="l-section" data-anchor="ボタン">
+   <h2 class="c-ttl-2">ボタン</h2>
+   <ul>
+     <li><a href="" class="c-btn">FANについて詳しく知る</a></li>
+     <li><a href="" target="_blank" rel="noopener" class="c-link">外部リンク</a></li>
+     <li><a href="sample.pdf" target="_blank" rel="noopener" class="c-link">PDFリンク</a></li>
+     <li><a href="" class="c-link c-link--underline">テキストリンク</a></li>
+   </ul>
+</section>
+{# ボタン #}
+
+
+{# 背景 #}
+<section id="background" class="" data-anchor="背景" style="margin: 0 0 60px;">
+  <div class="l-section--lightBlue">
+    <section class="l-section">
+      <h2 class="c-ttl-2 c-ttl-2--line">
+        <small>SUBTITLE</small>
+        <span>下層で使うh2見出し</span>
+      </h2>
+      <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+    </section>
+  </div>
+
+  <div class="l-section--lightBlue l-section--lowPadding">
+    <section class="l-section">
+      <h2 class="c-ttl-2 c-ttl-2--line">
+        <small>SUBTITLE</small>
+        <span>padding小さめ</span>
+      </h2>
+      <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+    </section>
+  </div>
+
+  <div class="l-section--lightBlue l-section--lightBlue--band">
+    <section class="l-section">
+      <h2 class="c-ttl-2 c-ttl-2--line">
+        <small>SUBTITLE</small>
+        <span>下層で使うh2見出し</span>
+      </h2>
+      <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+    </section>
+  </div>
+</section>
+{# 背景 #}
+
+
+{# テーブル #}
+<section id="table" class="l-section" data-anchor="テーブル">
+  <h2 class="c-ttl-2">テーブル</h2>
+  <table class="c-tbl c-tbl__block">
+    <tbody>
+      <tr>
+        <th>会社名</th>
+        <td>株式会社フォノグラム</td>
+      </tr>
+      <tr>
+        <th>代表取締役</th>
+        <td>フォノグラム太郎</td>
+      </tr>
+      <tr>
+        <th>設 立</th>
+        <td>1984年(昭和 59年4月) </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+{# テーブル #}
+
+
+<h2 class="c-ttl-2 c-ttl--center"><i>Molecules</i></h2>
+
+{# 2カラムレイアウト　画像端付き #}
+<div class="l-col2 l-col2--side">
+  <div class="l-section l-section--full">
+    <div class="l-col2__block">
+      <div class="l-col2__img" style="background-image: url('{{ inc.image }}/top/pic_aboutus.jpg');"></div>
+      <section class="l-col2__detail">
+        <h2 class="c-ttl-2"><small>ABOUT US</small>建機に関わる課題解決の<br>最良のパートナーを目指して。</h2>
+        <p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+        <div class="l-col2__btn">
+          <a href="" class="c-btn">FANについて詳しく知る</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="l-col2__block l-col2__block--reverse">
+      <div class="l-col2__img" style="background-image: url('{{ inc.image }}/top/pic_aboutus.jpg');"></div>
+      <section class="l-col2__detail">
+        <h2 class="c-ttl-2"><small>ABOUT US</small>建機に関わる課題解決の<br>最良のパートナーを目指して。</h2>
+        <p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+        <div class="l-col2__btn">
+          <a href="" class="c-btn">FANについて詳しく知る</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+{# 2カラムレイアウト　画像端付き #}
+
+
+{# 2カラム　通常 #}
+<div class="l-col2">
+  <div class="l-section">
+    <div class="l-col2__block l-col2__block--reverse">
+      <div class="l-col2__img">
+        <img src="{{ inc.image }}/top/img_reason.jpg" alt="">
+      </div>
+      <section class="l-col2__detail">
+        <h2 class="c-ttl-2"><small>REASON</small>総合力・機動力・提案力で<br>建機の課題を解決いたします。</h2>
+        <p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+        <div class="l-col2__btn">
+          <a href="" class="c-btn">選ばれる理由を詳しく知る</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="l-col2__block">
+      <div class="l-col2__img">
+        <img src="{{ inc.image }}/top/img_reason.jpg" alt="">
+      </div>
+      <section class="l-col2__detail">
+        <h2 class="c-ttl-2"><small>REASON</small>総合力・機動力・提案力で<br>建機の課題を解決いたします。</h2>
+        <p>ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。</p>
+        <div class="l-col2__btn">
+          <a href="" class="c-btn">選ばれる理由を詳しく知る</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+{# 2カラム　通常 #}
+
+
+{# 事業紹介 #}
+<div class="l-section">
+  {# 3カラム #}
+  <div class="c-card01">
+    <ul class="grid c-card01__list">
+      <li class="col-4_sm-6_xs-12 c-card01__item">
+        <a href="">
+          <div class="c-card01__inner">
+            <div class="c-card01__thumb" style="background-image: url('{{ inc.image }}/common/business/pic_business_rental.jpg');"></div>
+            <div class="c-card01__body">
+              <h3 class="c-card01__title" data-js="js-matchHeight">建設機器 レンタル・リース</h3>
+              <p class="c-link c-link--arrow">詳しく知る</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="col-4_sm-6_xs-12 c-card01__item">
+        <a href="">
+          <div class="c-card01__inner">
+            <div class="c-card01__thumb" style="background-image: url('{{ inc.image }}/common/business/pic_business_rental.jpg');"></div>
+            <div class="c-card01__body">
+              <h3 class="c-card01__title" data-js="js-matchHeight">建設機器 レンタル・リース</h3>
+              <p class="c-link c-link--arrow">詳しく知る</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="col-4_sm-6_xs-12 c-card01__item">
+        <a href="">
+          <div class="c-card01__inner">
+            <div class="c-card01__thumb" style="background-image: url('{{ inc.image }}/common/business/pic_business_rental.jpg');"></div>
+            <div class="c-card01__body">
+              <h3 class="c-card01__title" data-js="js-matchHeight">建設機器 レンタル・リース</h3>
+              <p class="c-link c-link--arrow">詳しく知る</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  {# 3カラム #}
+
+  {# 4カラム #}
+  <div class="c-card01 c-card01--sm">
+    <ul class="grid c-card01__list">
+      <li class="col-3_sm-6_xs-12 c-card01__item">
+        <a href="">
+          <div class="c-card01__inner">
+            <div class="c-card01__thumb" style="background-image: url('https://placehold.jp/266x249.png');"></div>
+            <div class="c-card01__body">
+              <h3 class="c-card01__title" data-js="js-matchHeight">環境・リサイクル機械</h3>
+              <p class="c-link c-link--arrow">詳しく知る</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="col-3_sm-6_xs-12 c-card01__item">
+        <a href="">
+          <div class="c-card01__inner">
+            <div class="c-card01__thumb" style="background-image: url('https://placehold.jp/266x249.png');"></div>
+            <div class="c-card01__body">
+              <h3 class="c-card01__title" data-js="js-matchHeight">環境・リサイクル機械</h3>
+              <p class="c-link c-link--arrow">詳しく知る</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="col-3_sm-6_xs-12 c-card01__item">
+        <a href="">
+          <div class="c-card01__inner">
+            <div class="c-card01__thumb" style="background-image: url('https://placehold.jp/266x249.png');"></div>
+            <div class="c-card01__body">
+              <h3 class="c-card01__title" data-js="js-matchHeight">環境・リサイクル機械</h3>
+              <p class="c-link c-link--arrow">詳しく知る</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="col-3_sm-6_xs-12 c-card01__item">
+        <a href="">
+          <div class="c-card01__inner">
+            <div class="c-card01__thumb" style="background-image: url('https://placehold.jp/266x249.png');"></div>
+            <div class="c-card01__body">
+              <h3 class="c-card01__title" data-js="js-matchHeight">環境・リサイクル機械</h3>
+              <p class="c-link c-link--arrow">詳しく知る</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  {# 4カラム #}
+
+  {# 採用カード #}
+  <ul class="grid c-card02">
+    <li class="col-4_sm-6_xs-12 c-card02__item">
+      <a href="">
+        <div class="c-card02__inner">
+          <div class="c-card02__thumb" style="background-image: url('{{ inc.image }}/common/business/pic_business_rental.jpg');"></div>
+          <div class="c-card02__body">
+            <h3 class="c-card02__title">営業</h3>
+            <p class="c-card02__desc" data-js="js-matchHeight">正社員</p>
+            <p class="c-card02__detail">詳しくはこちら</p>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="col-4_sm-6_xs-12 c-card02__item">
+      <a href="">
+        <div class="c-card02__inner">
+          <div class="c-card02__thumb" style="background-image: url('{{ inc.image }}/common/business/pic_business_rental.jpg');"></div>
+          <div class="c-card02__body">
+            <h3 class="c-card02__title">営業</h3>
+            <p class="c-card02__desc" data-js="js-matchHeight">正社員正社員正社員正社員正社員正社員正社員正社員正社員正社員正社員</p>
+            <p class="c-card02__detail">詳しくはこちら</p>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="col-4_sm-6_xs-12 c-card02__item">
+      <a href="">
+        <div class="c-card02__inner">
+          <div class="c-card02__thumb" style="background-image: url('{{ inc.image }}/common/business/pic_business_rental.jpg');"></div>
+          <div class="c-card02__body">
+            <h3 class="c-card02__title">営業</h3>
+            <p class="c-card02__desc" data-js="js-matchHeight">正社員</p>
+            <p class="c-card02__detail">詳しくはこちら</p>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  {# 採用カード #}
+</div>
+{# 事業紹介 #}
+
+
+{# ポイントボックス #}
+<div class="l-section">
+  <div class="c-pointBox">
+    <ul class="c-pointBox__list">
+      <li class="c-pointBox__item">
+        <h3 class="c-ttl-3">地域密着のグループ企業としての提案力</h3>
+        <div class="c-pointBox__desc">
+          <p>地域密着の地場企業として、各化学工場・プラントの工場内ルールを熟知し、ニーズに合った付加価値の高い商品・サービスをご提案することでお客様の課題を解決します。</p>
+        </div>
+      </li>
+      <li class="c-pointBox__item">
+        <h3 class="c-ttl-3">多様性に対応する総合力</h3>
+        <div class="c-pointBox__desc">
+          <p>建設現場のIT化・働き方の多様化など、社会の変化に対応し今後のお客様のニーズに迅速にフレキシブルに対応するため、現状に満足ぜず進化を続けていきます。</p>
+        </div>
+      </li>
+      <li class="c-pointBox__item">
+        <h3 class="c-ttl-3">豊富な取扱商品が生む<br>機動力</h3>
+        <div class="c-pointBox__desc">
+          <p>必要な機械をスピーディーに、ストレスなく現場で使用していただくために、自社で整備した小さな電動工具から大きな建設機械まで幅広く取り扱っています。</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{# ポイントボックス #}
+
+{# リクルートCVエリア #}
+{% include '../../include/_recruitCV.twig' %}
+{# リクルートCVエリア #}
+
+{# グループ会社 #}
+{% include '../../include/_groupCompany.twig' %}
+{# グループ会社 #}
+
+{% endblock %}
+
+<!-- ページ個別　JS等 -->
+{% block jsArea %}
+<script>
+  $(function(){
+    var anchorList = [];
+    var anchorName = [];
+    $('[data-anchor]').each(function(){
+      anchorList.push($(this).attr('id'));
+      anchorName.push($(this).data('anchor'));
+    })
+
+    //アンカーリンク描画
+    for (var i=0; i < anchorList.length; i++) {
+      $('.anchorList .parts_anchor').append('<li><a href="#'+ anchorList[i] +'">' + anchorName[i] +'</a></li>');
+    }
+  });
+</script>
+{% endblock %}

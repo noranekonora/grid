@@ -1,0 +1,118 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//  見出しクラス
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.c-ttl {
+  //h1見出し
+
+  &-1 {
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    @include mq-max(sm) {
+      font-size: 32px;
+    }
+
+    @include mq-max(xs) {
+      font-size: 28px;
+    }
+
+    &>small {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      color: $keyColor;
+      letter-spacing: 0.06em;
+      margin-bottom: 5px;
+    }
+  }
+
+  //h2見出し
+  &-2 {
+    font-size: 40px;
+    font-family: $futura;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-left: 1.7em;
+    position: relative;
+
+    @include mq-max(xs) {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 5px;
+      height: 40px;
+      background-color: $white;
+      @include mq-max(xs) {
+        width: 3px;
+        height: 20px;
+        top: 10px;
+
+      }
+    }
+
+    &>small {
+      display: block;
+      font-family: $sanserif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+
+      @include mq-max(xs) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  //h3見出し
+  &-3 {
+    font-size: 24px;
+    font-family: $futura;
+    font-weight: 600;
+
+    @include mq-max(xs) {
+      font-size: 20px;
+    }
+  }
+
+  //modify
+  &--center {
+    text-align: center;
+  }
+
+  &--mbLarge {
+    margin-bottom: 30px;
+  }
+}
+
+// 見出しに数字つけるために別で記載
+#contents {
+  counter-reset: point;
+  .c-ttl-2 {
+    &::before {
+      content: counter(point, decimal-leading-zero);
+      counter-increment: point;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      font-size: 40px;
+      font-family: "Heebo";
+      padding-left: 10px;
+      line-height: 1.2;
+      @include mq-max(xs) {
+        font-size: 26px;
+        top: 6px;
+        padding-left: 6px;
+      }
+    }
+  }
+}

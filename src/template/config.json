@@ -1,0 +1,24 @@
+{
+  "siteName": "grit",
+  "domain": "",
+  "companyName": "一般社団法人 広島グリットサッカークラブ",
+  "keywords": "",
+  "description": "",
+  "responsive": true,
+  "inc": {
+    "image": "/inc/image",
+    "css": "/inc/css",
+    "js": "/inc/js",
+    "pdf": "/inc/pdf"
+  },
+  "link": {
+    "parts": "/_parts",
+    "home": "/",
+    "about": "/about/",
+    "school": "/school/",
+    "jr_youth": "/jr-youth/",
+    "faq": "/faq/",
+    "news": "/news/",
+    "contact": "/contact/"
+  }
+}

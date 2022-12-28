@@ -1,0 +1,43 @@
+//ページ内アンカーリンク
+
+.c-anchor {
+  margin-bottom: 60px;
+  background-color: $lightGray;
+  padding: 30px 60px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  @include mq-max(content) {
+    padding: 30px 15px 25px;
+  }
+  &__item {
+    display: inline-block;
+    padding-right: 25px;
+    margin-bottom: 10px;
+    width: 20%;
+    @include mq-max(md) {
+      width: 25%;
+    }
+    @include mq-max(sm) {
+      width: 50%;
+    }
+    &>a {
+      color: $textColor;
+      font-size: 16px;
+      font-weight: 400;
+      display: inline-block;
+      position: relative;
+      @include mq-max(xs) {
+        font-size: 12px;
+      }
+      &:after {
+        @include fa('f107');
+        position: absolute;
+        top: 54%;
+        right: -0.8em;
+        transform: translateY(-50%);
+        line-height: 1;
+        color: $keyColor;
+      }
+    }
+  }
+}

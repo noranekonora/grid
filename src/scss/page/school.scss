@@ -1,0 +1,15 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+#school {
+ .p-category {
+   &__price {
+    text-align: right;
+    margin-top: 10px;
+    @include mq-max(xs) {
+      text-align: left;
+      font-size: 14px;
+    }
+   }
+ }
+}

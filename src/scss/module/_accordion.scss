@@ -1,0 +1,82 @@
+//アコーディオン
+
+.c-accordion {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__title {
+    padding: 20px 60px 20px 30px;
+    border-bottom: 2px solid $keyColor;
+    position: relative;
+    cursor: pointer;
+    &:first-child {
+      border-top: 2px solid $keyColor;
+    }
+    &:after {
+      @include fa('f067');
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 23px;
+      transform: translateY(-50%);
+    }
+    &.open {
+      &:after {
+        content: '\f068';
+      }
+    }
+  }
+  &__body {
+    font-size: 16px;
+    padding: 20px 60px 20px 30px;
+    background-color: #F4F4F4;;
+    border-bottom: 2px solid $keyColor;
+    display: none;
+    @include mq-max(xs) {
+      padding-right: 30px;
+    }
+  }
+
+  //Q&A
+  @mixin faqIcon($string) {
+    content: $string;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 1.7;
+    text-align: center;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+  }
+  &.c-accordion--faq {
+    font-size: 18px;
+    border-bottom: 1px solid $bdrColor;
+    margin-bottom: 0;
+    @include mq-max(xs) {
+      font-size: 16px;
+    }
+    .c-accordion__title {
+      padding-left: 65px;
+      position: relative;
+      &:before {
+        @include faqIcon('Q');
+        color: $keyColor;
+        background-color: #F2FBFF;
+      }
+    }
+    .c-accordion__body {
+      padding-left: 65px;
+      position: relative;
+      background-color: $keyColor;
+      &:before {
+        @include faqIcon('A');
+        color: #fff;
+        background-color: $accentColor;
+      }
+    }
+  }
+}

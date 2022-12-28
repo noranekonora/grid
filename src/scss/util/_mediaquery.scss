@@ -1,0 +1,20 @@
+//メディアクエリ出力用mixin
+
+// @mixinの定義
+// media query max-width
+@mixin mq-max($breakpoint: sm) {
+  @if $responsiveMode == true{
+    @media #{map-get($breakpoint-max, $breakpoint)} {
+      @content;
+    }
+  }
+}
+
+// media query min-width
+@mixin mq-min($breakpoint: sm) {
+  @if $responsiveMode == true{
+    @media #{map-get($breakpoint-min, $breakpoint)} {
+      @content;
+    }
+  }
+}

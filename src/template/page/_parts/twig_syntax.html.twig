@@ -1,0 +1,135 @@
+{% extends '../../layout/_01_lower.twig' %}
+
+<!-- ページタイトル設定 -->
+{% set pageTitle = 'Twig Syntax' %}
+
+<!-- ページID設定 -->
+{% set pageId = 'parts' %}
+
+{# グローバルメニュー カレント固定  #}
+{% set currentID = '' %}
+
+{# OGP関連設定
+※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
+※ogurlはルート相対パスで「必ず」記入してください
+※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
+{% set description = '' %}
+{% set ogurlpath = '' %}
+{% set ogimagepath = '' %}
+
+<!-- ページ個別　CSS等 -->
+{% block headArea %}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/agate.min.css">
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/parts.css">
+{% endblock %}
+
+<!-- コンテンツをここに記載(div#main) -->
+{% block contents %}
+
+<div class="l-section">
+  <h2 class="u-taC">Twig構文</h2>
+  <ul class="parts_anchor">
+    <li><a href="#extend">継承</a></li>
+    <li><a href="#include">インクルード</a></li>
+    <li><a href="#comment">コメントアウト</a></li>
+    <li><a href="#variable">変数</a></li>
+    <li><a href="#if">条件式</a></li>
+    <li><a href="#currentNavi">currentクラス付きnavi</a></li>
+  </ul>
+  {% include '../../include/parts/_parts-link.twig' %}
+</div>
+
+{# extend #}
+<section id="extend" class="l-section">
+  <h2>継承</h2>
+  <pre><code class="twig hljs">{% raw %}{% extends '相対パス' %}{% endraw %}</code></pre>
+</section>
+{# extend #}
+
+{# include #}
+<section id="include" class="l-section">
+  <h2>インクルード</h2>
+  <pre><code class="twig hljs">{% raw %}{% include '相対パス' %}{% endraw %}</code></pre>
+</section>
+{# include #}
+
+{# comment out #}
+<section id="comment" class="l-section">
+  <h2>コメントアウト</h2>
+  <pre><code class="twig hljs">{% raw %}{# ここにコメントを書く#}{% endraw %}</code></pre>
+</section>
+{# comment out #}
+
+{# variable #}
+<section id="variable" class="l-section">
+  <h2>変数</h2>
+
+  <section class="l-section">
+    <h3>変数表記</h3>
+    <pre><code class="twig hljs">{% raw %}{{ 変数名 }}{% endraw %}</code></pre>
+  </section>
+
+<section class="l-section">
+  <h3>変数定義</h3>
+  <pre><code class="twig hljs">{% raw %}{% set 変数名 = 'value' %}{% endraw %}</code></pre>
+  <ul class="comment">
+    <li>配列の場合は<br>{% raw %}{% set array = [ A, B ] %}{% endraw %}</li>
+    <li>連想配列は<br>{% raw %}{% set array =  [ key : value ] %}{% endraw %}</li>
+  </ul>
+</section>
+</section>
+{# variable #}
+
+{# if #}
+<section id="if" class="l-section">
+  <h2>条件式</h2>
+<pre><code class="twig hljs">{% raw %}
+{% if 条件式 %}
+  処理
+{% endif %}
+{% endraw %}
+</code></pre>
+  <p>else文、elseif文、複数条件の場合はandやorも使用可能</p>
+<pre><code class="twig hljs">{% raw %}
+{% if 条件式A and 条件式B %}
+  処理
+{% elseif 条件式 %}
+  処理
+{% else %}
+  処理
+{% endif %}
+{% endraw %}
+</code></pre>
+</section>
+{# if #}
+
+{# currentNavi #}
+<section id="currentNavi" class="l-section">
+  <h2>currentクラス付きnavi</h2>
+
+<pre><code class="twig hljs">{% raw %}
+&lt;nav id=&quot;ナビ名&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;1&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;2&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;3&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;4&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a{% if currentID |length &gt; 0 and currentID == &quot;5&quot; %} class=&quot;current&quot;{% endif %} href=&quot;&quot;&gt;メニュー5&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+{% endraw %}
+</code></pre>
+
+<ul class="comment">
+  <li>「currentID」は任意の名前に変更OK</li>
+</ul>
+</section>
+{# currentNavi #}
+
+{% endblock %}
+
+<!-- ページ個別　JS等 -->
+{% block jsArea %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}

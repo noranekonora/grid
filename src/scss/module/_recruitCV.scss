@@ -1,0 +1,103 @@
+//リクルートCVエリア
+.l-recruitCV {
+  overflow: hidden;
+  position: relative;
+  &:before {
+    content: '';
+    background-color: #242424;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    z-index: 1;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: calc(100% - (10px * 2));
+    height: calc(100% - (15px * 2));
+    border: 1px solid $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+  }
+  &__bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s cubic-bezier(0, -0.075, 0.27, 0.94);
+    z-index: -1;
+  }
+  &>a {
+    display: block;
+    &:hover {
+      .l-recruitCV__bg {
+        transform: scale(1.1);
+      }
+      .l-recruitCV__more {
+        &>span {
+          &:after {
+            right: -1em;
+          }
+        }
+      }
+    }
+  }
+  &__inner {
+    max-width: $contentWidth;
+    margin: 0 auto;
+    padding: 120px 15px 131px;
+    position: relative;
+    z-index: 2;
+    @include mq-max(sm) {
+      padding: 120px 30px 131px;
+    }
+  }
+  &__desc {
+    text-align: center;
+    color: $white;
+    margin-bottom: 35px;
+    font-size: 15px;
+    @include mq-max(xs) {
+      text-align: left;
+    }
+  }
+  &__more {
+    text-align: center;
+    color: $white;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1;
+    &>span {
+      position: relative;
+      display: inline-block;
+      &:after {
+        @include fa('f105');
+        line-height: 1;
+        position: absolute;
+        top: 60%;
+        right: -0.8em;
+        transform: translateY(-50%);
+        transition: all $transition;
+      }
+    }
+  }
+
+  //パーツ調整
+  .c-ttl-2 {
+    color: $white;
+    &>small {
+      color: $white;
+    }
+  }
+}

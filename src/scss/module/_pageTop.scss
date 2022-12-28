@@ -1,0 +1,19 @@
+.pageTop{
+  position: fixed;
+  bottom: 95px;
+  right: 15px;
+  z-index: 1000;
+  @include mq-max(xs) {
+    bottom: 72px;
+  }
+  &:after {
+    @include fa('f077');
+    display: inline-block;
+    color: $keyColor;
+    padding: 20px;
+    background-color: $accentColor;
+    border-radius: 50%;
+    line-height: 1;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}

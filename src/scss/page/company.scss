@@ -1,0 +1,166 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+#company {
+
+  //企業理念
+  .p-philosophy {
+    &__inner {
+      display: flex;
+      align-items: center;
+      @include mq-max(bp700) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    &__desc {
+      padding-left: 90px;
+      position: relative;
+      top: 14px;
+      @include mq-max(bp700) {
+        padding-left: 0;
+        top: 0;
+      }
+      strong {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0;
+        @include mq-max(xs) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    //パーツ調整
+    .c-ttl-2 {
+      margin: 0;
+      @include mq-max(bp700) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
+  //代表挨拶
+  .p-greet {
+    &__catch {
+      margin-bottom: 30px;
+      strong {
+        line-height: 1.5;
+        font-size: 28px;
+        font-weight: 500;
+      }
+    }
+    &__txt {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__author {
+      text-align: right;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-top: 25px;
+      &-job {
+        font-size: 16px;
+        display: block;
+        padding-right: 28px;
+      }
+      &-name {
+        font-size: 22px;
+        display: block;
+      }
+    }
+  }
+
+
+  //行動指針
+  .p-guide {
+    &__list {
+      padding-left: 65px;
+      @include mq-max(xs) {
+        padding-left: 15px;
+      }
+    }
+    &__item {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__title {
+      margin: 0;
+      @include mq-max(xs) {
+        font-size: 20px;
+      }
+    }
+  }
+
+
+  //会社概要
+  .p-overview {
+    &__tbl {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .label{
+        display: inline-block;
+        width: 50px;
+      }
+    }
+  }
+
+
+
+  //沿革
+  .p-history {
+    background: $lightBlue;
+    width: calc(100% - 73px);
+    overflow: hidden;
+    @include mq-max(bp1350) {
+      padding-right: 0;
+    }
+    @include mq-max(xs) {
+      width: calc(100% - 30px);
+    }
+    &__inner {
+      @include mq-max(content) {
+        padding-right: 0;
+      }
+    }
+    &__scroll {
+      overflow-x: scroll;
+      position: relative;
+      padding-bottom: 20px;
+      img {
+        display: block;
+        height: 275px;
+      }
+    }
+
+    //パーツ調整
+    .l-section {
+      max-width: calc(#{$contentWidth} + ((100vw - #{$contentWidth}) / 2));
+      margin: 0 0 0 auto;
+      @include mq-max(xs) {
+        padding-right: 0;
+      }
+    }
+  }
+
+
+  //perfectscrollの改造
+  .ps {
+    &>.ps__scrollbar-x-rail {
+      opacity: 1;
+      background-color: $lightBlue;
+      .ps__scrollbar-x {
+        background-color: $keyColor;
+        height: 11px;
+      }
+    }
+  }
+
+}

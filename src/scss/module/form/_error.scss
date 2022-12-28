@@ -1,0 +1,106 @@
+//サイトレイアウト構造を記述
+
+.error {
+  background: $bg-error;
+  border: $border-error;
+  padding: $padding-content;
+  color: $txt-error;
+  margin: $padding-content auto;
+  border-radius: $border-radius;
+}
+
+.form_error_wrap {
+  display: none;
+}
+
+.form_error_inner {
+  display: flex;
+  align-items: baseline;
+  &>i {
+    margin-right: 4px;
+  }
+}
+
+.form_error {
+  div.txt {
+    position: relative;
+    display: inline-block;
+    @include mq-max(sm) {
+      display: block;
+    }
+    &.wdh100 {
+      width: 100%;
+    }
+    &:before {
+      @include fa('f00d');
+      color: $red;
+      font-size: 1.6rem;
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+  }
+  .form_error_wrap {
+    display: block;
+    color: $txt-error;
+    ul {
+      font-size: 90%;
+      display: inline-block;
+      margin-top: 5px;
+      i {
+        display: inline;
+      }
+    }
+  }
+  input,textarea,select {
+    background: $bg-error;
+    border: $border-error;
+    padding: $padding-parts;
+    color: $txt-error;
+      &.medium,&.long,&.small{
+        @include mq-max(sm) {
+        width: 100%;
+        display: block;
+        }
+      }
+  }
+}
+
+// リアルタイムバリデーション
+textarea, input, select {
+  &.has_error,
+  &.has_success {
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  &.has_error {
+    border: 2px solid $txt-error;
+    // background-image: url(/inc/image/form/ico_error.png);
+  }
+  &.has_success {
+    border: 2px solid #5cb85c;
+    background-color: #e9fbe9;
+    &:before {
+    /*  content: "\f00c";
+      font-family: $FontAwesome;
+      color: $keyColor;*/
+    }
+  }
+}
+
+textarea {
+  &.has_error, &.has_success {
+    background-position: right top;
+  }
+}
+
+
+//送信ボタン
+.l-btnArea {
+  .form_error_inner {
+    justify-content: center;
+    @include mq-max(xs) {
+      text-align: left;
+    }
+  }
+}

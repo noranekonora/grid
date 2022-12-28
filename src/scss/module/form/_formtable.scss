@@ -1,0 +1,69 @@
+//フォームテーブル
+.c-formTbl {
+  border-collapse: collapse;
+  width: 100%;
+  // table-layout: fixed;
+  margin-bottom: 40px;
+  @include mq-max(sm) {
+    border-bottom: 1px solid $border-table;
+    margin-bottom: 30px;
+  }
+
+  //th
+  &__head {
+    text-align: left;
+    background-color: $bg-th;
+    width: 300px;
+    border: 1px solid $border-table;
+    padding: 15px 10px;
+    font-size: 16px;
+    @include mq-max(sm) {
+      width: 100%;
+      display: block;
+    }
+    //必須 or 任意ラベル
+    .ico {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &__title {
+    position: relative;
+    width: 100%;
+    padding-right: 45px;
+  }
+
+  //td
+  &__input {
+    width: calc(100% - 300px);
+    border: 1px solid $border-table;
+    padding: 15px 10px;
+    font-size: 16px;
+    @include mq-max(sm) {
+      width: 100%;
+      display: block;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    &-inner {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    //郵便番号
+    &--zip {
+      .c-formTbl__input-inner {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &-ico {
+      margin-right: 5px;
+    }
+  }
+}
