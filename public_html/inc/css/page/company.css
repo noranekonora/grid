@@ -31,7 +31,7 @@
    ██    ███████ ██   ██    ██
 */
 .c-topicspath {
-  max-width: 1280px;
+  max-width: 1138px;
   position: absolute;
   bottom: 16px;
   right: 30px;
@@ -73,12 +73,12 @@
     .l-lowerCaption {
       height: 190px; } }
   .l-lowerCaption__inner {
-    max-width: 1280px;
+    max-width: 1138px;
     width: 100%;
     height: 100%;
     position: relative;
     margin: 0 auto; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-lowerCaption__inner {
         padding: 0 15px; } }
   .l-lowerCaption__titleBox {
@@ -96,7 +96,7 @@
     padding: 0;
     width: 100%;
     text-align: center; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-lowerCaption__title {
         padding: 0 15px; } }
     @media screen and (max-width: 768px) {
@@ -211,7 +211,7 @@
   @media screen and (max-width: 568px) {
     #company .p-history {
       width: calc(100% - 30px); } }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     #company .p-history__inner {
       padding-right: 0; } }
   #company .p-history__scroll {
@@ -222,7 +222,7 @@
       display: block;
       height: 275px; }
   #company .p-history .l-section {
-    max-width: calc(1280px + ((100vw - 1280px) / 2));
+    max-width: calc(1138px + ((100vw - 1138px) / 2));
     margin: 0 0 0 auto; }
     @media screen and (max-width: 568px) {
       #company .p-history .l-section {

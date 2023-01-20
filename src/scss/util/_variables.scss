@@ -11,7 +11,7 @@
 //----------------------------------------------------------------
 //    レイアウト設定
 //----------------------------------------------------------------
-$contentWidth    : 1280px;// 全体のコンテンツ幅
+$contentWidth    : 1138px;// 全体のコンテンツ幅
 $contentPadding  : 30px;//パディング:gridlexでも使用
 $sectionPadding  : 60px; //.l-sectionの上下padding
 $sectionInnerPadding : 30px; //.l-section__innerのpadding
@@ -24,7 +24,7 @@ $padding-content : ($padding-break / 2);//テーブルの上下などの余白�
 //    header fixed設定
 //----------------------------------------------------------------
 $is-fixed        : true;
-$headerHeight    : 120px;
+$headerHeight    : 80px;
 $headerHeight-sp : 60px; //ここを変えたら、menu.jsの「headerHeight」の値も変えること！
 
 
