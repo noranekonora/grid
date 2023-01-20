@@ -12,3 +12,8 @@ ErrorDocument 404 /_404.html
 # WP 読み込み設定
 # AddHandler fcgid-script .php .phps .html
 # AddHandler php7-script .html
+
+AuthType Basic 
+AuthName "login" 
+AuthUserFile "/home/grit2019/grit2019.xsrv.jp//public_html/.htpasswd" 
+require valid-user
