@@ -371,7 +371,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-feature-settings: "pwid";
           font-feature-settings: "pwid";
-  margin-top: 120px; }
+  margin-top: 80px; }
   @media screen and (max-width: 1024px) {
     body {
       margin-top: 60px; } }
@@ -437,7 +437,7 @@ a {
     transition: color 0.2s ease; }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 30px;
   line-height: 2; }
   p:last-child {
@@ -1457,10 +1457,10 @@ ul, ol {
 
 .l-section {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1138px;
   margin: 0 auto;
   padding: 60px 0; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .l-section {
       padding: 0 30px 120px; } }
   @media screen and (max-width: 768px) {
@@ -1495,7 +1495,7 @@ ul, ol {
     padding: 120px 0;
     margin-top: 60px;
     margin-bottom: 60px; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-section--lightgray {
         padding: 60px 30px;
         margin-top: 0; } }
@@ -1507,7 +1507,7 @@ ul, ol {
         padding: 60px 0; } }
     .l-section--lightgray:last-child {
       margin-bottom: 0; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-section--lightgray .l-section:last-child {
         padding-bottom: 0; } }
     .l-section--lightgray--last {
@@ -1520,7 +1520,7 @@ ul, ol {
     padding: 60px 0;
     margin-top: 60px;
     margin-bottom: 60px; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-section--lightBlue {
         padding: 120px 30px;
         margin-top: 0; } }
@@ -1532,7 +1532,7 @@ ul, ol {
         padding: 60px 0; } }
     .l-section--lightBlue:last-child {
       margin-bottom: 0; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-section--lightBlue .l-section:last-child {
         padding-bottom: 0; } }
     .l-section--lightBlue--band {
@@ -1543,7 +1543,7 @@ ul, ol {
         .l-section--lightBlue--band {
           padding-right: 103px;
           padding-left: 30px; } }
-      @media screen and (max-width: 1310px) {
+      @media screen and (max-width: 1168px) {
         .l-section--lightBlue--band {
           margin-bottom: 80px !important; } }
       @media screen and (max-width: 568px) {
@@ -1557,7 +1557,7 @@ ul, ol {
         padding-top: 0; }
         .l-section--lightBlue--band .l-section:last-child {
           padding-bottom: 0; }
-        @media screen and (max-width: 1310px) {
+        @media screen and (max-width: 1168px) {
           .l-section--lightBlue--band .l-section {
             padding: 0 30px 80px; } }
         @media screen and (max-width: 768px) {
@@ -1569,7 +1569,7 @@ ul, ol {
       padding-top: 0; }
       .l-section--lowPadding .l-section:last-child {
         padding-bottom: 0; }
-      @media screen and (max-width: 1310px) {
+      @media screen and (max-width: 1168px) {
         .l-section--lowPadding .l-section {
           padding: 0 30px 80px; } }
       @media screen and (max-width: 768px) {
@@ -1629,6 +1629,10 @@ ul, ol {
   .u-not-under-sm {
     display: none !important; } }
 
+@media screen and (max-width: 568px) {
+  .u-not-under-xs {
+    display: none !important; } }
+
 .u-only-sm-xs {
   display: none !important; }
   @media screen and (max-width: 768px) {
@@ -1671,7 +1675,7 @@ ul, ol {
       -ms-flex: 0 0 calc(100% / 2 + 22px);
           flex: 0 0 calc(100% / 2 + 22px);
       position: relative; }
-      @media screen and (max-width: 1310px) {
+      @media screen and (max-width: 1168px) {
         .l-col2--side .l-col2__detail {
           padding-right: 30px;
           padding-left: 30px; } }
@@ -1682,7 +1686,7 @@ ul, ol {
           width: 100%; } }
     .l-col2--side .l-col2__block--reverse .l-col2__detail {
       padding: 0 50px 0 0; }
-      @media screen and (max-width: 1310px) {
+      @media screen and (max-width: 1168px) {
         .l-col2--side .l-col2__block--reverse .l-col2__detail {
           padding-right: 30px;
           padding-left: 30px; } }
@@ -1692,12 +1696,13 @@ ul, ol {
     .l-col2--side .l-col2__catch {
       font-size: 32px;
       font-weight: 600;
-      line-height: 1.625; }
+      line-height: 1.625;
+      margin-bottom: 10px; }
       @media screen and (max-width: 568px) {
         .l-col2--side .l-col2__catch {
           font-size: 20px; } }
     .l-col2--side .l-col2__txt {
-      line-height: 2.2; }
+      line-height: 2; }
       @media screen and (max-width: 568px) {
         .l-col2--side .l-col2__txt {
           line-height: 1.72; } }
@@ -8468,7 +8473,7 @@ readers do not read off random characters that represent icons */
         justify-content: space-between;
     width: 100%;
     max-width: 100%;
-    height: 120px;
+    height: 80px;
     margin: 0 auto;
     padding: 0 35px 0 40px;
     position: relative;
@@ -8563,7 +8568,7 @@ readers do not read off random characters that represent icons */
   .l-f__inner {
     max-width: 1640px;
     margin: 0 auto; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-f__inner {
         padding: 0 30px; } }
   .l-f__companyName {
@@ -8612,7 +8617,7 @@ readers do not read off random characters that represent icons */
       .l-navigation__item:last-child {
         border-bottom: 1px solid #CCCCCC; } }
   .l-navigation__item a {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center; }
     @media screen and (max-width: 1024px) {
       .l-navigation__item a {
@@ -8686,7 +8691,7 @@ readers do not read off random characters that represent icons */
       pointer-events: auto; }
   .l-navigation__item.has-dropdown .l-dropDown {
     position: absolute;
-    top: 90px;
+    top: 50px;
     visibility: hidden;
     opacity: 0;
     transition: all .5s ease;
@@ -8730,7 +8735,7 @@ readers do not read off random characters that represent icons */
           .l-navigation__item.has-dropdown .l-dropDown li a:after {
             font-size: 13px; } }
   .l-navigation__item.has-dropdown.is-opened .l-dropDown {
-    top: calc(120px + 20px);
+    top: calc(80px + 20px);
     opacity: 1;
     visibility: visible; }
     @media screen and (max-width: 1024px) {
@@ -8789,8 +8794,8 @@ readers do not read off random characters that represent icons */
       color: #FFFFFF;
       position: relative;
       display: inline-block;
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
       transition: all 0.2s ease; }
       @media screen and (max-width: 1024px) {
         .l-nav__item > a {
@@ -9201,7 +9206,7 @@ readers do not read off random characters that represent icons */
   padding-top: 0;
   padding-bottom: 120px;
   margin-top: -80px; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .l-tbl-bgImg__block {
       padding-bottom: 60px; } }
 
@@ -9295,7 +9300,7 @@ readers do not read off random characters that represent icons */
     font-size: 24px;
     display: inline-block;
     margin-right: 50px; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .c-list--large > .c-list__item {
         margin-right: 0;
         display: block; } }
@@ -9791,10 +9796,10 @@ readers do not read off random characters that represent icons */
 
 .c-link {
   color: #FFFFFF;
-  font-size: 23px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  padding: 0 35px 20px;
+  padding: 0 38px 12px 20px;
   display: inline-block;
   margin: 0 auto;
   position: relative;
@@ -9859,7 +9864,7 @@ readers do not read off random characters that represent icons */
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    margin-bottom: 20px; }
+    margin-bottom: 6px; }
     @media screen and (max-width: 768px) {
       .c-newslist dl dt {
         -ms-flex: 0 0 100%;
@@ -9892,7 +9897,7 @@ readers do not read off random characters that represent icons */
 
 .c-newslist__wrap {
   position: relative; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .c-newslist__wrap {
       margin-bottom: 60px; } }
   @media screen and (max-width: 768px) {
@@ -10016,7 +10021,7 @@ readers do not read off random characters that represent icons */
 .l-group {
   background-color: #F7F7F7; }
   .l-group__inner {
-    max-width: 1280px;
+    max-width: 1138px;
     width: 100%;
     margin: 0 auto;
     padding: 64px 0;
@@ -10024,7 +10029,7 @@ readers do not read off random characters that represent icons */
     display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-group__inner {
         padding: 64px 15px; } }
     @media screen and (max-width: 1024px) {
@@ -10046,7 +10051,7 @@ readers do not read off random characters that represent icons */
   .l-group__company {
     max-width: 846px;
     width: 100%; }
-    @media screen and (max-width: 1310px) {
+    @media screen and (max-width: 1168px) {
       .l-group__company {
         max-width: 750px; } }
     @media screen and (max-width: 1024px) {
@@ -10135,7 +10140,7 @@ readers do not read off random characters that represent icons */
     .l-recruitCV > a:hover .l-recruitCV__more > span:after {
       right: -1em; }
   .l-recruitCV__inner {
-    max-width: 1280px;
+    max-width: 1138px;
     margin: 0 auto;
     padding: 120px 15px 131px;
     position: relative;
@@ -10389,7 +10394,7 @@ readers do not read off random characters that represent icons */
   border: 2px solid #CCCCCC;
   padding: 50px 96px;
   background-color: #FFFFFF; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .c-pointBox {
       padding: 50px 40px; } }
   @media screen and (max-width: 568px) {
@@ -10566,7 +10571,7 @@ readers do not read off random characters that represent icons */
   background: linear-gradient(#fff 0%, #ededed 100%);
   width: 230px;
   padding: 20px; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .c-icoCard__icoWrap {
       width: 120px;
       display: -ms-flexbox;
@@ -10583,7 +10588,7 @@ readers do not read off random characters that represent icons */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .c-icoCard__ico {
       width: 100px;
       height: 100px; } }
@@ -10592,7 +10597,7 @@ readers do not read off random characters that represent icons */
   width: calc(100% - 230px);
   padding: 23px 13px 45px 27px;
   position: relative; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .c-icoCard__body {
       width: calc(100% - 120px);
       padding-bottom: 40px; } }
@@ -10619,7 +10624,7 @@ readers do not read off random characters that represent icons */
   position: absolute;
   bottom: 26px;
   left: 28px; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .c-icoCard .c-link--arrow {
       bottom: 15px; } }
   .c-icoCard .c-link--arrow:hover:after {
@@ -10633,7 +10638,7 @@ readers do not read off random characters that represent icons */
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .c-anchor {
       padding: 30px 15px 25px; } }
   .c-anchor__item {
@@ -10747,7 +10752,7 @@ readers do not read off random characters that represent icons */
   padding: 41px 50px;
   width: calc(100% - 250px);
   position: relative; }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .c-flow__desc {
       padding-right: 20px; } }
   @media screen and (max-width: 768px) {
@@ -10956,7 +10961,7 @@ readers do not read off random characters that represent icons */
   @media screen and (max-width: 568px) {
     .l-history {
       width: calc(100% - 30px); } }
-  @media screen and (max-width: 1310px) {
+  @media screen and (max-width: 1168px) {
     .l-history__inner {
       padding-right: 0; } }
   .l-history__scroll {
@@ -10967,7 +10972,7 @@ readers do not read off random characters that represent icons */
       display: block;
       height: 275px; }
   .l-history .l-section {
-    max-width: calc(1280px + ((100vw - 1280px) / 2));
+    max-width: calc(1138px + ((100vw - 1138px) / 2));
     margin: 0 0 0 auto; }
     @media screen and (max-width: 568px) {
       .l-history .l-section {
@@ -11026,7 +11031,7 @@ readers do not read off random characters that represent icons */
         min-width: auto;
         width: 100%; } }
   .l-cvArea__heading {
-    font-size: 80px;
+    font-size: 60px;
     font-family: "Futura PT", sans-serif;
     font-weight: 600;
     color: #1C1C1C;

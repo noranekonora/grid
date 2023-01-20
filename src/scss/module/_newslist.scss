@@ -27,7 +27,7 @@
     dt {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 6px;
       @include mq-max(sm) {
         flex: 0 0 100%;
         max-width: 100%;

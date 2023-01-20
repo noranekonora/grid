@@ -90,18 +90,19 @@
             </dl>
           </a>
         </div>
-        <div class="p-mainVisual__bg" style="background-image: url('/inc/image/top/bg_mainimg.jpg');">
+        <div class="p-mainVisual__bg">
+          <video class="p-mainVisual__video" playsinline autoplay muted loop src="/inc/image/top/video.mp4"></video>
         </div>
         <div class="p-mainVisual__catch">
-          <h2 class="p-mainVisual__catch-heading">
-            <span>It's all up to you!</span> 技術を、<br> 戦術が超える。 </h2>
+          <h2 class="p-mainVisual__catch-heading"> 技術を、<br> 戦術が超える。 <span>It's all up to you!</span>
+          </h2>
         </div>
       </div>
       <div id="contents">
         <div class="l-section p-about">
-          <p>広島市安芸区で活動する「広島グリットサッカークラブ」です。<br> “grit” = ”やり抜く力” という言葉をコンセプトに子どもたちのやり抜く力”育て、伸ばしていくことで簡単に諦めず、自分の自信に繋がる力を身につけます。</p>
+          <p>広島市安芸区で活動する「広島グリットサッカークラブ」です。<br> “grit” = ”やり抜く力” という言葉をコンセプトに子どもたちのやり抜く力”育て、<br class="u-not-under-xs">伸ばしていくことで簡単に諦めず、自分の自信に繋がる力を身につけます。</p>
           <div class="p-about__linkBox">
-            <a class="c-link" href="/about/"><span>グリットについて</span></a>
+            <a class="c-link" href="/about/"><span>グリットについて知る</span></a>
           </div>
         </div>
         <div class="l-col2 l-col2--side">
@@ -109,11 +110,11 @@
             <div class="l-col2__block l-col2__block--reverse">
               <div class="l-col2__img" style="background-image: url('/inc/image/top/pic_school.jpg');"></div>
               <section class="l-col2__detail">
-                <h2 class="c-ttl-2">School</h2>
+                <h2 class="c-ttl-2">SCHOOL</h2>
                 <p class="l-col2__catch">「楽しみながら、サッカーを続ける」</p>
                 <p class="l-col2__txt"> ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。 </p>
                 <div class="l-col2__btn">
-                  <a href="/school/" class="c-link"><span>スクールについて</span></a>
+                  <a href="/school/" class="c-link"><span>スクールについて知る</span></a>
                 </div>
               </section>
             </div>

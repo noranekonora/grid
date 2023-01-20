@@ -320,6 +320,12 @@ lg;
   }
 }
 
+.u-not-under-xs {
+  @include mq-max(xs) {
+    display: none !important;
+  }
+}
+
 .u-only-sm-xs {
   display: none !important;
 
@@ -440,13 +446,14 @@ lg;
       font-size: 32px;
       font-weight: 600;
       line-height: 1.625;
+      margin-bottom: 10px;
       @include mq-max(xs) {
         font-size: 20px;
       }
     }
 
     .l-col2__txt {
-      line-height: 2.2;
+      line-height: 2;
       @include mq-max(xs) {
         line-height: 1.72;
       }
