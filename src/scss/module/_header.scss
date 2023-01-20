@@ -1,13 +1,33 @@
 .l-header {
   box-shadow: 0 3px 6px rgba(255, 255, 255, .07);
-
+  width: 100%;
   // background-color: $white;
-  @if $is-fixed==true {
-    width: 100%;
+  // @if $is-fixed==true {
+  //   width: 100%;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 1002;
+  // }
+
+  &--fixed {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1002;
+    animation-name: fadein; 
+    animation-duration: 0.5s;
+    z-index: 100;
+    @include mq-max(md) {
+      animation: none;
+    }
+  }
+  @keyframes fadein{ 
+    from{ 
+    opacity: 0; 
+    transform: translatey(-160px); 
+    } 
+    to{ 
+    opacity: 1; 
+    transform: translatey(0); 
+    } 
   }
 
   &__inner {
@@ -141,3 +161,4 @@
     }
   }
 }
+

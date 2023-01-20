@@ -32,8 +32,7 @@
 */
 #top .p-mainVisual {
   width: 100%;
-  max-height: 100vh;
-  margin-top: -80px;
+  max-height: calc( 100vh - 80px);
   position: relative;
   overflow: hidden; }
   #top .p-mainVisual__bg {
@@ -48,7 +47,6 @@
       #top .p-mainVisual__video {
         padding-left: 15px; } }
   #top .p-mainVisual__news {
-    margin-top: 80px;
     height: 160px; }
     @media screen and (max-width: 1024px) {
       #top .p-mainVisual__news {
@@ -121,7 +119,7 @@
         font-size: 12px; } }
   #top .p-mainVisual__catch {
     position: absolute;
-    top: 150px;
+    top: 70px;
     left: 8%;
     max-width: 690px;
     width: 100%;
@@ -132,7 +130,7 @@
         padding: 0 15px 0 15px; } }
     @media screen and (max-width: 768px) {
       #top .p-mainVisual__catch {
-        top: 120px; } }
+        top: 40px; } }
     @media screen and (max-width: 568px) {
       #top .p-mainVisual__catch {
         max-width: calc(100% - 30px); } }

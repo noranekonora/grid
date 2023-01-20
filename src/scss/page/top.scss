@@ -9,8 +9,8 @@
   //メインヴィジュアル
   .p-mainVisual {
     width: 100%;
-    max-height: 100vh;
-    margin-top: -$headerHeight;
+    max-height: calc( 100vh - 80px );
+    // margin-top: -$headerHeight;
     position: relative;
     overflow: hidden;
 
@@ -44,7 +44,7 @@
 
     // お知らせ
     &__news {
-      margin-top: $headerHeight;
+      // margin-top: $headerHeight;
       height: 160px;
       @include mq-max(md) {
         height: 125px;
@@ -136,7 +136,7 @@
     //キャッチコピー
     &__catch {
       position: absolute;
-      top: 150px;
+      top: 70px;
       left: 8%;
       max-width: 690px;
       width: 100%;
@@ -147,7 +147,7 @@
         padding: 0 15px 0 15px;
       }
       @include mq-max(sm) {
-        top: 120px;
+        top: 40px;
       }
 
       @include mq-max(xs) {

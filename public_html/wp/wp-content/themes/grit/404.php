@@ -35,7 +35,7 @@
 
 <body id="error404">
   <div id="container">
-    <header class="l-header">
+    <header class="l-header js-header">
       <div class="l-header__inner">
         <div class="l-header__modules">
           <a href="/" class="logo"><img src="/inc/image/common/img_logo.svg" alt="grit"></a>

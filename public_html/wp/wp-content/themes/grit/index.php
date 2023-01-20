@@ -37,7 +37,7 @@
 
 <body id="top">
   <div id="container">
-    <header class="l-header">
+    <header class="l-header js-header">
       <div class="l-header__inner">
         <div class="l-header__modules">
           <h1><a href="/" class="logo"><img src="/inc/image/common/img_logo.svg" alt="grit"></a></h1>
@@ -78,7 +78,7 @@
     </header>
     <!-- /header -->
     <div id="main">
-      <div class="p-mainVisual">
+      <div class="p-mainVisual js-mainVisual">
         <div class="p-mainVisual__news">
           <a href="">
             <dl class="p-mainVisual__newsInner">
