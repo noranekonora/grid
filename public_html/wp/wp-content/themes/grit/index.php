@@ -80,15 +80,35 @@
     <div id="main">
       <div class="p-mainVisual js-mainVisual">
         <div class="p-mainVisual__news">
-          <a href="">
+          <?php
+      $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
+      $args = array(
+        'paged' => $paged,//ポイント2
+        'posts_per_page' => 1,//ポイント3
+        );
+      $cat = get_the_category();
+      $cat = $cat[0];
+      $query = new WP_Query( $args );
+    ?>
+          <?php if( $query->have_posts() ) : ?>
+          <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+          <a href="<?php the_permalink(); ?>">
             <dl class="p-mainVisual__newsInner">
               <dt>
-                <span class="p-mainVisual__newsDate">2022.04.12</span>
-                <span class="p-mainVisual__newsLabel">school</span>
+                <span class="p-mainVisual__newsDate">
+                  <?php echo get_the_date(); ?></span>
+                <span class="p-mainVisual__newsLabel">
+                  <?php echo $cat->name; ?></span>
               </dt>
-              <dd class="p-mainVisual__newsTitle">本日4/12(火)のスクールは通常通り行います。</dd>
+              <dd class="p-mainVisual__newsTitle">
+                <?php the_title(); ?>
+              </dd>
             </dl>
           </a>
+          <?php endwhile; wp_reset_postdata(); ?>
+          <?php else : ?>
+          <p class="">記事が見つかりませんでした。</p>
+          <?php endif; ?>
         </div>
         <div class="p-mainVisual__bg">
           <video class="p-mainVisual__video" playsinline autoplay muted loop src="/inc/image/top/video.mp4"></video>
@@ -139,50 +159,37 @@
             </div>
             <div class="col-8_sm-12">
               <ul class="c-newslist">
+                <?php
+      $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
+      $args = array(
+        'paged' => $paged,//ポイント2
+        'posts_per_page' => 4,//ポイント3
+        );
+      $cat = get_the_category();
+      $cat = $cat[0];
+      $query = new WP_Query( $args );
+    ?>
+                <?php if( $query->have_posts() ) : ?>
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                 <li class="c-newslist__item">
-                  <a href="/news/single.html">
+                  <a href="<?php the_permalink(); ?>">
                     <dl>
                       <dt>
-                        <span class="c-newslist__date">2021.03.01</span>
-                        <span class="c-label c-label__aaa">grit news</span>
+                        <span class="c-newslist__date">
+                          <?php echo get_the_date(); ?></span>
+                        <span class="c-label ">
+                          <?php echo $cat->name; ?></span>
                       </dt>
-                      <dd>ホームページをリニューアルしました。</dd>
+                      <dd>
+                        <?php the_title(); ?>
+                      </dd>
                     </dl>
                   </a>
                 </li>
-                <li class="c-newslist__item">
-                  <a href="/news/single.html">
-                    <dl>
-                      <dt>
-                        <span class="c-newslist__date">2021.03.01</span>
-                        <span class="c-label c-label__aaa">grit news</span>
-                      </dt>
-                      <dd>ホームページをリニューアルしました。</dd>
-                    </dl>
-                  </a>
-                </li>
-                <li class="c-newslist__item">
-                  <a href="/news/single.html">
-                    <dl>
-                      <dt>
-                        <span class="c-newslist__date">2021.03.01</span>
-                        <span class="c-label c-label__aaa">grit news</span>
-                      </dt>
-                      <dd>ホームページをリニューアルしました。</dd>
-                    </dl>
-                  </a>
-                </li>
-                <li class="c-newslist__item">
-                  <a href="/news/single.html">
-                    <dl>
-                      <dt>
-                        <span class="c-newslist__date">2021.03.01</span>
-                        <span class="c-label c-label__aaa">grit news</span>
-                      </dt>
-                      <dd>ホームページをリニューアルしました。</dd>
-                    </dl>
-                  </a>
-                </li>
+                <?php endwhile; wp_reset_postdata(); ?>
+                <?php else : ?>
+                <p class="">記事が見つかりませんでした。</p>
+                <?php endif; ?>
               </ul>
               <div class="u-taC u-only-sm-xs p-news__spLink">
                 <a href="/news/" class="c-link"><span>お知らせ一覧を見る</span></a>

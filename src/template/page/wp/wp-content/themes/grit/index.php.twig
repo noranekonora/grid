@@ -33,15 +33,31 @@
 {# Main Visual #}
 <div class="p-mainVisual js-mainVisual">
   <div class="p-mainVisual__news">
-    <a href="">
-      <dl class="p-mainVisual__newsInner">
-        <dt>
-          <span class="p-mainVisual__newsDate">2022.04.12</span>
-          <span class="p-mainVisual__newsLabel">school</span>
-        </dt>
-        <dd class="p-mainVisual__newsTitle">本日4/12(火)のスクールは通常通り行います。</dd>
-      </dl>
-    </a>
+    <?php
+      $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
+      $args = array(
+        'paged' => $paged,//ポイント2
+        'posts_per_page' => 1,//ポイント3
+        );
+      $cat = get_the_category();
+      $cat = $cat[0];
+      $query = new WP_Query( $args );
+    ?>
+    <?php if( $query->have_posts() ) : ?>
+      <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
+        <a href="<?php the_permalink(); ?>">
+          <dl class="p-mainVisual__newsInner">
+            <dt>
+              <span class="p-mainVisual__newsDate"><?php echo get_the_date(); ?></span>
+              <span class="p-mainVisual__newsLabel"><?php echo $cat->name; ?></span>
+            </dt>
+            <dd class="p-mainVisual__newsTitle"><?php the_title(); ?></dd>
+          </dl>
+        </a>
+        <?php endwhile; wp_reset_postdata(); ?>
+      <?php else : ?>
+      <p class="">記事が見つかりませんでした。</p>
+    <?php endif; ?>
   </div>
   <div class="p-mainVisual__bg">
   <video class="p-mainVisual__video"playsinline autoplay muted loop src="{{ inc.image }}/top/video.mp4"></video>
@@ -106,7 +122,51 @@
   {# school,Jr.youth #}
 
   {# News #}
-  {% include ('../../../../../include/_newsList.twig') %}
+  <div class="l-section p-news">
+  <div class="grid">
+    <div class="col-4_sm-12">
+      <h2 class="c-ttl-2">News</h2>
+      <a href="{{ link.news }}" class="c-link u-not-under-sm"><span>お知らせ一覧を見る</span></a>
+    </div>
+    <div class="col-8_sm-12">
+      <ul class="c-newslist">
+      <?php
+      $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
+      $args = array(
+        'paged' => $paged,//ポイント2
+        'posts_per_page' => 4,//ポイント3
+        );
+      $cat = get_the_category();
+      $cat = $cat[0];
+      $query = new WP_Query( $args );
+    ?>
+    <?php if( $query->have_posts() ) : ?>
+      <?php while ( $query->have_posts() ) : $query->the_post(); ?> 
+        <li class="c-newslist__item">
+          <a href="<?php the_permalink(); ?>" {% if newslist.target_blank %}target="_blank" rel="noopener" {% endif %}>
+            <dl>
+              <dt>
+                <span class="c-newslist__date"><?php echo get_the_date(); ?></span>
+                <span
+                  class="c-label {% if newslist.category %}c-label__{{ newslist.category }}{% endif %}"><?php echo $cat->name; ?></span>
+              </dt>
+              <dd><?php the_title(); ?></dd>
+            </dl>
+          </a>
+        </li>
+      <?php endwhile; wp_reset_postdata(); ?>
+      <?php else : ?>
+      <p class="">記事が見つかりませんでした。</p>
+    <?php endif; ?>
+       
+      </ul>
+      <div class="u-taC u-only-sm-xs p-news__spLink">
+        <a href="{{ link.news }}" class="c-link"><span>お知らせ一覧を見る</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+  {# {% include ('../../../../../include/_newsList.twig') %} #}
   {# News #}
 
   {# Instagram #}
