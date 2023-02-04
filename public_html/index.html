@@ -86,19 +86,17 @@
         'paged' => $paged,//ポイント2
         'posts_per_page' => 1,//ポイント3
         );
-      $cat = get_the_category();
-      $cat = $cat[0];
-      $query = new WP_Query( $args );
-    ?>
+        $query = new WP_Query( $args );
+        ?>
           <?php if( $query->have_posts() ) : ?>
           <?php while ( $query->have_posts() ) : $query->the_post(); ?>
           <a href="<?php the_permalink(); ?>">
             <dl class="p-mainVisual__newsInner">
               <dt>
                 <span class="p-mainVisual__newsDate">
-                  <?php echo get_the_date(); ?></span>
+                  <?php echo get_the_date("Y.m.d"); ?></span>
                 <span class="p-mainVisual__newsLabel">
-                  <?php echo $cat->name; ?></span>
+                  <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
               </dt>
               <dd class="p-mainVisual__newsTitle">
                 <?php the_title(); ?>
@@ -160,15 +158,13 @@
             <div class="col-8_sm-12">
               <ul class="c-newslist">
                 <?php
-      $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
-      $args = array(
-        'paged' => $paged,//ポイント2
-        'posts_per_page' => 4,//ポイント3
-        );
-      $cat = get_the_category();
-      $cat = $cat[0];
-      $query = new WP_Query( $args );
-    ?>
+        $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
+        $args = array(
+          'paged' => $paged,//ポイント2
+          'posts_per_page' => 4,//ポイント3
+          );
+          $query = new WP_Query( $args );
+          ?>
                 <?php if( $query->have_posts() ) : ?>
                 <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                 <li class="c-newslist__item">
@@ -176,9 +172,9 @@
                     <dl>
                       <dt>
                         <span class="c-newslist__date">
-                          <?php echo get_the_date(); ?></span>
+                          <?php echo get_the_date("Y.m.d"); ?></span>
                         <span class="c-label ">
-                          <?php echo $cat->name; ?></span>
+                          <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
                       </dt>
                       <dd>
                         <?php the_title(); ?>
