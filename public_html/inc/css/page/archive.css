@@ -162,12 +162,15 @@
     .c-newslist__item dl dd {
       -ms-flex: 0 0 calc(100% - 170px);
           flex: 0 0 calc(100% - 170px);
-      max-width: calc(100% - 170px); }
+      max-width: calc(100% - 170px);
+      color: #000000; }
       @media screen and (max-width: 768px) {
         .c-newslist__item dl dd {
           max-width: 100%;
           -ms-flex: 0 0 100%;
               flex: 0 0 100%; } }
+  .c-newslist__date {
+    color: #000000; }
 
 .pagination {
   text-align: center;

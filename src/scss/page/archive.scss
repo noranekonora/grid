@@ -53,6 +53,7 @@
       dd {
         flex: 0 0 calc(100% - 170px);
         max-width: calc(100% - 170px);
+        color: $black;
         @include mq-max(sm) {
           max-width: 100%;
           flex: 0 0 100%;
@@ -60,7 +61,9 @@
       }
     }
   }
-  // &__date {}
+  &__date {
+    color: $black;
+  }
 
   // .c-label {}
 }
