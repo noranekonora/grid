@@ -49,9 +49,9 @@ function Change_menulabel() {
 add_action( "init", "create_post_type" );
 	function create_post_type() {
     register_post_type(
-      'column',
+      'schedule',
       array(
-        'label' => 'カスタム投稿',
+        'label' => 'リーグ戦スケジュール',
         'public' => true,
         'has_archive' => true,
         'show_in_rest' => true,
