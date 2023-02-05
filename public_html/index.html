@@ -195,6 +195,7 @@
         </div>
         <section class="l-section">
           <h2 class="c-ttl-2">Instagram</h2>
+          <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
           <a href="" class="c-link"><span>インスタグラムを見る</span></a>
         </section>
         <div class="l-section l-cvArea">
