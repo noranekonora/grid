@@ -1,7 +1,7 @@
 {% extends '../../../../../layout/_01_lower.twig' %}
 
 {# ページタイトル設定 #}
-{% set pageTitle = '<?php the_title(); ?>' %}
+{% set pageTitle = 'お知らせ' %}
 
 {# ページID設定 #}
 {% set pageId = '' %}
@@ -24,6 +24,7 @@
 
 <div class="l-section single_body">
   <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
+  <h2 class=""><?php the_title(); ?></h2>
   <?php the_content(); ?>
   <?php endwhile; endif; ?>
 </div>

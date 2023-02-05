@@ -13,14 +13,13 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <title>
-    <?php the_title(); ?>｜grit</title>
+  <title>お知らせ｜grit</title>
   <script src="/inc/js/page/viewport-extra.min.js"></script>
   <script>new ViewportExtra(375);</script>
   <link rel="icon" href="/inc/image/favicon.ico" type="image/x-icon">
   <meta name="description" content="<?php the_title(); ?>の記事です。">
   <meta property="og:site_name" content="grit" />
-  <meta property="og:title" content="<?php the_title(); ?>｜grit" />
+  <meta property="og:title" content="お知らせ｜grit" />
   <meta property="og:description" content="<?php the_title(); ?>の記事です。" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="<?php the_permalink(); ?>">
@@ -81,21 +80,21 @@
         <div class="l-lowerCaption__inner">
           <div class="l-lowerCaption__titleBox">
             <h1 class="l-lowerCaption__title">
-              <small>
-                <?php the_title(); ?></small>
+              <small>お知らせ</small>
             </h1>
           </div>
           <ul class="c-topicspath">
             <li><a href="/">HOME</a></li>
-            <li>
-              <?php the_title(); ?>
-            </li>
+            <li>お知らせ</li>
           </ul>
         </div>
       </div>
       <div id="contents" class="l-lower">
         <div class="l-section single_body">
           <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
+          <h2 class="">
+            <?php the_title(); ?>
+          </h2>
           <?php the_content(); ?>
           <?php endwhile; endif; ?>
         </div>
