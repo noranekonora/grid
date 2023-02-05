@@ -208,7 +208,9 @@
             <?php wp_reset_postdata(); ?>
           </section>
           <section class="l-section">
+            <?php if(get_field('selectionform')): ?>
             <a href="/selectionform/" style="color: #ffffff;">セレクション申込フォーム</a>
+            <?php endif; ?>
             <a href="//" style="color: #ffffff;">ユニフォーム注文</a>
           </section>
           <div class="l-section l-cvArea">
