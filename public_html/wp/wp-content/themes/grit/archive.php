@@ -122,7 +122,8 @@
             <?php endif; ?>
           </ul>
         </div>
-        <?php
+        <div class="pagination">
+          <?php
           $big = 999999999; // need an unlikely integer
           echo paginate_links([
             'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
@@ -133,6 +134,7 @@
             'next_text' => __('&gt;'),
           ]);
         ?>
+        </div>
         <?php if( function_exists("the_pagination") ) the_pagination(); ?>
       </div>
     </div>

@@ -209,4 +209,15 @@
         .pagination ul.page-numbers li .page-numbers:hover {
           background-color: #090B3B; }
 
+.pagination {
+  text-align: center;
+  margin-top: 30px; }
+  .pagination .page-numbers {
+    padding: 10px 19px;
+    background-color: #eee;
+    transition: all 0.5s; }
+    .pagination .page-numbers:hover {
+      background: #000;
+      color: #FFFFFF; }
+
 /*# sourceMappingURL=../_map/page/archive.css.map */

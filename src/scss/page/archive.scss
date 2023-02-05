@@ -112,3 +112,18 @@
     }
   }
 }
+
+// 一覧ページページネーション
+.pagination {
+  text-align: center;
+  margin-top: 30px;
+  .page-numbers {
+    padding: 10px 19px;
+    background-color: #eee;
+    transition: all 0.5s;
+    &:hover {
+      background: #000;
+      color: $white;
+    }
+  }
+}
