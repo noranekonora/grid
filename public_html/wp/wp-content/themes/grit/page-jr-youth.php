@@ -13,15 +13,14 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <title>
-    <?php the_title(); ?>｜grit</title>
+  <title>jr.youth｜grit</title>
   <script src="/inc/js/page/viewport-extra.min.js"></script>
   <script>new ViewportExtra(375);</script>
   <link rel="icon" href="/inc/image/favicon.ico" type="image/x-icon">
-  <meta name="description" content="gritの「<?php the_title(); ?>」についてのページです。">
+  <meta name="description" content="gritの「jr.youth」についてのページです。">
   <meta property="og:site_name" content="grit" />
-  <meta property="og:title" content="<?php the_title(); ?>｜grit" />
-  <meta property="og:description" content="gritの「<?php the_title(); ?>」についてのページです。" />
+  <meta property="og:title" content="jr.youth｜grit" />
+  <meta property="og:description" content="gritの「jr.youth」についてのページです。" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="">
   <meta property="og:image" content="/inc/image/common/img_ogp.jpg" />
@@ -55,7 +54,7 @@
               <a href="/school/"><span class="l-navigation__ja">スクール</span>SCHOOL</a>
             </li>
             <li class="l-navigation__item">
-              <a href="/jr-youth/"><span class="l-navigation__ja">ジュニアユース</span>Jr.YOUTH</a>
+              <a class="current" href="/jr-youth/"><span class="l-navigation__ja">ジュニアユース</span>Jr.YOUTH</a>
             </li>
             <li class="l-navigation__item">
               <a href="/faq/"><span class="l-navigation__ja">よくある質問</span>FAQ</a>
@@ -81,15 +80,11 @@
         <div class="l-lowerCaption__inner">
           <div class="l-lowerCaption__titleBox">
             <h1 class="l-lowerCaption__title">
-              <small>
-                <?php the_title(); ?></small>
-            </h1>
+              <small>jr.youth</small> ジュニアユース </h1>
           </div>
           <ul class="c-topicspath">
             <li><a href="/">HOME</a></li>
-            <li>
-              <?php the_title(); ?>
-            </li>
+            <li>jr.youth</li>
           </ul>
         </div>
       </div>
