@@ -87,3 +87,15 @@ add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
 //wp_headのtitleタグを削除
 // remove_action(‘wp_head’, ‘_wp_render_title_tag’, 1);
+
+// 固定ページをphpファイルで管理？
+// function Include_my_php($params = array()) {
+//   extract(shortcode_atts(array(
+//   ‘file’ => ‘default’
+//   ), $params));
+//   ob_start();
+//   include(get_theme_root() . ‘/’ . get_template() . “/$file.php”);
+//   return ob_get_clean();
+//   }
+  
+//   add_shortcode(‘myphp’, ‘Include_my_php’);
