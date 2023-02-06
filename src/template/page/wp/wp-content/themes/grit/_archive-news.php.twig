@@ -1,40 +1,42 @@
-{% extends '../../../../../layout/_10_news.twig' %}
+{% extends '../../../../../layout/_01_lower.twig' %}
 
 {# グローバルメニュー カレント固定  #}
 {% set currentID = '5' %}
 
 {# ページタイトル設定 #}
-{% set pageTitle = '<?php the_title(); ?>' %}
+{% set pageTitle = 'news' %}
+{% set subTitle = 'お知らせ' %}
 
 {# ページID設定 #}
-{% set pageId = 'single-news' %}
+{% set pageId = 'archive-news' %}
 
 {# OGP関連設定
 ※descriptionを記入しなければ、「〇〇」の「〇〇」のページです。とデフォルトの文言が出力されます。
 ※ogurlはルート相対パスで「必ず」記入してください
 ※ページ毎にOGP画像を変更した場合は、ogimagepathに画像のパスをルート相対パスで入力してください。記述がなければ、デフォルトのOGP画像が表示されます。　#}
-{% set description = '<?php the_title(); ?>の記事です。' %}
-{% set wpogurl = '<?php the_permalink(); ?>' %}
+{% set description = '' %}
+{% set ogurlpath = '/news/' %}
 
 {# ページ個別 CSS等 #}
 {% block headArea %}
 <?php wp_head(); ?>
-<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/single.css">
+<link rel="stylesheet" type="text/css" href="{{ inc.css }}/page/archive.css">
 {% endblock %}
 
 {# コンテンツをここに記載(div#contents内) #}
 {% block contents %}
 
-<section class="l-section l-section--sm single_body">
-  <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php the_time("Y/n/d"); ?>
-    <h2 class=""><?php the_title(); ?></h2>
-    <?php the_content(); ?>
-  <?php endwhile; endif; ?>
-  <div class="p-goTop">
-    <a href="{{ link.home}}" class="c-btn">ホームへ戻る</a>
-  </div>
-</section>
+<div class="l-section l-section--sm">
+  {% include '../../../../../include/_newsList.twig' %}
+</div>
+
+{# pagination #}
+<?php if( function_exists("the_pagination") ) the_pagination(); ?>
+{# pagination #}
+
+{# cvArea #}
+{% include ('../../../../../include/_cvArea.twig') %}
+{# cvArea #}
 
 {% endblock %}
 

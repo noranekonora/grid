@@ -77,12 +77,14 @@
     </header>
     <!-- /header -->
     <div id="main">
-      <div class="l-lowerCaption">
+      <div class="l-lowerCaption js-mainVisual">
         <div class="l-lowerCaption__inner">
-          <h1 class="l-lowerCaption__title">
-            <small>News</small> お知らせ </h1>
+          <div class="l-lowerCaption__titleBox">
+            <h1 class="l-lowerCaption__title">
+              <small>News</small> お知らせ </h1>
+          </div>
           <ul class="c-topicspath">
-            <li><a href="/">ホーム</a></li>
+            <li><a href="/">HOME</a></li>
             <li><a href="/news/">お知らせ</a></li>
             <li>
               <?php the_title(); ?>
@@ -92,17 +94,11 @@
       </div>
       <div id="contents" class="l-lower">
         <section class="l-section l-section--sm single_body">
-          <h2 class="c-ttl-2">
-            <span class="p-heading__head">
-              <small class="c-newslist__date">
-                <?php the_time("Y/n/d"); ?></small>
-              <small class="c-label">
-                <?php showTerms('news_category');?></small>
-            </span>
-            <span class="p-heading">
-              <?php the_title(); ?></span>
-          </h2>
           <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
+          <?php the_time("Y/n/d"); ?>
+          <h2 class="">
+            <?php the_title(); ?>
+          </h2>
           <?php the_content(); ?>
           <?php endwhile; endif; ?>
           <div class="p-goTop">

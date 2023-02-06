@@ -22,14 +22,14 @@ add_action( 'after_setup_theme', 'my_setup' );
 function Change_menulabel() {
   global $menu;
   global $submenu;
-  $name = 'お知らせ投稿';
+  $name = '投稿';
   $menu[5][0] = $name;
   $submenu['edit.php'][5][0] = $name.'一覧';
   $submenu['edit.php'][10][0] = '新しい'.$name;
   }
   function Change_objectlabel() {
   global $wp_post_types;
-  $name = 'news';
+  $name = 'test';
   $labels = &$wp_post_types['post']->labels;
   $labels->name = $name;
   $labels->singular_name = $name;
@@ -46,25 +46,63 @@ function Change_menulabel() {
   add_action( 'admin_menu', 'Change_menulabel' );
 
 // カスタム投稿タイプの追加
-add_action( "init", "create_post_type" );
-	function create_post_type() {
-    register_post_type(
-      'schedule',
-      array(
-        'label' => 'リーグ戦スケジュール',
-        'public' => true,
-        'has_archive' => true,
-        'show_in_rest' => true,
-        'menu_position' => 5,
-        'supports' => array(
-          'title',
-          'editor',
-          'thumbnail',
-          'revisions',
-        ),
-      )
-    );
-	}
+// add_action( "init", "create_post_type" );
+// 	function create_post_type() {
+//     register_post_type(
+//       'schedule',
+//       array(
+//         'label' => 'リーグ戦スケジュール',
+//         'public' => true,
+//         'has_archive' => true,
+//         'show_in_rest' => true,
+//         'menu_position' => 5,
+//         'supports' => array(
+//           'title',
+//           'editor',
+//           'thumbnail',
+//           'revisions',
+//         ),
+//       )
+//     );
+// 	}
+
+  //カスタム投稿タイプの追加
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+//カスタム投稿タイプ１（ここから）
+register_post_type(
+'schedule',
+array(
+'labels' => array(
+'name' => __( 'リーグ戦スケジュール1' ),
+'singular_name' => __( 'リーグ戦スケジュール1' )
+),
+'public' => true,
+'menu_position' =>5,
+)
+);
+//カスタム投稿タイプ１（ここまで）
+
+//カスタム投稿タイプ２（ここから）
+register_post_type(
+  'news',
+  array(
+  'labels' => array(
+  'name' => __( 'news' ),
+  'singular_name' => __( 'news' )
+  ),
+  'public' => true,
+  'menu_position' =>5,
+  'has_archive' => true,
+  )
+  );
+//カスタム投稿タイプ２（ここまで）
+//カテゴリーの追加
+register_taxonomy_for_object_type('category', 'news');
+//タグの追加
+register_taxonomy_for_object_type('post_tag', 'news');
+
+}
 
   //カスタム投稿本文概要の文字数調整
  function my_excerpt_length($length) {
@@ -73,15 +111,15 @@ add_action( "init", "create_post_type" );
   add_filter('excerpt_length', 'my_excerpt_length');
 
 // 投稿のアーカイブページを作成する
-function post_has_archive($args, $post_type)
-{
-    if ('post' == $post_type) {
-        $args['rewrite'] = true; // リライトを有効にする
-        $args['has_archive'] = 'news'; // 任意のスラッグ名
-    }
-    return $args;
-}
-add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+// function post_has_archive($args, $post_type)
+// {
+//     if ('post' == $post_type) {
+//         $args['rewrite'] = true; // リライトを有効にする
+//         $args['has_archive'] = 'noranora'; // 任意のスラッグ名
+//     }
+//     return $args;
+// }
+// add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
  
 

@@ -25,13 +25,52 @@
 
 {# コンテンツをここに記載(div#contents内) #}
 {% block contents %}
-
 <div class="l-section l-section--sm">
-  {% include '../../../../../include/_newsList.twig' %}
+<ul class="c-newslist">
+  <?php
+   $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
+      $args = array(
+        'post_type' => 'news', //カスタム投稿タイプ名
+        'paged' => $paged,//ポイント2
+        'posts_per_page' => 6 //取得する投稿の件数
+      );
+    $query = new WP_Query( $args );
+  ?>
+  <?php if( $query->have_posts() ) : ?>
+    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+    <li class="c-newslist__item">
+      <a href="<?php the_permalink(); ?>" {% if newslist.target_blank %}target="_blank" rel="noopener" {% endif %}>
+        <dl>
+          <dt>
+            <span class="c-newslist__date"><?php echo get_the_date("Y.m.d"); ?></span>
+            <span
+              class="c-label {% if newslist.category %}c-label__{{ newslist.category }}{% endif %}"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
+          </dt>
+          <dd><?php the_title(); ?></dd>
+        </dl>
+      </a>
+    </li>
+    <?php endwhile; wp_reset_postdata(); ?>
+    <?php else : ?>
+      <p class="">記事が見つかりませんでした。</p>
+    <?php endif; ?>
+  </ul>
+</div>
+
+<div class="pagination">
+  <?php
+    $args = array(
+      'mid_size' => 1,
+      'prev_text' => '&lt;&lt;前へ',
+      'next_text' => '次へ&gt;&gt;',
+      'screen_reader_text' => ' ',
+    );
+    the_posts_pagination($args);
+  ?> 
 </div>
 
 {# pagination #}
-<?php if( function_exists("the_pagination") ) the_pagination(); ?>
+{# <?php if( function_exists("the_pagination") ) the_pagination(); ?> #}
 {# pagination #}
 
 {# cvArea #}

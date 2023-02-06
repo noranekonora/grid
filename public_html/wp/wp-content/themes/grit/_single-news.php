@@ -77,12 +77,14 @@
     </header>
     <!-- /header -->
     <div id="main">
-      <div class="l-lowerCaption">
+      <div class="l-lowerCaption js-mainVisual">
         <div class="l-lowerCaption__inner">
-          <h1 class="l-lowerCaption__title">
-            <small>News</small> お知らせ </h1>
+          <div class="l-lowerCaption__titleBox">
+            <h1 class="l-lowerCaption__title">
+              <small>News</small> お知らせ </h1>
+          </div>
           <ul class="c-topicspath">
-            <li><a href="/">ホーム</a></li>
+            <li><a href="/">HOME</a></li>
             <li><a href="/news/">お知らせ</a></li>
             <li>
               <?php the_title(); ?>

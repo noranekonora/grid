@@ -82,12 +82,13 @@
         <div class="p-mainVisual__news">
           <?php
       $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
-      $args = array(
-        'paged' => $paged,//ポイント2
-        'posts_per_page' => 1,//ポイント3
-        );
+          $args = array(
+            'post_type' => 'news', //カスタム投稿タイプ名
+            'paged' => $paged,//ポイント2
+            'posts_per_page' => 1 //取得する投稿の件数
+          );
         $query = new WP_Query( $args );
-        ?>
+      ?>
           <?php if( $query->have_posts() ) : ?>
           <?php while ( $query->have_posts() ) : $query->the_post(); ?>
           <a href="<?php the_permalink(); ?>">
@@ -158,12 +159,13 @@
             <div class="col-8_sm-12">
               <ul class="c-newslist">
                 <?php
-        $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
-        $args = array(
-          'paged' => $paged,//ポイント2
-          'posts_per_page' => 4,//ポイント3
-          );
-          $query = new WP_Query( $args );
+          $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
+              $args = array(
+                'post_type' => 'news', //カスタム投稿タイプ名
+                'paged' => $paged,//ポイント2
+                'posts_per_page' => 4 //取得する投稿の件数
+              );
+            $query = new WP_Query( $args );
           ?>
                 <?php if( $query->have_posts() ) : ?>
                 <?php while ( $query->have_posts() ) : $query->the_post(); ?>

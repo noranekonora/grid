@@ -91,49 +91,75 @@
       <div id="contents" class="l-lower">
         <div class="l-section l-section--sm">
           <ul class="c-newslist">
-            <?php
-   $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
-      $args = array(
-        'post_type' => 'news', //カスタム投稿タイプ名
-        'paged' => $paged,//ポイント2
-        'posts_per_page' => 6 //取得する投稿の件数
-      );
-    $query = new WP_Query( $args );
-  ?>
-            <?php if( $query->have_posts() ) : ?>
-            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
             <li class="c-newslist__item">
-              <a href="<?php the_permalink(); ?>">
+              <a href="/news/single.html">
                 <dl>
                   <dt>
-                    <span class="c-newslist__date">
-                      <?php echo get_the_date("Y.m.d"); ?></span>
-                    <span class="c-label ">
-                      <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
+                    <span class="c-newslist__date">2021.03.01</span>
+                    <span class="c-label c-label__aaa">grit news</span>
                   </dt>
-                  <dd>
-                    <?php the_title(); ?>
-                  </dd>
+                  <dd>ホームページをリニューアルしました。</dd>
                 </dl>
               </a>
             </li>
-            <?php endwhile; wp_reset_postdata(); ?>
-            <?php else : ?>
-            <p class="">記事が見つかりませんでした。</p>
-            <?php endif; ?>
+            <li class="c-newslist__item">
+              <a href="/news/single.html">
+                <dl>
+                  <dt>
+                    <span class="c-newslist__date">2021.03.01</span>
+                    <span class="c-label c-label__aaa">grit news</span>
+                  </dt>
+                  <dd>ホームページをリニューアルしました。</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="c-newslist__item">
+              <a href="/news/single.html">
+                <dl>
+                  <dt>
+                    <span class="c-newslist__date">2021.03.01</span>
+                    <span class="c-label c-label__aaa">grit news</span>
+                  </dt>
+                  <dd>ホームページをリニューアルしました。</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="c-newslist__item">
+              <a href="/news/single.html">
+                <dl>
+                  <dt>
+                    <span class="c-newslist__date">2021.03.01</span>
+                    <span class="c-label c-label__aaa">grit news</span>
+                  </dt>
+                  <dd>ホームページをリニューアルしました。</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="c-newslist__item">
+              <a href="/news/single.html">
+                <dl>
+                  <dt>
+                    <span class="c-newslist__date">2021.03.01</span>
+                    <span class="c-label c-label__aaa">grit news</span>
+                  </dt>
+                  <dd>ホームページをリニューアルしました。</dd>
+                </dl>
+              </a>
+            </li>
+            <li class="c-newslist__item">
+              <a href="/news/single.html">
+                <dl>
+                  <dt>
+                    <span class="c-newslist__date">2021.03.01</span>
+                    <span class="c-label c-label__aaa">grit news</span>
+                  </dt>
+                  <dd>ホームページをリニューアルしました。</dd>
+                </dl>
+              </a>
+            </li>
           </ul>
         </div>
-        <div class="pagination">
-          <?php
-    $args = array(
-      'mid_size' => 1,
-      'prev_text' => '&lt;&lt;前へ',
-      'next_text' => '次へ&gt;&gt;',
-      'screen_reader_text' => ' ',
-    );
-    the_posts_pagination($args);
-  ?>
-        </div>
+        <?php if( function_exists("the_pagination") ) the_pagination(); ?>
         <div class="l-section l-cvArea">
           <section class="l-cvArea__inner">
             <h2 class="l-cvArea__heading">contact</h2>

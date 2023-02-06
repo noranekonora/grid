@@ -26,10 +26,15 @@
 {% block contents %}
 
 <section class="l-section l-section--sm single_body">
+  <h2 class="c-ttl-2">
+    <span class="p-heading__head">
+      <small class="c-newslist__date"><?php the_time("Y/n/d"); ?></small>
+      <small class="c-label"><?php showTerms('news_category');?></small>
+    </span>
+    <span class="p-heading"><?php the_title(); ?></span>
+  </h2>
   <?php if(have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php the_time("Y/n/d"); ?>
-    <h2 class=""><?php the_title(); ?></h2>
-    <?php the_content(); ?>
+  <?php the_content(); ?>
   <?php endwhile; endif; ?>
   <div class="p-goTop">
     <a href="{{ link.home}}" class="c-btn">ホームへ戻る</a>
