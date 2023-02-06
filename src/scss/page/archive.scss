@@ -99,6 +99,7 @@
         padding: 18.5px 26.9px;
         display: inline-block;
         color: #000;
+        background-color: $white;
         transition: all .4s ease;
         @include mq-max(xs) {
           padding: 6px 15px;
@@ -119,11 +120,18 @@
   margin-top: 30px;
   .page-numbers {
     padding: 10px 19px;
-    background-color: #eee;
+    background-color: $white;
     transition: all 0.5s;
+    font-family: $futura;
+    color: $black;
     &:hover {
-      background: #000;
+      background: $keyColor;
       color: $white;
+    }
+    &.current {
+      background: $keyColor;
+      color: $white;
+      border: 1px solid $white;
     }
   }
 }

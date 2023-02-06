@@ -203,6 +203,7 @@
         padding: 18.5px 26.9px;
         display: inline-block;
         color: #000;
+        background-color: #FFFFFF;
         transition: all .4s ease; }
         @media screen and (max-width: 568px) {
           .pagination ul.page-numbers li .page-numbers {
@@ -217,10 +218,16 @@
   margin-top: 30px; }
   .pagination .page-numbers {
     padding: 10px 19px;
-    background-color: #eee;
-    transition: all 0.5s; }
+    background-color: #FFFFFF;
+    transition: all 0.5s;
+    font-family: "Futura PT", sans-serif;
+    color: #000000; }
     .pagination .page-numbers:hover {
-      background: #000;
+      background: #090B3B;
       color: #FFFFFF; }
+    .pagination .page-numbers.current {
+      background: #090B3B;
+      color: #FFFFFF;
+      border: 1px solid #FFFFFF; }
 
 /*# sourceMappingURL=../_map/page/archive.css.map */
