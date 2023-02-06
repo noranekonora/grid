@@ -16,7 +16,7 @@
     font-family: $futura;
     font-size: 16px;
     text-transform: uppercase;
-
+    color: $white;
     @include mq-max(sm) {
       font-size: 0.7em;
     }
@@ -31,6 +31,9 @@
       &:after {
         content: none;
       }
+    }
+    a {
+      color: $white;
     }
   }
 }

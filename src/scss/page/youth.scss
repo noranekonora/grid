@@ -42,6 +42,12 @@
     &>dt,
     dd {
       font-size: 24px;
+      @include mq-max(content) {
+        font-size: 18px;
+      }
+      @include mq-max(xs) {
+        font-size: 16px;
+      }
     }
 
     &>dt {

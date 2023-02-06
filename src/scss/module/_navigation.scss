@@ -63,12 +63,12 @@
       color: $textColor;
       font-weight: 400;
       display: inline-block;
-      padding: 33px 19px;
+      padding: 17px 19px;
       position: relative;
       font-family: $futura;
 
       @include mq-max(bp1200) {
-        padding: 33px 15px;
+        padding: 17px 15px;
       }
 
       @include mq-max(md) {

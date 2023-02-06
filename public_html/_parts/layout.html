@@ -75,7 +75,7 @@
     </header>
     <!-- /header -->
     <div id="main">
-      <div class="l-lowerCaption">
+      <div class="l-lowerCaption js-mainVisual">
         <div class="l-lowerCaption__inner">
           <div class="l-lowerCaption__titleBox">
             <h1 class="l-lowerCaption__title">

@@ -8647,12 +8647,12 @@ readers do not read off random characters that represent icons */
     color: #FFFFFF;
     font-weight: 400;
     display: inline-block;
-    padding: 33px 19px;
+    padding: 17px 19px;
     position: relative;
     font-family: "Futura PT", sans-serif; }
     @media screen and (max-width: 1200px) {
       .l-navigation__item > a {
-        padding: 33px 15px; } }
+        padding: 17px 15px; } }
     @media screen and (max-width: 1024px) {
       .l-navigation__item > a {
         display: block;
@@ -11051,7 +11051,7 @@ readers do not read off random characters that represent icons */
     line-height: 1.2; }
     @media screen and (max-width: 568px) {
       .l-cvArea__heading {
-        font-size: 62px; } }
+        font-size: 40px; } }
   .l-cvArea__linkBox {
     display: -ms-flexbox;
     display: flex; }
