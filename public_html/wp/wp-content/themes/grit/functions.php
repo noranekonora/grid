@@ -90,3 +90,9 @@ register_post_type(
 //   }
   
 //   add_shortcode(‘myphp’, ‘Include_my_php’);
+
+/* パスワード保護ページの「保護中:」を消す */
+add_filter('protected_title_format', 'remove_protected');
+function remove_protected($title) {
+       return '%s';
+}
