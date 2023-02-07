@@ -59,6 +59,7 @@
       @include mq-max(md) {
         width: 100%;
         padding-right: 0;
+        margin-bottom: 10px;
       }
       @include mq-max(xs) {
         margin-bottom: 10px;

@@ -165,7 +165,8 @@
     @media screen and (max-width: 1024px) {
       #youth .p-matchSchedule > dt {
         width: 100%;
-        padding-right: 0; } }
+        padding-right: 0;
+        margin-bottom: 10px; } }
     @media screen and (max-width: 568px) {
       #youth .p-matchSchedule > dt {
         margin-bottom: 10px; } }
