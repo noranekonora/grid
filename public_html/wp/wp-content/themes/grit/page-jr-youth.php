@@ -193,13 +193,13 @@
               <dt>
                 <?php the_title(); ?></dt>
               <div class="p-matchSchedule__detail">
-                <dd>VS
+                <dd class="p-matchSchedule__vs">VS
                   <?php the_field('taisenaite'); ?>
                 </dd>
-                <dd>会場<span class="p-matchSchedule__slash">／</span>
+                <dd class="p-matchSchedule__location">会場<span class="p-matchSchedule__slash">／</span>
                   <?php the_field('kaijou'); ?>
                 </dd>
-                <dd>KICKOFF<span class="p-matchSchedule__slash">／</span>
+                <dd class="p-matchSchedule__kickoff">KICKOFF<span class="p-matchSchedule__slash">／</span>
                   <?php the_field('kickoff'); ?>
                 </dd>
               </div>

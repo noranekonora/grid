@@ -139,7 +139,7 @@
       justify-content: space-around;
   padding: 20px 0;
   border-bottom: 1px solid #707070; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     #youth .p-matchSchedule {
       display: block; } }
   @media screen and (max-width: 568px) {
@@ -159,20 +159,45 @@
   #youth .p-matchSchedule > dt {
     font-weight: 600;
     letter-spacing: 0.02em;
-    padding-right: 10px; }
+    padding-right: 10px;
+    width: 35%;
+    padding-right: 35px; }
+    @media screen and (max-width: 1024px) {
+      #youth .p-matchSchedule > dt {
+        width: 100%;
+        padding-right: 0; } }
     @media screen and (max-width: 568px) {
       #youth .p-matchSchedule > dt {
         margin-bottom: 10px; } }
   #youth .p-matchSchedule__detail {
     display: -ms-flexbox;
-    display: flex; }
-    @media screen and (max-width: 568px) {
+    display: flex;
+    width: 65%; }
+    @media screen and (max-width: 1024px) {
+      #youth .p-matchSchedule__detail {
+        width: 100%; } }
+    @media screen and (max-width: 768px) {
       #youth .p-matchSchedule__detail {
         display: block; } }
     #youth .p-matchSchedule__detail > dd {
       font-weight: 500; }
       #youth .p-matchSchedule__detail > dd:not(:last-child) {
         margin-right: 35px; }
+  #youth .p-matchSchedule__vs {
+    width: 7em; }
+    @media screen and (max-width: 768px) {
+      #youth .p-matchSchedule__vs {
+        width: 100%; } }
+  #youth .p-matchSchedule__location {
+    width: calc( 100% - ( 7em + 9em + 70px )); }
+    @media screen and (max-width: 768px) {
+      #youth .p-matchSchedule__location {
+        width: 100%; } }
+  #youth .p-matchSchedule__kickoff {
+    width: 9em; }
+    @media screen and (max-width: 768px) {
+      #youth .p-matchSchedule__kickoff {
+        width: 100%; } }
   #youth .p-matchSchedule__slash {
     display: inline-block;
     padding: 0 10px; }
