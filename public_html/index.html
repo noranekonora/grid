@@ -81,16 +81,16 @@
       <div class="p-mainVisual js-mainVisual">
         <div class="p-mainVisual__news">
           <?php
-      $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;//ポイント1
-          $args = array(
-            'post_type' => 'news', //カスタム投稿タイプ名
-            'paged' => $paged,//ポイント2
-            'posts_per_page' => 1 //取得する投稿の件数
-          );
-        $query = new WP_Query( $args );
-      ?>
-          <?php if( $query->have_posts() ) : ?>
-          <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+$cat_posts = get_posts(array(
+    'post_type' => 'news', // 投稿タイプ
+    'category_name' => 'school', // カテゴリをスラッグで指定する場合
+    'posts_per_page' => 1, // 表示件数
+    'orderby' => 'date', // 表示順の基準
+    'order' => 'DESC' // 昇順・降順
+));
+global $post;
+if($cat_posts): foreach($cat_posts as $post): setup_postdata($post); ?>
+          <!-- ループはじめ -->
           <a href="<?php the_permalink(); ?>">
             <dl class="p-mainVisual__newsInner">
               <dt>
@@ -104,10 +104,8 @@
               </dd>
             </dl>
           </a>
-          <?php endwhile; wp_reset_postdata(); ?>
-          <?php else : ?>
-          <p class="">記事が見つかりませんでした。</p>
-          <?php endif; ?>
+          <!-- ループおわり -->
+          <?php endforeach; endif; wp_reset_postdata(); ?>
         </div>
         <div class="p-mainVisual__bg">
           <video class="p-mainVisual__video" playsinline autoplay muted loop src="/inc/image/top/video.mp4"></video>
