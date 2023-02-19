@@ -453,7 +453,6 @@ lg;
     }
 
     .l-col2__txt {
-      line-height: 2;
       @include mq-max(xs) {
         line-height: 1.72;
       }

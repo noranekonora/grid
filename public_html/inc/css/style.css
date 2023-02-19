@@ -437,8 +437,8 @@ a {
 
 p {
   font-size: 16px;
-  margin-bottom: 30px;
-  line-height: 2; }
+  margin-bottom: 1em;
+  line-height: 1.8; }
   p:last-child {
     margin-bottom: 0; }
   @media screen and (max-width: 568px) {
@@ -1700,11 +1700,9 @@ ul, ol {
       @media screen and (max-width: 568px) {
         .l-col2--side .l-col2__catch {
           font-size: 20px; } }
-    .l-col2--side .l-col2__txt {
-      line-height: 2; }
-      @media screen and (max-width: 568px) {
-        .l-col2--side .l-col2__txt {
-          line-height: 1.72; } }
+    @media screen and (max-width: 568px) {
+      .l-col2--side .l-col2__txt {
+        line-height: 1.72; } }
     .l-col2--side .l-section {
       padding-left: 0;
       padding-right: 0; }
