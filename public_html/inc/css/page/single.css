@@ -149,7 +149,8 @@
   @media screen and (max-width: 568px) {
     .c-ttl-2 {
       font-size: 26px;
-      margin-bottom: 10px; } }
+      margin-bottom: 10px;
+      padding-left: 14px; } }
   .c-ttl-2::after {
     content: "";
     position: absolute;
@@ -160,9 +161,8 @@
     background-color: #FFD200; }
     @media screen and (max-width: 568px) {
       .c-ttl-2::after {
-        width: 3px;
-        height: 20px;
-        top: 10px; } }
+        height: 22px;
+        top: 9px; } }
   .c-ttl-2 > small {
     display: block;
     font-family: YakuHanJPs, 游ゴシック体, YuGothic-M, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -172,7 +172,7 @@
     margin-top: -8px; }
     @media screen and (max-width: 568px) {
       .c-ttl-2 > small {
-        font-size: 16px; } }
+        font-size: 14px; } }
 
 .c-ttl-3, #contents .single_body h3 {
   font-size: 24px;

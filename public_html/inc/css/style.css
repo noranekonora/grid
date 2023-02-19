@@ -1704,8 +1704,7 @@ ul, ol {
       margin-bottom: 32px; }
       @media screen and (max-width: 568px) {
         .l-col2--side .l-col2__txt {
-          line-height: 1.72;
-          margin-bottom: unset; } }
+          line-height: 1.72; } }
     .l-col2--side .l-section {
       padding-left: 0;
       padding-right: 0; }
@@ -9361,7 +9360,8 @@ readers do not read off random characters that represent icons */
   @media screen and (max-width: 568px) {
     .c-ttl-2 {
       font-size: 26px;
-      margin-bottom: 10px; } }
+      margin-bottom: 10px;
+      padding-left: 14px; } }
   .c-ttl-2::after {
     content: "";
     position: absolute;
@@ -9372,9 +9372,8 @@ readers do not read off random characters that represent icons */
     background-color: #FFD200; }
     @media screen and (max-width: 568px) {
       .c-ttl-2::after {
-        width: 3px;
-        height: 20px;
-        top: 10px; } }
+        height: 22px;
+        top: 9px; } }
   .c-ttl-2 > small {
     display: block;
     font-family: YakuHanJPs, 游ゴシック体, YuGothic-M, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -9384,7 +9383,7 @@ readers do not read off random characters that represent icons */
     margin-top: -8px; }
     @media screen and (max-width: 568px) {
       .c-ttl-2 > small {
-        font-size: 16px; } }
+        font-size: 14px; } }
 
 .c-ttl-3 {
   font-size: 24px;
