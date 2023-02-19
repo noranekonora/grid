@@ -81,15 +81,15 @@
       <div class="p-mainVisual js-mainVisual">
         <div class="p-mainVisual__news">
           <?php
-$cat_posts = get_posts(array(
-    'post_type' => 'news', // 投稿タイプ
-    'category_name' => 'school', // カテゴリをスラッグで指定する場合
-    'posts_per_page' => 1, // 表示件数
-    'orderby' => 'date', // 表示順の基準
-    'order' => 'DESC' // 昇順・降順
-));
-global $post;
-if($cat_posts): foreach($cat_posts as $post): setup_postdata($post); ?>
+    $cat_posts = get_posts(array(
+        'post_type' => 'news', // 投稿タイプ
+        'category_name' => 'school', // カテゴリをスラッグで指定する場合
+        'posts_per_page' => 1, // 表示件数
+        'orderby' => 'date', // 表示順の基準
+        'order' => 'DESC' // 昇順・降順
+    ));
+    global $post;
+    if($cat_posts): foreach($cat_posts as $post): setup_postdata($post); ?>
           <!-- ループはじめ -->
           <a href="<?php the_permalink(); ?>">
             <dl class="p-mainVisual__newsInner">

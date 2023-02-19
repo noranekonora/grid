@@ -1,0 +1,18 @@
+//下層読み込みSCSS
+@import "../util/all";
+@import "../base/lower";
+
+@import "../module/form/all";
+
+#contents {
+  @include mq-max(content) {
+    padding-top: 60px;
+  }
+}
+
+//エラー、完了ページ
+#complete {
+  .l-btnArea {
+    padding-top: 30px;
+  }
+}
