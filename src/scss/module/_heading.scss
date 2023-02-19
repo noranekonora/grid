@@ -36,7 +36,7 @@
     font-family: $futura;
     font-weight: 600;
     margin-bottom: 30px;
-    padding-left: 1.7em;
+    padding-left: 16px;
     position: relative;
 
     @include mq-max(xs) {
@@ -49,8 +49,8 @@
       top: 12px;
       left: 0;
       width: 5px;
-      height: 40px;
-      background-color: $white;
+      height: 36px;
+      background-color: $accentColor;
       @include mq-max(xs) {
         width: 3px;
         height: 20px;
@@ -65,6 +65,7 @@
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 5px;
+      margin-top: -8px;
 
       @include mq-max(xs) {
         font-size: 16px;
@@ -90,29 +91,5 @@
 
   &--mbLarge {
     margin-bottom: 30px;
-  }
-}
-
-// 見出しに数字つけるために別で記載
-#contents {
-  counter-reset: point;
-  .c-ttl-2 {
-    &::before {
-      content: counter(point, decimal-leading-zero);
-      counter-increment: point;
-      display: inline-block;
-      position: absolute;
-      top: 10px;
-      left: 0;
-      font-size: 40px;
-      font-family: "Heebo";
-      padding-left: 10px;
-      line-height: 1.2;
-      @include mq-max(xs) {
-        font-size: 26px;
-        top: 6px;
-        padding-left: 6px;
-      }
-    }
   }
 }

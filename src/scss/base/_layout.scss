@@ -445,7 +445,7 @@ lg;
     .l-col2__catch {
       font-size: 32px;
       font-weight: 600;
-      line-height: 1.625;
+      line-height: 1.3;
       margin-bottom: 10px;
       @include mq-max(xs) {
         font-size: 20px;
@@ -453,8 +453,10 @@ lg;
     }
 
     .l-col2__txt {
+      margin-bottom: 32px;
       @include mq-max(xs) {
         line-height: 1.72;
+        margin-bottom: unset;
       }
     }
 

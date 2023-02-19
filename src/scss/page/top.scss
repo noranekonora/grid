@@ -214,8 +214,8 @@
     .c-ttl-2 {
       font-size: 60px;
       padding-left: 0;
-      padding-top: 0.8em;
-      margin-bottom: 15px;
+      padding-top: 40px;
+      margin-bottom: 12px;
 
       @include mq-max(xs) {
         font-size: 40px;
@@ -387,7 +387,28 @@
       }
     }
   }
-
-
-
 }
+
+    // 見出しに数字つけるために別で記載
+    #contents {
+      counter-reset: point;
+      .c-ttl-2 {
+        &::before {
+          content: counter(point, decimal-leading-zero);
+          counter-increment: point;
+          display: inline-block;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          font-size: 40px;
+          font-family: "Heebo";
+          padding-left: 10px;
+          line-height: 1.2;
+          @include mq-max(xs) {
+            font-size: 26px;
+            top: 6px;
+            padding-left: 6px;
+          }
+        }
+      }
+    }

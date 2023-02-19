@@ -144,7 +144,7 @@
   font-family: "Futura PT", sans-serif;
   font-weight: 600;
   margin-bottom: 30px;
-  padding-left: 1.7em;
+  padding-left: 16px;
   position: relative; }
   @media screen and (max-width: 568px) {
     .c-ttl-2 {
@@ -156,8 +156,8 @@
     top: 12px;
     left: 0;
     width: 5px;
-    height: 40px;
-    background-color: #FFFFFF; }
+    height: 36px;
+    background-color: #FFD200; }
     @media screen and (max-width: 568px) {
       .c-ttl-2::after {
         width: 3px;
@@ -168,7 +168,8 @@
     font-family: YakuHanJPs, 游ゴシック体, YuGothic-M, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    margin-top: -8px; }
     @media screen and (max-width: 568px) {
       .c-ttl-2 > small {
         font-size: 16px; } }
@@ -186,25 +187,6 @@
 
 .c-ttl--mbLarge {
   margin-bottom: 30px; }
-
-#contents {
-  counter-reset: point; }
-  #contents .c-ttl-2::before {
-    content: counter(point, decimal-leading-zero);
-    counter-increment: point;
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    font-size: 40px;
-    font-family: "Heebo";
-    padding-left: 10px;
-    line-height: 1.2; }
-    @media screen and (max-width: 568px) {
-      #contents .c-ttl-2::before {
-        font-size: 26px;
-        top: 6px;
-        padding-left: 6px; } }
 
 .c-blockquote, #contents .single_body blockquote {
   padding: 28px 24px 28px 72px;

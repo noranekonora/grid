@@ -178,8 +178,8 @@
   #top #contents .c-ttl-2 {
     font-size: 60px;
     padding-left: 0;
-    padding-top: 0.8em;
-    margin-bottom: 15px; }
+    padding-top: 40px;
+    margin-bottom: 12px; }
     @media screen and (max-width: 568px) {
       #top #contents .c-ttl-2 {
         font-size: 40px;
@@ -287,5 +287,24 @@
       #top .p-reason .l-col2__detail:before {
         width: 484px;
         height: 259.5px; } }
+
+#contents {
+  counter-reset: point; }
+  #contents .c-ttl-2::before {
+    content: counter(point, decimal-leading-zero);
+    counter-increment: point;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 40px;
+    font-family: "Heebo";
+    padding-left: 10px;
+    line-height: 1.2; }
+    @media screen and (max-width: 568px) {
+      #contents .c-ttl-2::before {
+        font-size: 26px;
+        top: 6px;
+        padding-left: 6px; } }
 
 /*# sourceMappingURL=../_map/page/top.css.map */
