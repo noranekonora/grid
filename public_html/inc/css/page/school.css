@@ -128,5 +128,10 @@
     #school .p-category__price {
       text-align: left;
       font-size: 14px; } }
+  #school .p-category__price.c-box {
+    background: none;
+    width: 540px;
+    max-width: 100%;
+    margin-left: auto; }
 
 /*# sourceMappingURL=../_map/page/school.css.map */

@@ -10383,6 +10383,63 @@ readers do not read off random characters that represent icons */
 .c-card03--col3 .c-card03__title--mb0 {
   margin-bottom: 0; }
 
+.c-card04__title {
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Futura PT", sans-serif; }
+
+.c-card04__data {
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 600; }
+
+.c-card04__sublist {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center; }
+  .c-card04__sublist:not(:last-child) {
+    margin-bottom: 20px; }
+
+.c-card04__subtitle {
+  margin: 0 30px 0 0;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  color: #FFFFFF;
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 14px;
+  font-weight: 600; }
+  @media screen and (max-width: 568px) {
+    .c-card04__subtitle {
+      font-size: 12px; } }
+
+.c-card04__subdata {
+  text-align: left;
+  font-weight: 500; }
+
+.c-card04--mono .c-card04__title {
+  border: 1px solid #FFFFFF; }
+
+.c-card04--mono .c-card04__data {
+  background-color: #FFFFFF;
+  color: #090B3B; }
+
+.c-card04--color .c-card04__title {
+  background-color: #FFD200;
+  color: #090B3B; }
+
 .c-pointBox {
   border: 2px solid #CCCCCC;
   padding: 50px 96px;
