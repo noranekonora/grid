@@ -41,8 +41,10 @@
       }
     }
     dl {
+      border: none;
+      padding-bottom: 0;
       dt {
-        max-width: 170px;
+        // max-width: 170px;
         flex: 0 0 170px;
         @include mq-max(sm) {
           max-width: 100%;
@@ -52,7 +54,7 @@
       }
       dd {
         flex: 0 0 calc(100% - 170px);
-        max-width: calc(100% - 170px);
+        // max-width: calc(100% - 170px);
         color: $black;
         @include mq-max(sm) {
           max-width: 100%;
