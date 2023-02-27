@@ -16,16 +16,7 @@
 {# コンテンツをここに記載(div#contents内) #}
 {% block contents %}
 <div class="l-section">
- {# STEP #}
-  <section class="c-step" data-pfwform-hide-if-confirm>
-    <h2 class="c-step__title">お問い合わせ内容をご入力ください。</h2>
-    <ul class="c-step__list">
-      <li class="c-step__item is-active">内容の入力</li>
-      <li class="c-step__item">入力内容の確認</li>
-      <li class="c-step__item">送信完了</li>
-    </ul>
-  </section>
-  {# STEP #}
+ <h2 class="p-formtitle">お問い合わせ内容をご入力ください。</h2>
 
 <?php echo do_shortcode('[contact-form-7 id="43" title="お問合せ"]'); ?>
   {# <?php if(have_posts()) : while (have_posts()) : the_post(); ?>

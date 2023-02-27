@@ -126,36 +126,8 @@
 .wpcf7-form p {
   margin-bottom: 0; }
 
-/* 背景色（お好きな色に） */
-/*  フォームの幅（自由に変えてOK） */
-/* 各項目の下部余白 */
-.contact_item {
-  margin-bottom: 2.5rem; }
-
-/* 項目名 */
-/* 必須タグと任意タグ共通のスタイル */
-.label_tag {
-  font-size: 1.5rem;
-  color: #ffffff;
-  border-radius: .3rem;
-  margin-right: 1rem;
-  padding: 5px 10px; }
-
-/* 必須タグ */
-.label_must {
-  background-color: #C84772; }
-
-/* 任意タグ */
-.label_option {
-  background-color: #888988; }
-
-/* 名前やメールアドレスなどユーザーが入力する箇所 */
-.inputs {
-  width: 100%;
-  box-sizing: border-box; }
-
 input[type="text"], input[type="tel"], input[type="email"], input[type="date"], textarea {
-  padding: .5rem;
+  padding: 15px;
   background-color: #FFFFFF;
   color: #000000;
   border-radius: 3px;
@@ -169,42 +141,10 @@ input[type="submit"] {
   border-radius: 3px;
   padding: 21px 55px; }
 
-/* お問い合わせ内容を入力する箇所 */
-textarea.form-control {
-  border: solid 1px #707070;
-  padding: .5rem;
-  height: 207px;
-  font-size: 1.8rem; }
-
-/* ボタン */
-/* ボタンにホバーした時 */
-input[type="submit"]:hover {
-  color: #C84772;
-  background-color: #ffffff;
-  border-color: #C84772; }
-
 /* ローダー */
 .wpcf7 .ajax-loader {
   display: block;
   margin: 0 auto; }
-
-/* モバイル版 */
-@media screen and (max-width: 480px) {
-  .contact_item {
-    margin-bottom: 1.6rem; }
-  .label {
-    font-size: 1.5rem;
-    margin-bottom: .4rem; }
-  .label_tag {
-    font-size: 1.1rem; }
-  input[type="text"], input[type="email"] {
-    padding: .4rem;
-    font-size: 1.5rem; }
-  textarea {
-    padding: .4rem;
-    font-size: 1.5rem; }
-  input[type="submit"] {
-    font-size: 1.5rem; } }
 
 /* ラジオボタン */
 .wpcf7 input[type=radio] {
@@ -293,5 +233,29 @@ span.wpcf7-form-control.wpcf7-radio {
 
 .contactform .btn-submit {
   text-align: center; }
+  @media screen and (max-width: 568px) {
+    .contactform .btn-submit {
+      padding: 0 15px; } }
+
+.p-formtitle {
+  margin-bottom: 30px; }
+
+.c-privacy {
+  max-width: 800px;
+  height: 200px;
+  overflow-y: scroll;
+  margin: 0 auto 40px;
+  padding: 20px 15px;
+  border: 1px solid #FFFFFF; }
+  .c-privacy .l-section {
+    padding: 0; }
+    .c-privacy .l-section__inner {
+      padding-bottom: 30px; }
+  .c-privacy .analysis_tool {
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 20px; }
+    .c-privacy .analysis_tool p:last-child {
+      margin-bottom: 0; }
 
 /*# sourceMappingURL=../_map/page/form.css.map */

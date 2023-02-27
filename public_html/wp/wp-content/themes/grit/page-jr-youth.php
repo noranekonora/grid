@@ -92,90 +92,89 @@
         </div>
       </div>
       <div id="contents" class="l-lower">
-        <div class="l-section">
-          <section class="l-section p-schedule">
-            <h2 class="c-ttl-2">Schedule<small>スケジュール</small></h2>
-            <div class="c-card04 c-card04--mono">
-              <ul class="grid-center c-card01__list">
-                <li class="col-3_sm-6_xs-12">
-                  <dl>
-                    <dt class="c-card04__title">月曜日</dt>
-                    <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
-                  </dl>
-                </li>
-                <li class="col-3_sm-6_xs-12">
-                  <dl>
-                    <dt class="c-card04__title">火曜日</dt>
-                    <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
-                  </dl>
-                </li>
-                <li class="col-3_sm-6_xs-12">
-                  <dl>
-                    <dt class="c-card04__title">水曜日</dt>
-                    <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
-                  </dl>
-                </li>
-                <li class="col-3_sm-6_xs-12">
-                  <dl>
-                    <dt class="c-card04__title">木曜日</dt>
-                    <dd class="c-card04__data" data-js="js-matchHeight">休み</dd>
-                  </dl>
-                </li>
-                <li class="col-3_sm-6_xs-12">
-                  <dl>
-                    <dt class="c-card04__title">金曜日</dt>
-                    <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
-                  </dl>
-                </li>
-                <li class="col-3_sm-6_xs-12">
-                  <dl>
-                    <dt class="c-card04__title">土曜日</dt>
-                    <dd class="c-card04__data" data-js="js-matchHeight">リーグ戦・TRM<br>トレーニング</dd>
-                  </dl>
-                </li>
-                <li class="col-3_sm-6_xs-12">
-                  <dl>
-                    <dt class="c-card04__title">日曜日</dt>
-                    <dd class="c-card04__data" data-js="js-matchHeight">リーグ戦・TRM<br>または休み</dd>
-                  </dl>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section class="l-section">
-            <h2 class="c-ttl-2">Club philosophy<small>クラブ理念</small></h2>
-            <div class="l-col2__block">
-              <div class="l-col2__img">
-                <img src="/inc/image/jr-youth/img_clubPhilosophy.png" alt="">
-              </div>
-              <div class="l-col2__detail">
-                <div class="l-philosophy__contents">
-                  <h3 class="c-ttl-3">　</h3>
-                  <p><span class="u-underLine--red">サッカーを通じて、礼儀・敬う心を育て、規律（ルール）を守り、豊かな人間性の育成</span></p>
-                  <h3 class="c-ttl-3">　</h3>
-                  <p><span class="u-underLine--red">生涯スポーツとして、サッカーを楽しむことが出来る環境の提供</span></p>
-                  <h3 class="c-ttl-3">　</h3>
-                  <p><span class="u-underLine--red">地域に密着したクラブ運営</span></p>
-                  <h3 class="c-ttl-3">　</h3>
-                  <p><span class="u-underLine--red">広島から世界へ通用する選手の育成</span></p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="l-section">
-            <h2 class="c-ttl-2">Activity scenery<small>活動の様子</small></h2>
-            <ul class="grid">
-              <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
-              <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
-              <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
-              <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
-              <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
-              <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+        <section class="l-section p-schedule">
+          <h2 class="c-ttl-2">Schedule<small>スケジュール</small></h2>
+          <div class="c-card04 c-card04--mono">
+            <ul class="grid-center c-card01__list">
+              <li class="col-3_sm-6_xs-12">
+                <dl>
+                  <dt class="c-card04__title">月曜日</dt>
+                  <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
+                </dl>
+              </li>
+              <li class="col-3_sm-6_xs-12">
+                <dl>
+                  <dt class="c-card04__title">火曜日</dt>
+                  <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
+                </dl>
+              </li>
+              <li class="col-3_sm-6_xs-12">
+                <dl>
+                  <dt class="c-card04__title">水曜日</dt>
+                  <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
+                </dl>
+              </li>
+              <li class="col-3_sm-6_xs-12">
+                <dl>
+                  <dt class="c-card04__title">木曜日</dt>
+                  <dd class="c-card04__data" data-js="js-matchHeight">休み</dd>
+                </dl>
+              </li>
+              <li class="col-3_sm-6_xs-12">
+                <dl>
+                  <dt class="c-card04__title">金曜日</dt>
+                  <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
+                </dl>
+              </li>
+              <li class="col-3_sm-6_xs-12">
+                <dl>
+                  <dt class="c-card04__title">土曜日</dt>
+                  <dd class="c-card04__data" data-js="js-matchHeight">リーグ戦・TRM<br>トレーニング</dd>
+                </dl>
+              </li>
+              <li class="col-3_sm-6_xs-12">
+                <dl>
+                  <dt class="c-card04__title">日曜日</dt>
+                  <dd class="c-card04__data" data-js="js-matchHeight">リーグ戦・TRM<br>または休み</dd>
+                </dl>
+              </li>
             </ul>
-          </section>
-          <section class="l-section">
-            <h2 class="c-ttl-2">League match schedule<small>リーグ戦スケジュール</small></h2>
-            <?php
+          </div>
+        </section>
+        <section class="l-section">
+          <h2 class="c-ttl-2">Club philosophy<small>クラブ理念</small></h2>
+          <div class="l-col2__block">
+            <div class="l-col2__img">
+              <img src="/inc/image/jr-youth/img_clubPhilosophy.png" alt="">
+            </div>
+            <div class="l-col2__detail">
+              <div class="l-philosophy__contents">
+                <h3 class="c-ttl-3">　</h3>
+                <p><span class="u-underLine--red">サッカーを通じて、礼儀・敬う心を育て、規律（ルール）を守り、豊かな人間性の育成</span></p>
+                <h3 class="c-ttl-3">　</h3>
+                <p><span class="u-underLine--red">生涯スポーツとして、サッカーを楽しむことが出来る環境の提供</span></p>
+                <h3 class="c-ttl-3">　</h3>
+                <p><span class="u-underLine--red">地域に密着したクラブ運営</span></p>
+                <h3 class="c-ttl-3">　</h3>
+                <p><span class="u-underLine--red">広島から世界へ通用する選手の育成</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="l-section">
+          <h2 class="c-ttl-2">Activity scenery<small>活動の様子</small></h2>
+          <ul class="grid">
+            <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+            <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+            <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+            <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+            <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+            <li class="col-4_sm-6"><img src="https://placehold.jp/400x360.png" alt=""></li>
+          </ul>
+        </section>
+        <section class="l-section">
+          <h2 class="c-ttl-2">League match schedule<small>リーグ戦スケジュール</small></h2>
+          <?php
   $args = array(
     'post_type' => 'schedule', //カスタム投稿タイプ名
     'posts_per_page' => -1 //取得する投稿の件数
@@ -183,57 +182,57 @@
  
   $my_posts = get_posts($args);
 ?>
-            <?php foreach ($my_posts as $post) : setup_postdata($post); ?>
-            <dl class="p-matchSchedule">
-              <dt>
-                <?php the_title(); ?></dt>
-              <div class="p-matchSchedule__detail">
-                <dd class="p-matchSchedule__vs">VS
-                  <?php the_field('taisenaite'); ?>
-                </dd>
-                <dd class="p-matchSchedule__location">会場<span class="p-matchSchedule__slash">／</span>
-                  <?php the_field('kaijou'); ?>
-                </dd>
-                <dd class="p-matchSchedule__kickoff">KICKOFF<span class="p-matchSchedule__slash">／</span>
-                  <?php the_field('kickoff'); ?>
-                </dd>
-              </div>
-            </dl>
-            <?php endforeach; ?>
-            <?php wp_reset_postdata(); ?>
+          <?php foreach ($my_posts as $post) : setup_postdata($post); ?>
+          <dl class="p-matchSchedule">
+            <dt>
+              <?php the_title(); ?></dt>
+            <div class="p-matchSchedule__detail">
+              <dd class="p-matchSchedule__vs">VS
+                <?php the_field('taisenaite'); ?>
+              </dd>
+              <dd class="p-matchSchedule__location">会場<span class="p-matchSchedule__slash">／</span>
+                <?php the_field('kaijou'); ?>
+              </dd>
+              <dd class="p-matchSchedule__kickoff">KICKOFF<span class="p-matchSchedule__slash">／</span>
+                <?php the_field('kickoff'); ?>
+              </dd>
+            </div>
+          </dl>
+          <?php endforeach; ?>
+          <?php wp_reset_postdata(); ?>
+        </section>
+        <section class="l-section">
+          <?php if(get_field('selectionform')): ?>
+          <a href="/selectionform/" style="color: #ffffff;">セレクション申込フォーム</a>
+          <?php endif; ?>
+          <a href="//" style="color: #ffffff;">ユニフォーム注文</a>
+        </section>
+        <div class="l-section l-cvArea">
+          <section class="l-cvArea__inner">
+            <h2 class="l-cvArea__heading">contact</h2>
+            <div class="l-cvArea__linkBox">
+              <a href="/contact/" class="l-cvArea__link l-cvArea__link--contact"><span>お問合せはこちら</span></a>
+              <a href="/faq/" class="l-cvArea__link l-cvArea__link--faq"><span>よくある質問</span></a>
+            </div>
           </section>
-          <section class="l-section">
-            <?php if(get_field('selectionform')): ?>
-            <a href="/selectionform/" style="color: #ffffff;">セレクション申込フォーム</a>
-            <?php endif; ?>
-            <a href="//" style="color: #ffffff;">ユニフォーム注文</a>
-          </section>
-          <div class="l-section l-cvArea">
-            <section class="l-cvArea__inner">
-              <h2 class="l-cvArea__heading">contact</h2>
-              <div class="l-cvArea__linkBox">
-                <a href="/contact/" class="l-cvArea__link l-cvArea__link--contact"><span>お問合せはこちら</span></a>
-                <a href="/faq/" class="l-cvArea__link l-cvArea__link--faq"><span>よくある質問</span></a>
-              </div>
-            </section>
-          </div>
         </div>
       </div>
-      <!-- end of #main -->
-      <footer class="l-f l-f--lineTop">
-        <div class="l-f__inner">
-          <a href="/" class="pageTop" data-js="pagetop"></a>
-          <p class="l-f__companyName">一般社団法人 広島グリットサッカークラブ</p>
-          <small class="l-f__copyright">&copy; 2022 Hirosima grit soccer club.</small>
-        </div>
-      </footer>
-      <!-- /footer -->
     </div>
-    <!-- end of #container -->
-    <script src="/inc/js/common.min.js"></script>
-    <script src="/inc/js/page/jquery.matchHeight.min.js"></script>
-    <!--[if lt IE 9]><script src="/inc/js/old-ie.min.js"></script><![endif]-->
-    <?php wp_footer(); ?>
+    <!-- end of #main -->
+    <footer class="l-f l-f--lineTop">
+      <div class="l-f__inner">
+        <a href="/" class="pageTop" data-js="pagetop"></a>
+        <p class="l-f__companyName">一般社団法人 広島グリットサッカークラブ</p>
+        <small class="l-f__copyright">&copy; 2022 Hirosima grit soccer club.</small>
+      </div>
+    </footer>
+    <!-- /footer -->
+  </div>
+  <!-- end of #container -->
+  <script src="/inc/js/common.min.js"></script>
+  <script src="/inc/js/page/jquery.matchHeight.min.js"></script>
+  <!--[if lt IE 9]><script src="/inc/js/old-ie.min.js"></script><![endif]-->
+  <?php wp_footer(); ?>
 </body>
 
 </html>
