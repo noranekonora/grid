@@ -41,7 +41,7 @@
 
     &>dt,
     dd {
-      font-size: 24px;
+      font-size: 16px;
       @include mq-max(content) {
         font-size: 18px;
       }

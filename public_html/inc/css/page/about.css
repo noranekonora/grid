@@ -125,47 +125,38 @@
   #about .p-greeting__contents {
     padding-left: 0; } }
 
-@media screen and (max-width: 768px) {
-  #about .p-greeting__contents > p {
-    font-size: 16px; } }
+#about .p-greeting__img {
+  max-width: 150px;
+  margin: 0 auto; }
+  @media screen and (max-width: 768px) {
+    #about .p-greeting__img {
+      display: none; } }
+
+#about .p-staff__item:not(:last-child) {
+  margin-bottom: 40px; }
 
 #about .p-staff__list {
   padding-top: 30px;
   counter-reset: point; }
-  #about .p-staff__list > dl {
-    display: -ms-flexbox;
-    display: flex; }
-    #about .p-staff__list > dl:not(:last-child) {
-      margin-bottom: 30px; }
+  #about .p-staff__list > dl:not(:last-child) {
+    margin-bottom: 30px; }
+  @media screen and (max-width: 768px) {
+    #about .p-staff__list > dl {
+      display: block;
+      margin-top: -40px; } }
+  #about .p-staff__list > dl > dt {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px; }
+    #about .p-staff__list > dl > dt .nameen {
+      font-size: 16px;
+      display: block; }
+  #about .p-staff__list > dl > dd {
+    line-height: 1.8; }
     @media screen and (max-width: 768px) {
-      #about .p-staff__list > dl {
-        display: block; } }
-    #about .p-staff__list > dl > dt {
-      position: relative;
-      padding-left: 50px;
-      width: 320px;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-      font-size: 18px; }
-      #about .p-staff__list > dl > dt::before {
-        content: counter(point, decimal-leading-zero);
-        counter-increment: point;
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        left: 0;
-        font-size: 32px;
-        font-family: "Heebo";
-        line-height: 1.2; }
-        @media screen and (max-width: 568px) {
-          #about .p-staff__list > dl > dt::before {
-            font-size: 26px;
-            padding-left: 6px; } }
-    #about .p-staff__list > dl > dd {
-      line-height: 1.8; }
-      @media screen and (max-width: 768px) {
-        #about .p-staff__list > dl > dd {
-          padding-left: 50px; } }
+      #about .p-staff__list > dl > dd {
+        padding-left: 50px; } }
 
 #about .p-Overview > p {
   border-bottom: 1px solid #707070;

@@ -114,7 +114,8 @@
       padding: 4px 15px;
       background-color: $white;
       color: $black;
-      font-size: 18px;
+      font-size: 14px;
+      font-weight: 600;
       font-family: $futura;
       @include mq-max(sm) {
         font-size: 12px;

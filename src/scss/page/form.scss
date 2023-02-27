@@ -65,6 +65,14 @@ input[type="text"],input[type="tel"],input[type="email"],input[type="date"],text
   border-radius: $border-radius;
   // width: 100%;
   margin-top: 10px;
+  width: 100%;
+  @include mq-max(xs) {
+    margin-top: 0;
+  }
+}
+input[type="submit"] {
+  border-radius: $border-radius;
+  padding: 21px 55px;
 }
 /* お問い合わせ内容を入力する箇所 */
 textarea.form-control {
@@ -194,6 +202,10 @@ span.wpcf7-form-control.wpcf7-radio {
     position: relative;
     vertical-align: middle !important;
     font-weight: 600 !important;
+    @include mq-max(xs) {
+      color: $white;
+      background-color: $keyColor !important;
+    }
     .required {
       position: absolute;
       top: 50%;
@@ -210,6 +222,9 @@ span.wpcf7-form-control.wpcf7-radio {
     color: $black;
     width: 80%;
     text-align: left !important;
+    @include mq-max(xs) {
+      padding-top: 0 !important;
+    }
     .wpcf7-radio {
       text-align: left;
     }
@@ -219,6 +234,6 @@ span.wpcf7-form-control.wpcf7-radio {
     }
   }
   .btn-submit {
-    
+    text-align: center;
   }
 }

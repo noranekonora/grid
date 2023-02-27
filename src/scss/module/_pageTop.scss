@@ -1,7 +1,7 @@
 .pageTop{
   position: fixed;
-  bottom: 95px;
-  right: 15px;
+  bottom: 40px;
+  right: 40px;
   z-index: 1000;
   @include mq-max(xs) {
     bottom: 72px;

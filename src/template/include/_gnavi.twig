@@ -1,6 +1,9 @@
 <nav class="l-navigation" id="gnavi">
   <ul class="l-navigation__inner">
     <li class="l-navigation__item">
+      <a{% if currentID |length > 0 and currentID == "6" %} class="current"{% endif %} href="/"><span class="l-navigation__ja">トップ</span>TOP</a>
+    </li>
+    <li class="l-navigation__item">
       <a{% if currentID |length > 0 and currentID == "1" %} class="current"{% endif %} href="{{ link.about}}"><span class="l-navigation__ja">グリットについて</span>ABOUT US</a>
     </li>
     <li class="l-navigation__item">

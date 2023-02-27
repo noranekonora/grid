@@ -48,6 +48,9 @@
         <nav class="l-navigation" id="gnavi">
           <ul class="l-navigation__inner">
             <li class="l-navigation__item">
+              <a href="/"><span class="l-navigation__ja">トップ</span>TOP</a>
+            </li>
+            <li class="l-navigation__item">
               <a href="/about/"><span class="l-navigation__ja">グリットについて</span>ABOUT US</a>
             </li>
             <li class="l-navigation__item">
@@ -93,104 +96,50 @@
           <section class="l-section p-schedule">
             <h2 class="c-ttl-2">Schedule<small>スケジュール</small></h2>
             <div class="c-card04 c-card04--mono">
-              <ul class="grid c-card01__list">
+              <ul class="grid-center c-card01__list">
                 <li class="col-3_sm-6_xs-12">
                   <dl>
                     <dt class="c-card04__title">月曜日</dt>
-                    <dd class="c-card04__data">トレーニング</dd>
+                    <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
                   </dl>
                 </li>
                 <li class="col-3_sm-6_xs-12">
                   <dl>
                     <dt class="c-card04__title">火曜日</dt>
-                    <dd class="c-card04__data">トレーニング</dd>
+                    <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
                   </dl>
                 </li>
                 <li class="col-3_sm-6_xs-12">
                   <dl>
                     <dt class="c-card04__title">水曜日</dt>
-                    <dd class="c-card04__data">トレーニング</dd>
+                    <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
                   </dl>
                 </li>
                 <li class="col-3_sm-6_xs-12">
                   <dl>
                     <dt class="c-card04__title">木曜日</dt>
-                    <dd class="c-card04__data">休み</dd>
+                    <dd class="c-card04__data" data-js="js-matchHeight">休み</dd>
                   </dl>
                 </li>
                 <li class="col-3_sm-6_xs-12">
                   <dl>
                     <dt class="c-card04__title">金曜日</dt>
-                    <dd class="c-card04__data">トレーニング</dd>
+                    <dd class="c-card04__data" data-js="js-matchHeight">トレーニング</dd>
                   </dl>
                 </li>
                 <li class="col-3_sm-6_xs-12">
                   <dl>
                     <dt class="c-card04__title">土曜日</dt>
-                    <dd class="c-card04__data">リーグ戦・TRM<br>トレーニング</dd>
+                    <dd class="c-card04__data" data-js="js-matchHeight">リーグ戦・TRM<br>トレーニング</dd>
                   </dl>
                 </li>
                 <li class="col-3_sm-6_xs-12">
                   <dl>
                     <dt class="c-card04__title">日曜日</dt>
-                    <dd class="c-card04__data">リーグ戦・TRM<br>または休み</dd>
+                    <dd class="c-card04__data" data-js="js-matchHeight">リーグ戦・TRM<br>または休み</dd>
                   </dl>
                 </li>
               </ul>
-            </div>
-            <div class="c-tbl__scroll">
-              <table class="c-tbl">
-                <thead>
-                  <th></th>
-                  <th><span>U-13</span></th>
-                  <th><span>U-14</span></th>
-                  <th><span>U-15</span></th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>月曜日</th>
-                    <td>トレーニング</td>
-                    <td>トレーニング</td>
-                    <td>トレーニング</td>
-                  </tr>
-                  <tr>
-                    <th>火曜日</th>
-                    <td>トレーニング</td>
-                    <td>トレーニング</td>
-                    <td>トレーニング</td>
-                  </tr>
-                  <tr>
-                    <th>水曜日</th>
-                    <td>トレーニング</td>
-                    <td>トレーニング</td>
-                    <td>トレーニング</td>
-                  </tr>
-                  <tr>
-                    <th>木曜日</th>
-                    <td>休み</td>
-                    <td>休み</td>
-                    <td>休み</td>
-                  </tr>
-                  <tr>
-                    <th>金曜日</th>
-                    <td>トレーニング</td>
-                    <td>トレーニング</td>
-                    <td>トレーニング</td>
-                  </tr>
-                  <tr>
-                    <th>土曜日</th>
-                    <td>リーグ戦・TRM<br>トレーニング</td>
-                    <td>リーグ戦・TRM<br>トレーニング</td>
-                    <td>リーグ戦・TRM<br>トレーニング</td>
-                  </tr>
-                  <tr>
-                    <th>日曜日</th>
-                    <td>リーグ戦・TRM<br>または休み</td>
-                    <td>リーグ戦・TRM<br>または休み</td>
-                    <td>リーグ戦・TRM<br>または休み</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </section>
           <section class="l-section">

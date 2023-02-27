@@ -50,6 +50,9 @@
         <nav class="l-navigation" id="gnavi">
           <ul class="l-navigation__inner">
             <li class="l-navigation__item">
+              <a class="current" href="/"><span class="l-navigation__ja">トップ</span>TOP</a>
+            </li>
+            <li class="l-navigation__item">
               <a href="/about/"><span class="l-navigation__ja">グリットについて</span>ABOUT US</a>
             </li>
             <li class="l-navigation__item">

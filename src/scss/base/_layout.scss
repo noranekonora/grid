@@ -459,6 +459,13 @@ lg;
       }
     }
 
+    .l-col2__btn {
+      text-align: right;
+      @include mq-max(xs) {
+        text-align: center;
+      }
+    }
+
     //パーツ調整
     .l-section {
       padding-left: 0;

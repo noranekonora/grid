@@ -1705,6 +1705,11 @@ ul, ol {
       @media screen and (max-width: 568px) {
         .l-col2--side .l-col2__txt {
           line-height: 1.72; } }
+    .l-col2--side .l-col2__btn {
+      text-align: right; }
+      @media screen and (max-width: 568px) {
+        .l-col2--side .l-col2__btn {
+          text-align: center; } }
     .l-col2--side .l-section {
       padding-left: 0;
       padding-right: 0; }
@@ -8571,7 +8576,7 @@ readers do not read off random characters that represent icons */
 .l-f {
   background-color: #090B3B;
   padding: 30px 0;
-  text-align: right;
+  text-align: center;
   letter-spacing: 0.02em; }
   @media screen and (max-width: 768px) {
     .l-f {
@@ -8848,8 +8853,8 @@ readers do not read off random characters that represent icons */
 
 .pageTop {
   position: fixed;
-  bottom: 95px;
-  right: 15px;
+  bottom: 40px;
+  right: 40px;
   z-index: 1000; }
   @media screen and (max-width: 568px) {
     .pageTop {
@@ -9355,7 +9360,7 @@ readers do not read off random characters that represent icons */
   font-family: "Futura PT", sans-serif;
   font-weight: 600;
   margin-bottom: 30px;
-  padding-left: 16px;
+  padding-left: 19px;
   position: relative; }
   @media screen and (max-width: 568px) {
     .c-ttl-2 {
@@ -9367,8 +9372,8 @@ readers do not read off random characters that represent icons */
     position: absolute;
     top: 12px;
     left: 0;
-    width: 7px;
-    height: 36px;
+    width: 9px;
+    height: 62px;
     background-color: #FFD200; }
     @media screen and (max-width: 568px) {
       .c-ttl-2::after {
@@ -9377,7 +9382,7 @@ readers do not read off random characters that represent icons */
   .c-ttl-2 > small {
     display: block;
     font-family: YakuHanJPs, 游ゴシック体, YuGothic-M, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
     margin-top: -8px; }
@@ -9792,7 +9797,7 @@ readers do not read off random characters that represent icons */
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  padding: 0 20px 4px 0;
+  padding: 0 30px 6px 0;
   display: inline-block;
   margin: 0 auto;
   position: relative;
@@ -9971,8 +9976,8 @@ readers do not read off random characters that represent icons */
   color: #FFFFFF; }
 
 .c-newslist .c-label {
-  font-size: 18px;
-  padding: 5px 15px;
+  font-size: 14px;
+  padding: 5px 7px 3px;
   line-height: 1;
   background-color: white;
   color: #000000;
@@ -10434,7 +10439,14 @@ readers do not read off random characters that represent icons */
 
 .c-card04--mono .c-card04__data {
   background-color: #FFFFFF;
-  color: #090B3B; }
+  color: #090B3B;
+  min-height: 88px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .c-card04--color .c-card04__title {
   background-color: #FFD200;
@@ -10939,11 +10951,11 @@ readers do not read off random characters that represent icons */
         .l-philosophy__contents .c-ttl-3::before {
           font-size: 20px; } }
   .l-philosophy__contents p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px; }
     @media screen and (max-width: 568px) {
       .l-philosophy__contents p {
-        font-size: 18px; } }
+        font-size: 15px; } }
     .l-philosophy__contents p:last-child {
       margin-bottom: 0; }
 

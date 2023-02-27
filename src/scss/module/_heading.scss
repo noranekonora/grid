@@ -36,7 +36,7 @@
     font-family: $futura;
     font-weight: 600;
     margin-bottom: 30px;
-    padding-left: 16px;
+    padding-left: 19px;
     position: relative;
 
     @include mq-max(xs) {
@@ -49,8 +49,8 @@
       position: absolute;
       top: 12px;
       left: 0;
-      width: 7px;
-      height: 36px;
+      width: 9px;
+      height: 62px;
       background-color: $accentColor;
       @include mq-max(xs) {
         height: 22px;
@@ -62,7 +62,7 @@
     &>small {
       display: block;
       font-family: $sanserif;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       margin-bottom: 5px;
       margin-top: -8px;

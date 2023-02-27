@@ -12,54 +12,44 @@
       @include mq-max(sm) {
         padding-left: 0;
       }
-
-      &>p {
-        
-
-        @include mq-max(sm) {
-          font-size: 16px;
-        }
+    }
+    &__img {
+      max-width: 150px;
+      margin: 0 auto;
+      @include mq-max(sm) {
+        display: none;
       }
     }
   }
 
   //  スタッフ紹介
   .p-staff {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom:40px ;
+      }
+    }
     &__list {
       padding-top: 30px;
       counter-reset: point;
 
       &>dl {
-        display: flex;
         &:not(:last-child) {
           margin-bottom: 30px;
         }
         @include mq-max(sm) {
           display: block;
+          margin-top: -40px;
         }
         &>dt {
           position: relative;
-          padding-left: 50px;
-          width: 320px;
-          flex-shrink: 0;
           // line-height: 2;
-          font-size: 18px;
-
-          &::before {
-            content: counter(point, decimal-leading-zero);
-            counter-increment: point;
-            display: inline-block;
-            position: absolute;
-            top: 10px;
-            left: 0;
-            font-size: 32px;
-            font-family: "Heebo";
-            line-height: 1.2;
-
-            @include mq-max(xs) {
-              font-size: 26px;
-              padding-left: 6px;
-            }
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          .nameen {
+            font-size: 16px;
+            display: block;
           }
         }
         &>dd {

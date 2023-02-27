@@ -354,6 +354,10 @@
       &__data {
         background-color: $white;
         color: $keyColor;
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
