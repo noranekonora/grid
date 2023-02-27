@@ -98,14 +98,7 @@
       </div>
       <div id="contents" class="l-lower">
         <div class="l-section">
-          <section class="c-step" data-pfwform-hide-if-confirm>
-            <h2 class="c-step__title">お問い合わせ内容をご入力ください。</h2>
-            <ul class="c-step__list">
-              <li class="c-step__item is-active">内容の入力</li>
-              <li class="c-step__item">入力内容の確認</li>
-              <li class="c-step__item">送信完了</li>
-            </ul>
-          </section>
+          <h2 class="p-formtitle">お申込内容をご入力ください。</h2>
           <?php echo do_shortcode('[contact-form-7 id="54" title="ユースセレクション申込フォーム"]'); ?>
           <div class="c-privacy">
             <section class="l-section">
